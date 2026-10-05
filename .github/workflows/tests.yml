@@ -1,0 +1,37 @@
+name: A-A-P tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check generated standalone bundle
+        run: |
+          python work/tools/build_standalone.py --check
+          python work/tools/build_standalone.py --self-check
+      - name: Check Python 3.4 compatibility
+        run: python work/tools/check_frontend_py34.py
+      - name: Run frontend tests
+        env:
+          PYTHONPATH: work/src
+        run: python -m unittest discover -s work/tests/frontend -p 'test*.py' -v
+      - name: Run semantic tests
+        env:
+          PYTHONPATH: work/src:work/tests/semantics:work/docker/recursive-aap
+        run: python -m unittest discover -s work/tests/semantics -p 'test*.py' -v
+      - name: Run recursive CLI tests
+        run: python work/docker/recursive-aap/test_cli_stdout.py
+      - name: Prepare standalone bundle copy
+        run: |
+          mkdir -p github
+          cp aapy3.py github/aapy3.py
+      - name: Run standalone launcher tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
