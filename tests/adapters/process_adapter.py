@@ -21,7 +21,8 @@ class PosixProcessBackend(ProcessBackend):
         if getattr(request, 'logging', False):
             return self._run_logged(request, started)
         process = subprocess.Popen(request.shell_command_bytes, shell=True,
-            executable=self.shell, cwd=request.cwd_bytes, stdout=subprocess.PIPE,
+            executable=getattr(self, 'shell', '/bin/sh'),
+            cwd=request.cwd_bytes, stdout=subprocess.PIPE,
             stderr=subprocess.PIPE)
         if started is not None:
             started(process.pid, request.shell_command)
@@ -52,7 +53,8 @@ class PosixProcessBackend(ProcessBackend):
                 kind = b'log' if request.quiet else b'system'
                 logfile.write(kind + b':\t' + request.log_command_text.encode('latin-1') + b'\n')
             process = subprocess.Popen(wrapper.encode('latin-1'), shell=True,
-                executable=self.shell, cwd=request.cwd_bytes,
+                executable=getattr(self, 'shell', '/bin/sh'),
+                cwd=request.cwd_bytes,
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             if started is not None:
                 started(process.pid, wrapper)

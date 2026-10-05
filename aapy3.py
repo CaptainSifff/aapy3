@@ -8508,7 +8508,7 @@ class LocalFetchBackend(FetchBackend):
         return result
 ''')
 
-_MANIFEST['process_adapter'] = ('tests/adapters/process_adapter.py', False, '00ce8393b798c50a9b97bcb1d7d17972f30f98f4a50a4623837b554f20ffc1e9')
+_MANIFEST['process_adapter'] = ('tests/adapters/process_adapter.py', False, '583f269da0b97591ce269ee6b2d0c23598662a5a17673c7ad9a1989c185eead1')
 _EMBEDDED['process_adapter'] = ('tests/adapters/process_adapter.py', False, r'''"""Real POSIX process execution for the bounded A-A-P process requests."""
 from __future__ import print_function
 
@@ -8532,7 +8532,8 @@ class PosixProcessBackend(ProcessBackend):
         if getattr(request, 'logging', False):
             return self._run_logged(request, started)
         process = subprocess.Popen(request.shell_command_bytes, shell=True,
-            executable=self.shell, cwd=request.cwd_bytes, stdout=subprocess.PIPE,
+            executable=getattr(self, 'shell', '/bin/sh'),
+            cwd=request.cwd_bytes, stdout=subprocess.PIPE,
             stderr=subprocess.PIPE)
         if started is not None:
             started(process.pid, request.shell_command)
@@ -8563,7 +8564,8 @@ class PosixProcessBackend(ProcessBackend):
                 kind = b'log' if request.quiet else b'system'
                 logfile.write(kind + b':\t' + request.log_command_text.encode('latin-1') + b'\n')
             process = subprocess.Popen(wrapper.encode('latin-1'), shell=True,
-                executable=self.shell, cwd=request.cwd_bytes,
+                executable=getattr(self, 'shell', '/bin/sh'),
+                cwd=request.cwd_bytes,
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             if started is not None:
                 started(process.pid, wrapper)
