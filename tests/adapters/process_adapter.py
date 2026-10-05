@@ -10,6 +10,9 @@ from aap_semantics import ProcessBackend, ProcessResult
 
 
 class PosixProcessBackend(ProcessBackend):
+    def __init__(self, shell='/bin/sh'):
+        self.shell = shell
+
     def run(self, request):
         return self.run_observed(request, None)
 
@@ -18,7 +21,7 @@ class PosixProcessBackend(ProcessBackend):
         if getattr(request, 'logging', False):
             return self._run_logged(request, started)
         process = subprocess.Popen(request.shell_command_bytes, shell=True,
-            executable='/bin/sh', cwd=request.cwd_bytes, stdout=subprocess.PIPE,
+            executable=self.shell, cwd=request.cwd_bytes, stdout=subprocess.PIPE,
             stderr=subprocess.PIPE)
         if started is not None:
             started(process.pid, request.shell_command)
@@ -49,7 +52,7 @@ class PosixProcessBackend(ProcessBackend):
                 kind = b'log' if request.quiet else b'system'
                 logfile.write(kind + b':\t' + request.log_command_text.encode('latin-1') + b'\n')
             process = subprocess.Popen(wrapper.encode('latin-1'), shell=True,
-                executable='/bin/sh', cwd=request.cwd_bytes,
+                executable=self.shell, cwd=request.cwd_bytes,
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             if started is not None:
                 started(process.pid, wrapper)

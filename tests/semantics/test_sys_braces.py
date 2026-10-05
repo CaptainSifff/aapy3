@@ -107,7 +107,8 @@ class SysBraceTests(unittest.TestCase):
                     stream.write(name.encode('ascii'))
             before = dict((name, os.path.isfile(os.path.join(target, name)))
                           for name in names + ('KEEP',))
-            backend = PosixProcessBackend()
+            # Brace expansion is a Bash feature; Ubuntu's /bin/sh is dash.
+            backend = PosixProcessBackend('/bin/bash')
             evaluator, program = evaluate(
                 ':sys rm -f $PKGDIR$PREFIX/{LICENSE,NOTICE,RELEASE-NOTES,RUNNING.txt}\n',
                 cwd, backend)
