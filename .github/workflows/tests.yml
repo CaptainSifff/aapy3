@@ -15,15 +15,13 @@ jobs:
           python-version: '3.11'
       - name: Check generated standalone bundle
         run: |
-          python work/tools/build_standalone.py --check
-          python work/tools/build_standalone.py --self-check
+          python tests/tools/build_standalone.py --check
+          python tests/tools/build_standalone.py --self-check
       - name: Check Python 3.4 compatibility
-        run: python work/tools/check_frontend_py34.py
-      - name: Run frontend and semantic tests
+        run: python tests/tools/check_frontend_py34.py
+      - name: Run test suites
         env:
-          PYTHONPATH: work/src:work/tests/semantics:work/docker/recursive-aap
-        run: python -m unittest discover -s work/tests -p 'test*.py' -v
-      - name: Run recursive CLI tests
-        run: python work/docker/recursive-aap/test_cli_stdout.py
-      - name: Run standalone launcher tests
+          PYTHONPATH: tests/src:tests/semantics:tests/adapters:tests/tools
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Run recursive CLI tests
+        run: python tests/adapters/test_cli_stdout.py

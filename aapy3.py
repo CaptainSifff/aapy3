@@ -13,8 +13,8 @@ import sys
 _EMBEDDED = {}
 _MANIFEST = {}
 
-_MANIFEST['aap_frontend'] = ('work/src/aap_frontend/__init__.py', True, '18a93dee839fb91379a9d44998626dc997bb54283f243347a849415ba927fa43')
-_EMBEDDED['aap_frontend'] = ('work/src/aap_frontend/__init__.py', True, r'''"""Source-preserving A-A-P frontend; Python 3.4+, standard library only."""
+_MANIFEST['aap_frontend'] = ('tests/src/aap_frontend/__init__.py', True, '18a93dee839fb91379a9d44998626dc997bb54283f243347a849415ba927fa43')
+_EMBEDDED['aap_frontend'] = ('tests/src/aap_frontend/__init__.py', True, r'''"""Source-preserving A-A-P frontend; Python 3.4+, standard library only."""
 from .source import Source, SourcePosition, SourceSpan, FrontendError
 from .scanner import scan
 from .parser import parse, parse_body
@@ -23,8 +23,8 @@ __all__ = ['Source', 'SourcePosition', 'SourceSpan', 'FrontendError',
            'scan', 'parse', 'parse_body']
 ''')
 
-_MANIFEST['aap_frontend.cst'] = ('work/src/aap_frontend/cst.py', False, '554118c79dd1c3df65601df41f53a6bdb46f6f7795794937b2ea27f01a19ea13')
-_EMBEDDED['aap_frontend.cst'] = ('work/src/aap_frontend/cst.py', False, r'''"""Neutral concrete syntax nodes; no runtime objects or handler dispatch."""
+_MANIFEST['aap_frontend.cst'] = ('tests/src/aap_frontend/cst.py', False, '554118c79dd1c3df65601df41f53a6bdb46f6f7795794937b2ea27f01a19ea13')
+_EMBEDDED['aap_frontend.cst'] = ('tests/src/aap_frontend/cst.py', False, r'''"""Neutral concrete syntax nodes; no runtime objects or handler dispatch."""
 
 
 class Node(object):
@@ -189,8 +189,8 @@ class Document(Node):
         self.toplevel = toplevel
 ''')
 
-_MANIFEST['aap_frontend.parser'] = ('work/src/aap_frontend/parser.py', False, 'ce79e8d603e9efa913ff13797668b28431e6bfe7ff713d75a87c24bdcb3334bf')
-_EMBEDDED['aap_frontend.parser'] = ('work/src/aap_frontend/parser.py', False, r'''"""Context-directed structural readers, following Process.py's reader order.
+_MANIFEST['aap_frontend.parser'] = ('tests/src/aap_frontend/parser.py', False, 'ce79e8d603e9efa913ff13797668b28431e6bfe7ff713d75a87c24bdcb3334bf')
+_EMBEDDED['aap_frontend.parser'] = ('tests/src/aap_frontend/parser.py', False, r'''"""Context-directed structural readers, following Process.py's reader order.
 
 This is deliberately not a Python parser or a command registry. Only names
 whose syntax changes source boundaries have special readers.
@@ -660,8 +660,8 @@ def parse_body(body, toplevel=False):
     return _Parser(body.source, body.lines, toplevel).document(body.span)
 ''')
 
-_MANIFEST['aap_frontend.scanner'] = ('work/src/aap_frontend/scanner.py', False, '0d40f3532de3fef093e52f77c24ab57c23aa22947b67db9b081640ab0b6d74de')
-_EMBEDDED['aap_frontend.scanner'] = ('work/src/aap_frontend/scanner.py', False, r'''"""Physical/logical scanning derived from upstream/ParsePos.py::nextline."""
+_MANIFEST['aap_frontend.scanner'] = ('tests/src/aap_frontend/scanner.py', False, '0d40f3532de3fef093e52f77c24ab57c23aa22947b67db9b081640ab0b6d74de')
+_EMBEDDED['aap_frontend.scanner'] = ('tests/src/aap_frontend/scanner.py', False, r'''"""Physical/logical scanning derived from upstream/ParsePos.py::nextline."""
 from .cst import PhysicalLine, LogicalLine, Comment, BlankLine
 from .source import FrontendError
 
@@ -745,8 +745,8 @@ def scan(source):
     return tuple(result)
 ''')
 
-_MANIFEST['aap_frontend.source'] = ('work/src/aap_frontend/source.py', False, 'a5a43454d29eec83b4205897a10a3c8dfac0c33cac8dfc472c1a2acf668607e5')
-_EMBEDDED['aap_frontend.source'] = ('work/src/aap_frontend/source.py', False, r'''"""Immutable text and physical coordinates. Offsets count Unicode characters."""
+_MANIFEST['aap_frontend.source'] = ('tests/src/aap_frontend/source.py', False, 'a5a43454d29eec83b4205897a10a3c8dfac0c33cac8dfc472c1a2acf668607e5')
+_EMBEDDED['aap_frontend.source'] = ('tests/src/aap_frontend/source.py', False, r'''"""Immutable text and physical coordinates. Offsets count Unicode characters."""
 from bisect import bisect_right
 from collections import namedtuple
 import io
@@ -802,8 +802,8 @@ class FrontendError(ValueError):
             source.source_id, pos.line, pos.column, reason))
 ''')
 
-_MANIFEST['aap_semantics'] = ('work/src/aap_semantics/__init__.py', True, 'cb6c12b57c51ae1f2a03ed953b613080a3ddc7ddf50a076ac1d96901097fef68')
-_EMBEDDED['aap_semantics'] = ('work/src/aap_semantics/__init__.py', True, r'''"""A-A-P semantic lowering and restricted metadata evaluation (Python 3.4+)."""
+_MANIFEST['aap_semantics'] = ('tests/src/aap_semantics/__init__.py', True, 'cb6c12b57c51ae1f2a03ed953b613080a3ddc7ddf50a076ac1d96901097fef68')
+_EMBEDDED['aap_semantics'] = ('tests/src/aap_semantics/__init__.py', True, r'''"""A-A-P semantic lowering and restricted metadata evaluation (Python 3.4+)."""
 from .lowering import lower, lower_body
 from .capabilities import RuntimeCapabilities
 from .evaluator import Evaluator, EvaluationResult
@@ -883,8 +883,8 @@ __all__ = ['lower', 'lower_body', 'RuntimeCapabilities', 'Evaluator', 'Evaluatio
            'valid_variable_name']
 ''')
 
-_MANIFEST['aap_semantics.actions'] = ('work/src/aap_semantics/actions.py', False, '0e691065541f99e657352f01749407d2f0a457c61119c529e1df011460377a70')
-_EMBEDDED['aap_semantics.actions'] = ('work/src/aap_semantics/actions.py', False, r'''"""Bounded action routing and entry, not an archive-format implementation.
+_MANIFEST['aap_semantics.actions'] = ('tests/src/aap_semantics/actions.py', False, '0e691065541f99e657352f01749407d2f0a457c61119c529e1df011460377a70')
+_EMBEDDED['aap_semantics.actions'] = ('tests/src/aap_semantics/actions.py', False, r'''"""Bounded action routing and entry, not an archive-format implementation.
 
 Evidence: Action.action_run/action_find/action_ftype, Filetype.ft_detect,
 Scope.get_build_recdict. Effects require explicit trusted capabilities.
@@ -1176,8 +1176,8 @@ class ActionRuntime(object):
         return result
 ''')
 
-_MANIFEST['aap_semantics.body_executor'] = ('work/src/aap_semantics/body_executor.py', False, '32c76b652dfeca315203ad1f33bcd32c11f861368d1c78337dd80979a48c657c')
-_EMBEDDED['aap_semantics.body_executor'] = ('work/src/aap_semantics/body_executor.py', False, r'''"""Enter one planned dependency body through the existing evaluator.
+_MANIFEST['aap_semantics.body_executor'] = ('tests/src/aap_semantics/body_executor.py', False, '32c76b652dfeca315203ad1f33bcd32c11f861368d1c78337dd80979a48c657c')
+_EMBEDDED['aap_semantics.body_executor'] = ('tests/src/aap_semantics/body_executor.py', False, r'''"""Enter one planned dependency body through the existing evaluator.
 
 This is semantic execution, not a build driver or signature commit protocol.
 It never traverses prerequisites, writes persistent state, or marks nodes done.
@@ -1404,8 +1404,8 @@ class BodyExecutor(object):
         return result
 ''')
 
-_MANIFEST['aap_semantics.build_driver'] = ('work/src/aap_semantics/build_driver.py', False, 'c1c7f5731601fda38b66dacebacf19e46dd6e6591b5bb94ffeb4f5d97e55e6dd')
-_EMBEDDED['aap_semantics.build_driver'] = ('work/src/aap_semantics/build_driver.py', False, r'''"""One controlled invocation: plan, enter, observe, complete, explicitly flush.
+_MANIFEST['aap_semantics.build_driver'] = ('tests/src/aap_semantics/build_driver.py', False, 'c1c7f5731601fda38b66dacebacf19e46dd6e6591b5bb94ffeb4f5d97e55e6dd')
+_EMBEDDED['aap_semantics.build_driver'] = ('tests/src/aap_semantics/build_driver.py', False, r'''"""One controlled invocation: plan, enter, observe, complete, explicitly flush.
 
 No recipe command handlers or automatic port helper execution live here.
 """
@@ -1662,8 +1662,8 @@ class BuildDriver(object):
         return result
 ''')
 
-_MANIFEST['aap_semantics.buildcheck'] = ('work/src/aap_semantics/buildcheck.py', False, '9a3695d0ca25751b6971fee5bcaa6a3cc6f1fd1aa6c82126f6c5882d434c2888')
-_EMBEDDED['aap_semantics.buildcheck'] = ('work/src/aap_semantics/buildcheck.py', False, r'''"""Pure, bounded preparation of historical expanded-command buildchecks.
+_MANIFEST['aap_semantics.buildcheck'] = ('tests/src/aap_semantics/buildcheck.py', False, '9a3695d0ca25751b6971fee5bcaa6a3cc6f1fd1aa6c82126f6c5882d434c2888')
+_EMBEDDED['aap_semantics.buildcheck'] = ('tests/src/aap_semantics/buildcheck.py', False, r'''"""Pure, bounded preparation of historical expanded-command buildchecks.
 
 DoBuild.buildcheck_update signs $xcommands after action expansion, comment
 removal, special-variable masking, A-A-P expansion and whitespace folding.
@@ -1790,8 +1790,8 @@ class BuildSignaturePreparer(object):
                                          signature=signature)
 ''')
 
-_MANIFEST['aap_semantics.capabilities'] = ('work/src/aap_semantics/capabilities.py', False, 'f4c8bff5f783afed9ca4bca27aa865a98dbb953f3395d8f77e522231dd75637e')
-_EMBEDDED['aap_semantics.capabilities'] = ('work/src/aap_semantics/capabilities.py', False, r'''"""Explicit host-facing capabilities shared by semantic execution phases."""
+_MANIFEST['aap_semantics.capabilities'] = ('tests/src/aap_semantics/capabilities.py', False, 'f4c8bff5f783afed9ca4bca27aa865a98dbb953f3395d8f77e522231dd75637e')
+_EMBEDDED['aap_semantics.capabilities'] = ('tests/src/aap_semantics/capabilities.py', False, r'''"""Explicit host-facing capabilities shared by semantic execution phases."""
 
 
 class RuntimeCapabilities(object):
@@ -1826,8 +1826,8 @@ class RuntimeCapabilities(object):
         return RuntimeCapabilities(**values)
 ''')
 
-_MANIFEST['aap_semantics.cat'] = ('work/src/aap_semantics/cat.py', False, 'b5b3022986081cdca4e46ab5032567cfbefd4d742966caf9c811c0f0bff700dd')
-_EMBEDDED['aap_semantics.cat'] = ('work/src/aap_semantics/cat.py', False, r'''"""Bounded redirected A-A-P cat: exact Linux bytes, never a shell command."""
+_MANIFEST['aap_semantics.cat'] = ('tests/src/aap_semantics/cat.py', False, 'b5b3022986081cdca4e46ab5032567cfbefd4d742966caf9c811c0f0bff700dd')
+_EMBEDDED['aap_semantics.cat'] = ('tests/src/aap_semantics/cat.py', False, r'''"""Bounded redirected A-A-P cat: exact Linux bytes, never a shell command."""
 import posixpath
 
 from .model import Node
@@ -1941,8 +1941,8 @@ class CatRuntime(object):
         record.message = 'Concatenated files into "' + request.path + '"'
 ''')
 
-_MANIFEST['aap_semantics.checksum'] = ('work/src/aap_semantics/checksum.py', False, '9ad593c17ec2d0785d974dda5c1f0376dbe7fa791c3a2e4a3e820adea7cb365d')
-_EMBEDDED['aap_semantics.checksum'] = ('work/src/aap_semantics/checksum.py', False, r'''"""Read-only package MD5 verification, independent of build signatures.
+_MANIFEST['aap_semantics.checksum'] = ('tests/src/aap_semantics/checksum.py', False, '9ad593c17ec2d0785d974dda5c1f0376dbe7fa791c3a2e4a3e820adea7cb365d')
+_EMBEDDED['aap_semantics.checksum'] = ('tests/src/aap_semantics/checksum.py', False, r'''"""Read-only package MD5 verification, independent of build signatures.
 
 Evidence: Commands.aap_checksum/get_args, Dictlist.str2dictlist/parse_attr,
 Sign.check_md5/hexdigest. No local filesystem adapter is implicitly enabled.
@@ -2104,8 +2104,8 @@ class ChecksumRuntime(object):
         raise result.error
 ''')
 
-_MANIFEST['aap_semantics.cli'] = ('work/src/aap_semantics/cli.py', False, '8d5d45f6a411927101b1de22d9ace55196f4e5cf85c4a31bcea2712a88297c14')
-_EMBEDDED['aap_semantics.cli'] = ('work/src/aap_semantics/cli.py', False, r'''"""Bounded external A-A-P argv handling from DoArgs.doargs().
+_MANIFEST['aap_semantics.cli'] = ('tests/src/aap_semantics/cli.py', False, '8d5d45f6a411927101b1de22d9ace55196f4e5cf85c4a31bcea2712a88297c14')
+_EMBEDDED['aap_semantics.cli'] = ('tests/src/aap_semantics/cli.py', False, r'''"""Bounded external A-A-P argv handling from DoArgs.doargs().
 
 This module deliberately accepts an already-tokenized argv sequence.  Shell
 quoting is resolved before this boundary and must not be parsed again here.
@@ -2163,8 +2163,8 @@ def apply_assignments(scope, assignments):
     return applied, ignored
 ''')
 
-_MANIFEST['aap_semantics.command_items'] = ('work/src/aap_semantics/command_items.py', False, '9843e27f6bf0c85a5e9527374b502b5bce6769da056dbcb92de08db28286cd86')
-_EMBEDDED['aap_semantics.command_items'] = ('work/src/aap_semantics/command_items.py', False, r'''"""Bounded Dictlist item/attribute syntax shared by command consumers."""
+_MANIFEST['aap_semantics.command_items'] = ('tests/src/aap_semantics/command_items.py', False, '9843e27f6bf0c85a5e9527374b502b5bce6769da056dbcb92de08db28286cd86')
+_EMBEDDED['aap_semantics.command_items'] = ('tests/src/aap_semantics/command_items.py', False, r'''"""Bounded Dictlist item/attribute syntax shared by command consumers."""
 import string
 
 from .diagnostics import SemanticError, Unsupported
@@ -2244,8 +2244,8 @@ def items(text, origin, label="item"):
     return items
 ''')
 
-_MANIFEST['aap_semantics.completion'] = ('work/src/aap_semantics/completion.py', False, '8d19b8a9f27ba844a4eac7eeb660fc3ecdb7e294de49e02b03fa9c474078376b')
-_EMBEDDED['aap_semantics.completion'] = ('work/src/aap_semantics/completion.py', False, r'''"""Post-body checks and pending signatures; never execute a recipe or flush."""
+_MANIFEST['aap_semantics.completion'] = ('tests/src/aap_semantics/completion.py', False, '8d19b8a9f27ba844a4eac7eeb660fc3ecdb7e294de49e02b03fa9c474078376b')
+_EMBEDDED['aap_semantics.completion'] = ('tests/src/aap_semantics/completion.py', False, r'''"""Post-body checks and pending signatures; never execute a recipe or flush."""
 from .model import Node
 from .target_state import FileState
 from .persistence import SignatureRecord
@@ -2336,8 +2336,8 @@ class PostExecutionRecheck(object):
         return decision
 ''')
 
-_MANIFEST['aap_semantics.copy_runtime'] = ('work/src/aap_semantics/copy_runtime.py', False, 'f4b5b0810b49ab084f4fba7fe064892fc8029fefeb4cad51cc6dd696d487f291')
-_EMBEDDED['aap_semantics.copy_runtime'] = ('work/src/aap_semantics/copy_runtime.py', False, r'''"""Bounded local regular-file :copy through an injected filesystem backend.
+_MANIFEST['aap_semantics.copy_runtime'] = ('tests/src/aap_semantics/copy_runtime.py', False, 'f4b5b0810b49ab084f4fba7fe064892fc8029fefeb4cad51cc6dd696d487f291')
+_EMBEDDED['aap_semantics.copy_runtime'] = ('tests/src/aap_semantics/copy_runtime.py', False, r'''"""Bounded local regular-file :copy through an injected filesystem backend.
 
 The reached production form is one plain local regular source and one local
 destination.  It deliberately has a distinct backend from :move: historical
@@ -2523,8 +2523,8 @@ class CopyRuntime(object):
         record.status = 'COMPLETED'
 ''')
 
-_MANIFEST['aap_semantics.declarations'] = ('work/src/aap_semantics/declarations.py', False, 'd6a2ad52edf6e34ceb72a7dafca97bd5ded4299f1af2ae5276e0a33e6f2fc2e2')
-_EMBEDDED['aap_semantics.declarations'] = ('work/src/aap_semantics/declarations.py', False, r'''"""Session-owned declarative state; no detection or action execution."""
+_MANIFEST['aap_semantics.declarations'] = ('tests/src/aap_semantics/declarations.py', False, 'd6a2ad52edf6e34ceb72a7dafca97bd5ded4299f1af2ae5276e0a33e6f2fc2e2')
+_EMBEDDED['aap_semantics.declarations'] = ('tests/src/aap_semantics/declarations.py', False, r'''"""Session-owned declarative state; no detection or action execution."""
 from .model import Node
 from .diagnostics import SemanticError, Unsupported
 
@@ -2607,8 +2607,8 @@ class DeclarationState(object):
                 self.filetypes.add(filetype)
 ''')
 
-_MANIFEST['aap_semantics.dependency_items'] = ('work/src/aap_semantics/dependency_items.py', False, '64ed1b2a16141d5ba2680fde757ac4284ef1ba54cb547f25ed0d83312875bf34')
-_EMBEDDED['aap_semantics.dependency_items'] = ('work/src/aap_semantics/dependency_items.py', False, r'''"""Bounded dependency item language, after separate A-A-P expansion."""
+_MANIFEST['aap_semantics.dependency_items'] = ('tests/src/aap_semantics/dependency_items.py', False, '64ed1b2a16141d5ba2680fde757ac4284ef1ba54cb547f25ed0d83312875bf34')
+_EMBEDDED['aap_semantics.dependency_items'] = ('tests/src/aap_semantics/dependency_items.py', False, r'''"""Bounded dependency item language, after separate A-A-P expansion."""
 from . import model as m
 from .diagnostics import SemanticError, Unsupported
 from .expansion import expand_text
@@ -2718,8 +2718,8 @@ def dependency_fields(dependency, scope):
     return target_items, source_items, build_attributes
 ''')
 
-_MANIFEST['aap_semantics.diagnostics'] = ('work/src/aap_semantics/diagnostics.py', False, 'de37b839f3ec77464875c5bb2511ec7e58b770bba9fe8590feb76b16fe9fbf8e')
-_EMBEDDED['aap_semantics.diagnostics'] = ('work/src/aap_semantics/diagnostics.py', False, r'''"""Diagnostics shared by lowering, conversions and interpretation."""
+_MANIFEST['aap_semantics.diagnostics'] = ('tests/src/aap_semantics/diagnostics.py', False, 'de37b839f3ec77464875c5bb2511ec7e58b770bba9fe8590feb76b16fe9fbf8e')
+_EMBEDDED['aap_semantics.diagnostics'] = ('tests/src/aap_semantics/diagnostics.py', False, r'''"""Diagnostics shared by lowering, conversions and interpretation."""
 from aap_frontend import FrontendError
 
 
@@ -2738,8 +2738,8 @@ class UndefinedName(SemanticError):
     pass
 ''')
 
-_MANIFEST['aap_semantics.directories'] = ('work/src/aap_semantics/directories.py', False, '3d880c73b5545a7b1429cf25eedf36342a4a17b404dc21caf528bb8864ca386a')
-_EMBEDDED['aap_semantics.directories'] = ('work/src/aap_semantics/directories.py', False, r'''"""Commands.aap_cd: explicit execution-frame cwd, never host chdir."""
+_MANIFEST['aap_semantics.directories'] = ('tests/src/aap_semantics/directories.py', False, '3d880c73b5545a7b1429cf25eedf36342a4a17b404dc21caf528bb8864ca386a')
+_EMBEDDED['aap_semantics.directories'] = ('tests/src/aap_semantics/directories.py', False, r'''"""Commands.aap_cd: explicit execution-frame cwd, never host chdir."""
 import posixpath
 
 from .model import Node
@@ -2826,8 +2826,8 @@ def change_directory(evaluator, node, records):
     return record
 ''')
 
-_MANIFEST['aap_semantics.evaluator'] = ('work/src/aap_semantics/evaluator.py', False, '43d6a0545eabcdcfe1a44aa8cb24139e1c2b84ac28bb33737a1e96cdf017a7c7')
-_EMBEDDED['aap_semantics.evaluator'] = ('work/src/aap_semantics/evaluator.py', False, r'''"""Metadata evaluation; unsupported runtime constructs are explicit barriers."""
+_MANIFEST['aap_semantics.evaluator'] = ('tests/src/aap_semantics/evaluator.py', False, '43d6a0545eabcdcfe1a44aa8cb24139e1c2b84ac28bb33737a1e96cdf017a7c7')
+_EMBEDDED['aap_semantics.evaluator'] = ('tests/src/aap_semantics/evaluator.py', False, r'''"""Metadata evaluation; unsupported runtime constructs are explicit barriers."""
 import posixpath
 
 from aap_frontend import Source, parse, cst
@@ -3175,8 +3175,8 @@ class Evaluator(object):
         namespace.set(name, DeferredExpansion(value, node) if node.delayed else value, node)
 ''')
 
-_MANIFEST['aap_semantics.expansion'] = ('work/src/aap_semantics/expansion.py', False, '02bf4bd350728755b6d85a0c3d13262924210ca7f8f64b0cc82bbca4ecc3979c')
-_EMBEDDED['aap_semantics.expansion'] = ('work/src/aap_semantics/expansion.py', False, r'''"""A-A-P expansion, separate from lexical parsing and Python interpretation."""
+_MANIFEST['aap_semantics.expansion'] = ('tests/src/aap_semantics/expansion.py', False, '02bf4bd350728755b6d85a0c3d13262924210ca7f8f64b0cc82bbca4ecc3979c')
+_EMBEDDED['aap_semantics.expansion'] = ('tests/src/aap_semantics/expansion.py', False, r'''"""A-A-P expansion, separate from lexical parsing and Python interpretation."""
 import string
 
 from . import model as m
@@ -3360,8 +3360,8 @@ def render_value(value, python):
     return result
 ''')
 
-_MANIFEST['aap_semantics.fetch'] = ('work/src/aap_semantics/fetch.py', False, '866395638014995bb93513aa68e17713c680cae2c54703eef5f4d4f14318d51e')
-_EMBEDDED['aap_semantics.fetch'] = ('work/src/aap_semantics/fetch.py', False, r'''"""Bounded port fetch request and injected acquisition capability.
+_MANIFEST['aap_semantics.fetch'] = ('tests/src/aap_semantics/fetch.py', False, '866395638014995bb93513aa68e17713c680cae2c54703eef5f4d4f14318d51e')
+_EMBEDDED['aap_semantics.fetch'] = ('tests/src/aap_semantics/fetch.py', False, r'''"""Bounded port fetch request and injected acquisition capability.
 
 The port helper constructs ordered locations. A backend performs byte I/O and
 reports each attempt; checksum verification remains a later build stage.
@@ -3426,8 +3426,8 @@ class MemoryFetchBackend(FetchBackend):
         return FetchResult('FAILED', attempts, detail='all fetch candidates failed')
 ''')
 
-_MANIFEST['aap_semantics.graph'] = ('work/src/aap_semantics/graph.py', False, 'ac7b22c9c79159c60c49439171760d5e3ea23df4c3a22069237489bdccf2db4a')
-_EMBEDDED['aap_semantics.graph'] = ('work/src/aap_semantics/graph.py', False, r'''"""Ordered dependency registration; no file probes, traversal or execution."""
+_MANIFEST['aap_semantics.graph'] = ('tests/src/aap_semantics/graph.py', False, 'ac7b22c9c79159c60c49439171760d5e3ea23df4c3a22069237489bdccf2db4a')
+_EMBEDDED['aap_semantics.graph'] = ('tests/src/aap_semantics/graph.py', False, r'''"""Ordered dependency registration; no file probes, traversal or execution."""
 import posixpath
 
 from .model import Node
@@ -3574,8 +3574,8 @@ class BuildGraph(object):
                      for d in self.definitions)
 ''')
 
-_MANIFEST['aap_semantics.helpers'] = ('work/src/aap_semantics/helpers.py', False, '4122f94ee1daad68f7444f06c24530a58bbe4f8b037ea68bb86f85961d28c76b')
-_EMBEDDED['aap_semantics.helpers'] = ('work/src/aap_semantics/helpers.py', False, r'''"""Closed call registry; recipes never obtain a host callable or module."""
+_MANIFEST['aap_semantics.helpers'] = ('tests/src/aap_semantics/helpers.py', False, '4122f94ee1daad68f7444f06c24530a58bbe4f8b037ea68bb86f85961d28c76b')
+_EMBEDDED['aap_semantics.helpers'] = ('tests/src/aap_semantics/helpers.py', False, r'''"""Closed call registry; recipes never obtain a host callable or module."""
 import posixpath
 import re as _re
 
@@ -3709,8 +3709,8 @@ class HelperRegistry(object):
             raise SemanticError(origin, 'wrong number of compatibility helper arguments')
 ''')
 
-_MANIFEST['aap_semantics.includes'] = ('work/src/aap_semantics/includes.py', False, '331ffc71344e8a237e7017b35ce4cfd1b858e2d1f2275f6ff0ca59d6ba834352')
-_EMBEDDED['aap_semantics.includes'] = ('work/src/aap_semantics/includes.py', False, r'''"""Read-only source loading and POSIX recipe-directory resolution."""
+_MANIFEST['aap_semantics.includes'] = ('tests/src/aap_semantics/includes.py', False, '331ffc71344e8a237e7017b35ce4cfd1b858e2d1f2275f6ff0ca59d6ba834352')
+_EMBEDDED['aap_semantics.includes'] = ('tests/src/aap_semantics/includes.py', False, r'''"""Read-only source loading and POSIX recipe-directory resolution."""
 import posixpath
 
 from aap_frontend import Source
@@ -3747,8 +3747,8 @@ def resolve_path(path, cwd, origin):
     return posixpath.normpath(path)
 ''')
 
-_MANIFEST['aap_semantics.lowering'] = ('work/src/aap_semantics/lowering.py', False, 'c77037c0947aafbd34c6ad45ddacb3021ac0b543110d8c53c1bef373e0557418')
-_EMBEDDED['aap_semantics.lowering'] = ('work/src/aap_semantics/lowering.py', False, r'''"""CST -> semantic structure, without value lookup or Python execution."""
+_MANIFEST['aap_semantics.lowering'] = ('tests/src/aap_semantics/lowering.py', False, 'c77037c0947aafbd34c6ad45ddacb3021ac0b543110d8c53c1bef373e0557418')
+_EMBEDDED['aap_semantics.lowering'] = ('tests/src/aap_semantics/lowering.py', False, r'''"""CST -> semantic structure, without value lookup or Python execution."""
 import io
 import tokenize
 
@@ -3935,8 +3935,8 @@ def lower_body(body):
     return lower(parse_body(body.origin))
 ''')
 
-_MANIFEST['aap_semantics.model'] = ('work/src/aap_semantics/model.py', False, '7ff3b982957d07687e872d63b3cf00a236489b9a90d83b85c58c124dc3a3d2ff')
-_EMBEDDED['aap_semantics.model'] = ('work/src/aap_semantics/model.py', False, r'''"""Semantic nodes. Source spelling belongs to their immutable-source CST refs."""
+_MANIFEST['aap_semantics.model'] = ('tests/src/aap_semantics/model.py', False, '7ff3b982957d07687e872d63b3cf00a236489b9a90d83b85c58c124dc3a3d2ff')
+_EMBEDDED['aap_semantics.model'] = ('tests/src/aap_semantics/model.py', False, r'''"""Semantic nodes. Source spelling belongs to their immutable-source CST refs."""
 
 
 class Node(object):
@@ -4039,8 +4039,8 @@ class Variant(Node):
         self.branches = tuple(branches)
 ''')
 
-_MANIFEST['aap_semantics.move_runtime'] = ('work/src/aap_semantics/move_runtime.py', False, 'b37611e966fe9c001df90e9717e3cb9f17d2d663c4b361d4933d03e28b83cc74')
-_EMBEDDED['aap_semantics.move_runtime'] = ('work/src/aap_semantics/move_runtime.py', False, r'''"""Bounded local regular-file :move for the reached doperlmod form.
+_MANIFEST['aap_semantics.move_runtime'] = ('tests/src/aap_semantics/move_runtime.py', False, 'b37611e966fe9c001df90e9717e3cb9f17d2d663c4b361d4933d03e28b83cc74')
+_EMBEDDED['aap_semantics.move_runtime'] = ('tests/src/aap_semantics/move_runtime.py', False, r'''"""Bounded local regular-file :move for the reached doperlmod form.
 
 CopyMove.remote_copy_move first tries os.rename for a local move. Semantic
 code records that one-file rename request through an injected backend; it does
@@ -4149,8 +4149,8 @@ class MoveRuntime(object):
         record.status = 'COMPLETED'
 ''')
 
-_MANIFEST['aap_semantics.nested_update'] = ('work/src/aap_semantics/nested_update.py', False, '067fb81ad5b905811b91bb25364bcd72beb39c93702346fb7c931fd244791ac0')
-_EMBEDDED['aap_semantics.nested_update'] = ('work/src/aap_semantics/nested_update.py', False, r'''"""Synchronous, source-backed target updates; no execution capability of its own."""
+_MANIFEST['aap_semantics.nested_update'] = ('tests/src/aap_semantics/nested_update.py', False, '067fb81ad5b905811b91bb25364bcd72beb39c93702346fb7c931fd244791ac0')
+_EMBEDDED['aap_semantics.nested_update'] = ('tests/src/aap_semantics/nested_update.py', False, r'''"""Synchronous, source-backed target updates; no execution capability of its own."""
 from .model import Node
 from .dependency_items import parse_items
 from .expansion import render_value, expand_text
@@ -4195,8 +4195,8 @@ class UpdateStopped(Exception):
         self.result = result
 ''')
 
-_MANIFEST['aap_semantics.output'] = ('work/src/aap_semantics/output.py', False, 'be546979eff51b0d2135f64d1c017f13f769ce94370f3c21abe41cac32ad3761')
-_EMBEDDED['aap_semantics.output'] = ('work/src/aap_semantics/output.py', False, r'''"""A-A-P print events and bounded local redirected output; no host I/O."""
+_MANIFEST['aap_semantics.output'] = ('tests/src/aap_semantics/output.py', False, 'be546979eff51b0d2135f64d1c017f13f769ce94370f3c21abe41cac32ad3761')
+_EMBEDDED['aap_semantics.output'] = ('tests/src/aap_semantics/output.py', False, r'''"""A-A-P print events and bounded local redirected output; no host I/O."""
 import posixpath
 
 from .model import Node
@@ -4437,8 +4437,8 @@ class PrintRuntime(object):
         record.status = 'COMPLETED'
 ''')
 
-_MANIFEST['aap_semantics.path_observation'] = ('work/src/aap_semantics/path_observation.py', False, '495f73e8b2f49060ee541d396f663ad30df8471bd1119dc55c3565184c29c5ba')
-_EMBEDDED['aap_semantics.path_observation'] = ('work/src/aap_semantics/path_observation.py', False, r'''"""Read-only stat-success observations. No host filesystem adapter is installed."""
+_MANIFEST['aap_semantics.path_observation'] = ('tests/src/aap_semantics/path_observation.py', False, '495f73e8b2f49060ee541d396f663ad30df8471bd1119dc55c3565184c29c5ba')
+_EMBEDDED['aap_semantics.path_observation'] = ('tests/src/aap_semantics/path_observation.py', False, r'''"""Read-only stat-success observations. No host filesystem adapter is installed."""
 import posixpath
 
 from .diagnostics import SemanticError, Unsupported
@@ -4522,8 +4522,8 @@ class PathObservationRuntime(object):
         return observation.status == 'EXISTS'
 ''')
 
-_MANIFEST['aap_semantics.persistence'] = ('work/src/aap_semantics/persistence.py', False, 'e659e4462e60d5717e537d2a040e5e418326a30aeaab1adf8468c2cb83275dfc')
-_EMBEDDED['aap_semantics.persistence'] = ('work/src/aap_semantics/persistence.py', False, r'''"""Decoded persistent observations, distinct from per-run successful updates.
+_MANIFEST['aap_semantics.persistence'] = ('tests/src/aap_semantics/persistence.py', False, 'e659e4462e60d5717e537d2a040e5e418326a30aeaab1adf8468c2cb83275dfc')
+_EMBEDDED['aap_semantics.persistence'] = ('tests/src/aap_semantics/persistence.py', False, r'''"""Decoded persistent observations, distinct from per-run successful updates.
 
 Sign._sign_upd_sign accumulates changes; Main flushes them even on later error.
 No host sign-file serializer or recipe filesystem operation is provided here.
@@ -4661,8 +4661,8 @@ class InvocationObservations(TargetStateBackend):
         return tuple(self.pending[name] for name in self.order)
 ''')
 
-_MANIFEST['aap_semantics.planner'] = ('work/src/aap_semantics/planner.py', False, 'd1249e691447b7c76aacffbe842c10b2a3c484e1e18f0b04a462666327b9f73e')
-_EMBEDDED['aap_semantics.planner'] = ('work/src/aap_semantics/planner.py', False, r'''"""Explicit-graph update planning. No executor, rule matcher or host I/O.
+_MANIFEST['aap_semantics.planner'] = ('tests/src/aap_semantics/planner.py', False, 'd1249e691447b7c76aacffbe842c10b2a3c484e1e18f0b04a462666327b9f73e')
+_EMBEDDED['aap_semantics.planner'] = ('tests/src/aap_semantics/planner.py', False, r'''"""Explicit-graph update planning. No executor, rule matcher or host I/O.
 
 Plans describe a successful-execution path through the registered graph.
 After a possible body effect, file decisions are rechecks, not predictions
@@ -5118,8 +5118,8 @@ class UpdatePlanner(object):
         return self._finish(node, status, reason, relations, bodies, after)
 ''')
 
-_MANIFEST['aap_semantics.port_commands'] = ('work/src/aap_semantics/port_commands.py', False, '6422472ff3ee3a62e7eb36dd5c19fb652041a10de3bae04f41d0388b412a78dd')
-_EMBEDDED['aap_semantics.port_commands'] = ('work/src/aap_semantics/port_commands.py', False, r'''"""Port.port_exe_cmd -> logged_system, distinct from Commands.aap_shell.
+_MANIFEST['aap_semantics.port_commands'] = ('tests/src/aap_semantics/port_commands.py', False, '6422472ff3ee3a62e7eb36dd5c19fb652041a10de3bae04f41d0388b412a78dd')
+_EMBEDDED['aap_semantics.port_commands'] = ('tests/src/aap_semantics/port_commands.py', False, r'''"""Port.port_exe_cmd -> logged_system, distinct from Commands.aap_shell.
 
 Only explicit unlogged synchronous requests; no host launcher or directory
 mutation. The trusted ProcessBackend interprets the exact opaque shell string.
@@ -5319,8 +5319,8 @@ class PortCommandRuntime(object):
         record.status, record.reason = 'COMPLETED', 'port_shell_success'
 ''')
 
-_MANIFEST['aap_semantics.port_defaults'] = ('work/src/aap_semantics/port_defaults.py', False, '98c08ccd6a7fbb409c56f8ceb830d5c1571744e2bac138d6fe0fa30a232a841e')
-_EMBEDDED['aap_semantics.port_defaults'] = ('work/src/aap_semantics/port_defaults.py', False, r'''"""Archive-port default declarations from Port.add_port_defaults/add_port_dep.
+_MANIFEST['aap_semantics.port_defaults'] = ('tests/src/aap_semantics/port_defaults.py', False, '98c08ccd6a7fbb409c56f8ceb830d5c1571744e2bac138d6fe0fa30a232a841e')
+_EMBEDDED['aap_semantics.port_defaults'] = ('tests/src/aap_semantics/port_defaults.py', False, r'''"""Archive-port default declarations from Port.add_port_defaults/add_port_dep.
 
 Generated commands remain ordinary opaque recipe bodies. In particular this
 module does not implement :update, :mkdir, :touch or any port_* Python helper.
@@ -5412,8 +5412,8 @@ class PortDefaults(object):
             scope.store('WRKSRC', name + '-' + version, self)
 ''')
 
-_MANIFEST['aap_semantics.port_delete'] = ('work/src/aap_semantics/port_delete.py', False, '8010f6b9730fd503909df7c3c3aca748594859b73ab2b6c02d0de5a3641c93af')
-_EMBEDDED['aap_semantics.port_delete'] = ('work/src/aap_semantics/port_delete.py', False, r'''"""Injected tree deletion for the bounded Port.clean/distclean helpers.
+_MANIFEST['aap_semantics.port_delete'] = ('tests/src/aap_semantics/port_delete.py', False, '8010f6b9730fd503909df7c3c3aca748594859b73ab2b6c02d0de5a3641c93af')
+_EMBEDDED['aap_semantics.port_delete'] = ('tests/src/aap_semantics/port_delete.py', False, r'''"""Injected tree deletion for the bounded Port.clean/distclean helpers.
 
 The semantic runtime never performs host deletion. The memory adapter uses
 explicit entries and missing facts; unknown paths remain unavailable.
@@ -5521,8 +5521,8 @@ class MemoryDeleteBackend(DeleteBackend, PathObserver):
         return DeleteResult('COMPLETED')
 ''')
 
-_MANIFEST['aap_semantics.port_makesum'] = ('work/src/aap_semantics/port_makesum.py', False, '83d314401356543aa6d5ab8311354f358d17a99bfeba5db45c357e59b180c1da')
-_EMBEDDED['aap_semantics.port_makesum'] = ('work/src/aap_semantics/port_makesum.py', False, r'''"""Linux Port.py:248-380 semantics, including unreachable restoration code."""
+_MANIFEST['aap_semantics.port_makesum'] = ('tests/src/aap_semantics/port_makesum.py', False, '83d314401356543aa6d5ab8311354f358d17a99bfeba5db45c357e59b180c1da')
+_EMBEDDED['aap_semantics.port_makesum'] = ('tests/src/aap_semantics/port_makesum.py', False, r'''"""Linux Port.py:248-380 semantics, including unreachable restoration code."""
 import posixpath
 
 from .checksum import ChecksumBackend, ChecksumRequest, ArtifactBackend
@@ -5706,8 +5706,8 @@ class _RecipeEditor(object):
         self.try_delete(temp)
 ''')
 
-_MANIFEST['aap_semantics.port_runtime'] = ('work/src/aap_semantics/port_runtime.py', False, 'f75fd2fcb062466cdaf3e36484c8f8dc497012a1d58d0e9c126c7eeb4523acd1')
-_EMBEDDED['aap_semantics.port_runtime'] = ('work/src/aap_semantics/port_runtime.py', False, r'''"""Archive-port preparation and bounded done-marker effects via capabilities.
+_MANIFEST['aap_semantics.port_runtime'] = ('tests/src/aap_semantics/port_runtime.py', False, 'f75fd2fcb062466cdaf3e36484c8f8dc497012a1d58d0e9c126c7eeb4523acd1')
+_EMBEDDED['aap_semantics.port_runtime'] = ('tests/src/aap_semantics/port_runtime.py', False, r'''"""Archive-port preparation and bounded done-marker effects via capabilities.
 
 Port.port_fetch and Commands.aap_mkdir/aap_touch are the evidence. This module
 never downloads or opens a host file. Actions re-enter the ordinary evaluator;
@@ -6286,8 +6286,8 @@ class PortRuntime(object):
             raise SemanticError(record, 'port operation failed: ' + str(error))
 ''')
 
-_MANIFEST['aap_semantics.process'] = ('work/src/aap_semantics/process.py', False, '1f60c40be4e462e4c3e1a2d3bfedc2c89f0607f60affcbde2abf38e09df56338')
-_EMBEDDED['aap_semantics.process'] = ('work/src/aap_semantics/process.py', False, r'''"""POSIX capture semantics behind an injected backend. No host launcher."""
+_MANIFEST['aap_semantics.process'] = ('tests/src/aap_semantics/process.py', False, '1f60c40be4e462e4c3e1a2d3bfedc2c89f0607f60affcbde2abf38e09df56338')
+_EMBEDDED['aap_semantics.process'] = ('tests/src/aap_semantics/process.py', False, r'''"""POSIX capture semantics behind an injected backend. No host launcher."""
 import posixpath
 import string
 
@@ -6480,8 +6480,8 @@ class ProcessRuntime(object):
         return ProcessRecord(node, pipeline, request, result, output)
 ''')
 
-_MANIFEST['aap_semantics.python_eval'] = ('work/src/aap_semantics/python_eval.py', False, '398967349372a93609acc2486e5177f8354cbf424177303b0a38b24fb9d0a4e3')
-_EMBEDDED['aap_semantics.python_eval'] = ('work/src/aap_semantics/python_eval.py', False, r'''"""Explicit Python AST interpretation over closed metadata values."""
+_MANIFEST['aap_semantics.python_eval'] = ('tests/src/aap_semantics/python_eval.py', False, '398967349372a93609acc2486e5177f8354cbf424177303b0a38b24fb9d0a4e3')
+_EMBEDDED['aap_semantics.python_eval'] = ('tests/src/aap_semantics/python_eval.py', False, r'''"""Explicit Python AST interpretation over closed metadata values."""
 import ast
 import io
 import tokenize
@@ -6780,8 +6780,8 @@ class PythonEvaluator(object):
         return value
 ''')
 
-_MANIFEST['aap_semantics.python_shell'] = ('work/src/aap_semantics/python_shell.py', False, '2ec5f35e08b776abaee4a41837696996e783dc470a9e9b82e0c63cebc5a65648')
-_EMBEDDED['aap_semantics.python_shell'] = ('work/src/aap_semantics/python_shell.py', False, r'''"""The audited shellheader/shellfooter :python form, with injected byte writes.
+_MANIFEST['aap_semantics.python_shell'] = ('tests/src/aap_semantics/python_shell.py', False, '2ec5f35e08b776abaee4a41837696996e783dc470a9e9b82e0c63cebc5a65648')
+_EMBEDDED['aap_semantics.python_shell'] = ('tests/src/aap_semantics/python_shell.py', False, r'''"""The audited shellheader/shellfooter :python form, with injected byte writes.
 
 Process.get_block_lines historically inserts the block into the same Python
 dictionary used by @ statements. This interpreter keeps that scope and uses
@@ -6987,8 +6987,8 @@ class ShellBlockRuntime(object):
                 raise Unsupported(origin, 'unsupported shell Python statement: ' + kind)
 ''')
 
-_MANIFEST['aap_semantics.recipe_mutation'] = ('work/src/aap_semantics/recipe_mutation.py', False, '81453b69f3dd23cf4959db4dd8095f9b9cbeb70fcba7c552d0d8e30d8008490a')
-_EMBEDDED['aap_semantics.recipe_mutation'] = ('work/src/aap_semantics/recipe_mutation.py', False, r'''"""Narrow byte-stream and file-name capabilities for Port.port_makesum.
+_MANIFEST['aap_semantics.recipe_mutation'] = ('tests/src/aap_semantics/recipe_mutation.py', False, '81453b69f3dd23cf4959db4dd8095f9b9cbeb70fcba7c552d0d8e30d8008490a')
+_EMBEDDED['aap_semantics.recipe_mutation'] = ('tests/src/aap_semantics/recipe_mutation.py', False, r'''"""Narrow byte-stream and file-name capabilities for Port.port_makesum.
 
 No host adapter. Open/read/write/close remain separate so failure timing and
 partial temporary-file contents are observable. No transaction or rollback.
@@ -7089,8 +7089,8 @@ class MemoryRecipeMutationBackend(RecipeMutationBackend, PathObserver):
         return RecipeMutationResult()
 ''')
 
-_MANIFEST['aap_semantics.scopes'] = ('work/src/aap_semantics/scopes.py', False, '96ee8eec158d85ed405cc620113ac8ec7cc6f39e6943b522b4ab3d18be2c6a35')
-_EMBEDDED['aap_semantics.scopes'] = ('work/src/aap_semantics/scopes.py', False, r'''"""Explicit recipe/build lookup layers, never host Python lexical scope."""
+_MANIFEST['aap_semantics.scopes'] = ('tests/src/aap_semantics/scopes.py', False, '96ee8eec158d85ed405cc620113ac8ec7cc6f39e6943b522b4ab3d18be2c6a35')
+_EMBEDDED['aap_semantics.scopes'] = ('tests/src/aap_semantics/scopes.py', False, r'''"""Explicit recipe/build lookup layers, never host Python lexical scope."""
 import string
 
 from .diagnostics import SemanticError, UndefinedName, Unsupported
@@ -7267,8 +7267,8 @@ class Scope(object):
         return value
 ''')
 
-_MANIFEST['aap_semantics.system_process'] = ('work/src/aap_semantics/system_process.py', False, 'a7b07fc3cf99d518422061eca689edfad707b2a1bdc5d4a0eec42db527cfb99c')
-_EMBEDDED['aap_semantics.system_process'] = ('work/src/aap_semantics/system_process.py', False, r'''"""Bounded synchronous :sys: plain shell forms and reached f/q/l attributes.
+_MANIFEST['aap_semantics.system_process'] = ('tests/src/aap_semantics/system_process.py', False, 'a7b07fc3cf99d518422061eca689edfad707b2a1bdc5d4a0eec42db527cfb99c')
+_EMBEDDED['aap_semantics.system_process'] = ('tests/src/aap_semantics/system_process.py', False, r'''"""Bounded synchronous :sys: plain shell forms and reached f/q/l attributes.
 
 Adjacent plain sys entries form one newline-separated unlogged shell request.
 Literal source force flags split that batch; logged execution stays in the
@@ -7787,8 +7787,8 @@ def execute_system(runtime, node, scope, python, cwd, records, nodes=None):
         raise record.error
 ''')
 
-_MANIFEST['aap_semantics.target_state'] = ('work/src/aap_semantics/target_state.py', False, '0b075614cca713b51b79a046f104f5c2627ceb3c0189ce4478af1635e76ed0af')
-_EMBEDDED['aap_semantics.target_state'] = ('work/src/aap_semantics/target_state.py', False, r'''"""Read-only observations for planning, independent of the host filesystem.
+_MANIFEST['aap_semantics.target_state'] = ('tests/src/aap_semantics/target_state.py', False, '0b075614cca713b51b79a046f104f5c2627ceb3c0189ce4478af1635e76ed0af')
+_EMBEDDED['aap_semantics.target_state'] = ('tests/src/aap_semantics/target_state.py', False, r'''"""Read-only observations for planning, independent of the host filesystem.
 
 Signature strings are historical observations, not hashes invented by the
 planner. None means unavailable; an empty stored signature means absent.
@@ -7899,8 +7899,8 @@ class MemoryTargetState(TargetStateBackend):
         return self.rules.get(node.identity, False)
 ''')
 
-_MANIFEST['aap_semantics.tree_runtime'] = ('work/src/aap_semantics/tree_runtime.py', False, '3ebfc9f7743572bcaf0e17e55a16cb833ae3ce901ef20b464b81252b30d8cb90')
-_EMBEDDED['aap_semantics.tree_runtime'] = ('work/src/aap_semantics/tree_runtime.py', False, r'''"""Bounded Linux :tree traversal over explicit directory observations."""
+_MANIFEST['aap_semantics.tree_runtime'] = ('tests/src/aap_semantics/tree_runtime.py', False, '3ebfc9f7743572bcaf0e17e55a16cb833ae3ce901ef20b464b81252b30d8cb90')
+_EMBEDDED['aap_semantics.tree_runtime'] = ('tests/src/aap_semantics/tree_runtime.py', False, r'''"""Bounded Linux :tree traversal over explicit directory observations."""
 import posixpath
 import re
 
@@ -8060,8 +8060,8 @@ class TreeRuntime(object):
                 evaluator.scope.store('name', previous, node)
 ''')
 
-_MANIFEST['aap_semantics.values'] = ('work/src/aap_semantics/values.py', False, '648951eaf5fb5f695ab0d788795ea725c99182d3b6d38980a80485669bb617fa')
-_EMBEDDED['aap_semantics.values'] = ('work/src/aap_semantics/values.py', False, r'''"""Closed metadata value domain and characterized A-A-P conversions."""
+_MANIFEST['aap_semantics.values'] = ('tests/src/aap_semantics/values.py', False, '648951eaf5fb5f695ab0d788795ea725c99182d3b6d38980a80485669bb617fa')
+_EMBEDDED['aap_semantics.values'] = ('tests/src/aap_semantics/values.py', False, r'''"""Closed metadata value domain and characterized A-A-P conversions."""
 from .diagnostics import SemanticError, Unsupported
 
 
@@ -8200,8 +8200,8 @@ def var2list(value, origin):
     return result
 ''')
 
-_MANIFEST['aap_semantics.work'] = ('work/src/aap_semantics/work.py', False, 'ad7900c7f030dc9f2d2d08603b5bb1b3f912646437f71177046bcf4d4f34e218')
-_EMBEDDED['aap_semantics.work'] = ('work/src/aap_semantics/work.py', False, r'''"""Interpreter-owned Work identity, separate from source IDs and recipe values."""
+_MANIFEST['aap_semantics.work'] = ('tests/src/aap_semantics/work.py', False, 'ad7900c7f030dc9f2d2d08603b5bb1b3f912646437f71177046bcf4d4f34e218')
+_EMBEDDED['aap_semantics.work'] = ('tests/src/aap_semantics/work.py', False, r'''"""Interpreter-owned Work identity, separate from source IDs and recipe values."""
 
 
 class WorkIdentity(object):
@@ -8215,8 +8215,8 @@ class WorkIdentity(object):
         self.top_recipe = top_recipe
 ''')
 
-_MANIFEST['output_adapter'] = ('work/docker/recursive-aap/output_adapter.py', False, 'c6851ee9d97b7c96267f8966172819f508bbafe62e5c527d99ab0b8e167a8e02')
-_EMBEDDED['output_adapter'] = ('work/docker/recursive-aap/output_adapter.py', False, r'''"""Real byte-output capability for disposable local integration adapters."""
+_MANIFEST['output_adapter'] = ('tests/adapters/output_adapter.py', False, 'c6851ee9d97b7c96267f8966172819f508bbafe62e5c527d99ab0b8e167a8e02')
+_EMBEDDED['output_adapter'] = ('tests/adapters/output_adapter.py', False, r'''"""Real byte-output capability for disposable local integration adapters."""
 from __future__ import print_function
 
 import binascii
@@ -8372,8 +8372,8 @@ class LocalByteWriter(object):
         return LocalByteSession(stream, path, mode, self._record)
 ''')
 
-_MANIFEST['fetch_adapter'] = ('work/docker/recursive-aap/fetch_adapter.py', False, '27d0c4c0763c7a5a384f47981a2d5b32cb5e7076b596e128e2cd6eaaf6f70508')
-_EMBEDDED['fetch_adapter'] = ('work/docker/recursive-aap/fetch_adapter.py', False, r'''"""Real byte acquisition adapter for the bounded port fetch capability."""
+_MANIFEST['fetch_adapter'] = ('tests/adapters/fetch_adapter.py', False, '27d0c4c0763c7a5a384f47981a2d5b32cb5e7076b596e128e2cd6eaaf6f70508')
+_EMBEDDED['fetch_adapter'] = ('tests/adapters/fetch_adapter.py', False, r'''"""Real byte acquisition adapter for the bounded port fetch capability."""
 from __future__ import print_function
 
 import hashlib
@@ -8508,8 +8508,8 @@ class LocalFetchBackend(FetchBackend):
         return result
 ''')
 
-_MANIFEST['process_adapter'] = ('work/docker/recursive-aap/process_adapter.py', False, '4d76b569a62419cfd7386e7a7aca97cf1f3fe8e152b9bdfdc35ba0977786ef19')
-_EMBEDDED['process_adapter'] = ('work/docker/recursive-aap/process_adapter.py', False, r'''"""Real POSIX process execution for the bounded A-A-P process requests."""
+_MANIFEST['process_adapter'] = ('tests/adapters/process_adapter.py', False, '4d76b569a62419cfd7386e7a7aca97cf1f3fe8e152b9bdfdc35ba0977786ef19')
+_EMBEDDED['process_adapter'] = ('tests/adapters/process_adapter.py', False, r'''"""Real POSIX process execution for the bounded A-A-P process requests."""
 from __future__ import print_function
 
 import os
@@ -8583,8 +8583,8 @@ class PosixProcessBackend(ProcessBackend):
                 os.unlink(status_path)
 ''')
 
-_MANIFEST['process_tracing'] = ('work/docker/recursive-aap/process_tracing.py', False, '447ecac3e1c2f981afe1526a71530f5fb15174c68ce8794e7cab143e42be5c14')
-_EMBEDDED['process_tracing'] = ('work/docker/recursive-aap/process_tracing.py', False, r'''"""Read-only integration evidence around an injected process backend."""
+_MANIFEST['process_tracing'] = ('tests/adapters/process_tracing.py', False, '447ecac3e1c2f981afe1526a71530f5fb15174c68ce8794e7cab143e42be5c14')
+_EMBEDDED['process_tracing'] = ('tests/adapters/process_tracing.py', False, r'''"""Read-only integration evidence around an injected process backend."""
 from __future__ import print_function
 
 import hashlib
@@ -8783,8 +8783,8 @@ class TracingProcessBackend(ProcessBackend):
         return result
 ''')
 
-_MANIFEST['host_filesystem'] = ('work/docker/recursive-aap/host_filesystem.py', False, '17c8576a952717e6ba55cebe3c8d600cb37777dd07df122795a2f51ce1773ff4')
-_EMBEDDED['host_filesystem'] = ('work/docker/recursive-aap/host_filesystem.py', False, r'''"""Real host filesystem capabilities for the integration CLI."""
+_MANIFEST['host_filesystem'] = ('tests/adapters/host_filesystem.py', False, '17c8576a952717e6ba55cebe3c8d600cb37777dd07df122795a2f51ce1773ff4')
+_EMBEDDED['host_filesystem'] = ('tests/adapters/host_filesystem.py', False, r'''"""Real host filesystem capabilities for the integration CLI."""
 from __future__ import print_function
 
 import hashlib
@@ -9055,8 +9055,8 @@ class HostState(TargetStateBackend):
 
 ''')
 
-_MANIFEST['host_persistence'] = ('work/docker/recursive-aap/host_persistence.py', False, 'adfaabd4c3ed0641a3cf0842ceacdb453deae2011523b6f3d1e25c1127d8e529')
-_EMBEDDED['host_persistence'] = ('work/docker/recursive-aap/host_persistence.py', False, r'''"""Real JSON signature persistence for the integration CLI."""
+_MANIFEST['host_persistence'] = ('tests/adapters/host_persistence.py', False, 'adfaabd4c3ed0641a3cf0842ceacdb453deae2011523b6f3d1e25c1127d8e529')
+_EMBEDDED['host_persistence'] = ('tests/adapters/host_persistence.py', False, r'''"""Real JSON signature persistence for the integration CLI."""
 from __future__ import print_function
 
 import json
@@ -9123,8 +9123,8 @@ class DiskPersistence(PersistenceBackend):
 
 ''')
 
-_MANIFEST['integration_evidence'] = ('work/docker/recursive-aap/integration_evidence.py', False, '19dc0409ba150e724ee101f2bc83fdf40f291e2c096d8f929b92498129e1935d')
-_EMBEDDED['integration_evidence'] = ('work/docker/recursive-aap/integration_evidence.py', False, r'''"""Structured trace and summary serializers for real integration."""
+_MANIFEST['integration_evidence'] = ('tests/adapters/integration_evidence.py', False, '19dc0409ba150e724ee101f2bc83fdf40f291e2c096d8f929b92498129e1935d')
+_EMBEDDED['integration_evidence'] = ('tests/adapters/integration_evidence.py', False, r'''"""Structured trace and summary serializers for real integration."""
 from __future__ import print_function
 
 import binascii
@@ -9381,8 +9381,8 @@ def python_write_records(result):
     return records
 ''')
 
-_MANIFEST['runtime_factory'] = ('work/docker/recursive-aap/runtime_factory.py', False, '07d6ab80ccb4748a2b450ac1a5a0e459cac2d2373614f244ab4357403a9d7bb2')
-_EMBEDDED['runtime_factory'] = ('work/docker/recursive-aap/runtime_factory.py', False, r'''"""Compose real host capabilities for one external A-A-P invocation."""
+_MANIFEST['runtime_factory'] = ('tests/adapters/runtime_factory.py', False, '07d6ab80ccb4748a2b450ac1a5a0e459cac2d2373614f244ab4357403a9d7bb2')
+_EMBEDDED['runtime_factory'] = ('tests/adapters/runtime_factory.py', False, r'''"""Compose real host capabilities for one external A-A-P invocation."""
 from __future__ import print_function
 
 import os
@@ -9448,8 +9448,8 @@ def create_runtime(cwd, environment, record, scope):
                            HostState(), DiskPersistence(cwd, record))
 ''')
 
-_MANIFEST['__main__'] = ('work/docker/recursive-aap/aap_cli.py', False, '9d7ff5bcea4f23647594848142d0ca3516e57d2330ddc4671f5ead7763664b1e')
-_EMBEDDED['__main__'] = ('work/docker/recursive-aap/aap_cli.py', False, r'''#!/usr/bin/env python3
+_MANIFEST['__main__'] = ('tests/adapters/aap_cli.py', False, '9d7ff5bcea4f23647594848142d0ca3516e57d2330ddc4671f5ead7763664b1e')
+_EMBEDDED['__main__'] = ('tests/adapters/aap_cli.py', False, r'''#!/usr/bin/env python3
 """Disposable generic CLI adapter for real recursive A-A-P integration.
 
 The adapter deliberately discovers ``main.aap`` from the process cwd.  It is

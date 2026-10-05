@@ -1,0 +1,3 @@
+VALUE = root
+:include include-child.aap
+VALUE += final
