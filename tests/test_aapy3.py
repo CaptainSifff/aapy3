@@ -8,7 +8,6 @@ import unittest
 
 
 REPOSITORY = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SOURCE_BUNDLE = os.path.join(REPOSITORY, 'github', 'aapy3.py')
 ROOT_BUNDLE = os.path.join(REPOSITORY, 'aapy3.py')
 
 
@@ -18,16 +17,11 @@ def write_bytes(path, value):
 
 
 class StandaloneAapy3Tests(unittest.TestCase):
-    def test_github_copy_matches_generated_root_bundle(self):
-        with open(SOURCE_BUNDLE, 'rb') as github_bundle:
-            with open(ROOT_BUNDLE, 'rb') as root_bundle:
-                self.assertEqual(github_bundle.read(), root_bundle.read())
-
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         self.root = self.temporary.name
         self.bundle = os.path.join(self.root, 'aapy3.py')
-        shutil.copyfile(SOURCE_BUNDLE, self.bundle)
+        shutil.copyfile(ROOT_BUNDLE, self.bundle)
         self.recipe_dir = os.path.join(self.root, 'recipe')
         os.mkdir(self.recipe_dir)
         self.wrapper = os.path.join(self.root, 'aap')

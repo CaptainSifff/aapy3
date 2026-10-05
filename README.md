@@ -16,13 +16,11 @@ the checked-in bundle with:
 python3 work/tools/build_standalone.py
 ```
 
-Run all included tests from the repository root with:
+Run all frontend and semantic tests together from the repository root with:
 
 ```sh
-PYTHONPATH=work/src python3 -m unittest discover \
-  -s work/tests/frontend -p 'test*.py' -v
 PYTHONPATH=work/src:work/tests/semantics:work/docker/recursive-aap \
-  python3 -m unittest discover -s work/tests/semantics -p 'test*.py' -v
+  python3 -m unittest discover -s work/tests -p 'test*.py' -v
 python3 work/docker/recursive-aap/test_cli_stdout.py
 python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
