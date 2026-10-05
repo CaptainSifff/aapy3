@@ -1,0 +1,44 @@
+
+AAPVERSION =	1.0
+
+# leise sein
+MESSAGE =	error
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+
+# alles paketieren
+packageall:
+	:tree . { filename = main.aap }
+		@dir = os.path.dirname(name)
+		@if dir != '.':
+			:cd $dir
+			:sys $AAP package
+			:sys $AAP distclean
+			:cd -
+
+# temporäre Dateien abräumen
+cleanall:
+	:tree . { filename = main.aap }
+		@dir = os.path.dirname(name)
+		@if dir != '.':
+			:cd $dir
+			:sys $AAP clean
+			:cd -
+
+# alles abräumen
+distcleanall:
+	:tree . { filename = main.aap }
+		@dir = os.path.dirname(name)
+		@if dir != '.':
+			:cd $dir
+			:sys $AAP distclean
+			:cd -
+
+# zu jedem Port eine Beschreibung ausgeben
+index:
+	:tree . { filename = main.aap }
+		@dir = os.path.dirname(name)
+		@if dir != '.':
+			:cd $dir
+			:sys $AAP IndexEntry
+			:cd -

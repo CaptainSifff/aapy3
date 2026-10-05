@@ -1,0 +1,798 @@
+# local store of archives
+@if "Linux" in _no.OSNAME:
+	ARCHIV =	/export/company/distfiles
+@else:
+	ARCHIV =	/spdata/Archiv/ports/distfiles
+
+# patches are kept within the port recipe itself
+PATCH_SITES =	file://files
+# AIX does not like a -p without a number
+# on the patch command line
+PATCHCMD =	patch -f -p 0 <
+
+:filetype
+	suffix tar.Z tarZ
+	suffix xz xz
+
+:action extract tarZ
+	:sys compress -dc $source | tar xf -
+
+:action extract xz 
+	:sys xz -dc $source | tar xf -
+
+# Standard tar does not understand 'xzf'
+# to extract commpressed files.
+:action extract targz
+	:sys gzip -dc $source | tar xf -
+
+:action extract tarbz2
+	:sys bzip2 -dc $source | tar xf -
+
+# local directory for 3rd party software
+PREFIX =	/usr/local
+
+# Ablageverzeichnis für LPPs
+LPPBASE =	/spdata/Archiv/tools.company
+# Ablageverzeichnis für RPMs
+RPMBASE =	/export/company
+
+
+@if "AIX" in _no.OSNAME:
+        PREFIX =        /opt/local
+        DISTRO =        none
+
+#Use "getdistro -v" to detect the Distribution of the system.
+:syseval /usr/local/nacharbeiten/na_bin/getdistro -v | :assign rel
+:syseval /usr/local/nacharbeiten/na_bin/getdistro | :assign rel2
+:syseval /usr/local/nacharbeiten/na_bin/getdistro -vv | :assign relvv
+
+YUMCLEAN = yum clean all
+@if string.find(rel2, "centos") >= 0:
+	DISTRO =	centos
+	RPMINSTALL =	yum install --nogpgcheck -y
+	CLEARCACHE =	$(YUMCLEAN)
+        INITSCR =       /usr/local/etc/rc.d/scripts
+	@if string.find(rel, "centos6") >= 0:
+		RPMBASE =	/export/company/CentOS6
+        @elif string.find(rel, "centos7") >= 0:
+                RPMBASE =       /export/company/CentOS7
+@elif string.find(rel2, "Oracle") >= 0:
+	DISTRO =	Oracle	
+	RPMINSTALL =	yum install --nogpgcheck -y
+	CLEARCACHE =	$(YUMCLEAN)
+        INITSCR =       /usr/local/etc/rc.d/scripts
+	RPMBASE =	/export/company/Oracle8
+@elif string.find(rel2, "Stream") >= 0:
+	DISTRO =	Stream
+	RPMINSTALL =	yum install --nogpgcheck -y
+	CLEARCACHE =	$(YUMCLEAN)
+        INITSCR =       /usr/local/etc/rc.d/scripts
+	RPMBASE =	/export/company/Stream
+@elif string.find(rel2, "suse") >= 0:
+	DISTRO =	suse
+	RPMINSTALL =	zypper --non-interactive --no-gpg-checks install
+	INITSCR =	/usr/local/etc/rc.d/scripts
+	CLEARCACHE =	zypper clean --all
+	@if string.find(rel, "SUSE15") >= 0:
+		OSMJR =		15
+		RPMBASE =	/export/company/SLES15
+		@if relvv == 'SUSE 15 6':
+			RPMBASE =	/export/company/SLES15SP6
+		@elif relvv == 'SUSE 15 7':
+			RPMBASE =	/export/company/SLES15SP7
+	@elif string.find(rel, "SUSE12") >= 0:
+		OSMJR =		12
+		RPMBASE =	/export/company/SLES12
+		INITSCR =	/etc/init.d/scripts
+
+# Directory for post_i from RPMs
+IPATH = /usr/local/companyrpmlib
+
+# commands
+MKDIR =		mkdir -p
+
+# define vars if the are undefined    
+s_global.PreScript    ?= 
+s_global.PostScript   ?= 
+s_global.UnpostScript ?= 
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# Varianten
+
+# Pakete, die andere Pakete enthalten
+:variant BOXED
+	NO
+		:pass
+	YES
+		LXVER ?= noarch
+		ARCH = BuildArch:	noarch
+		AIXVER ?= none
+		BUILDCMD =	true
+		TESTCMD =	true
+		INSTALLCMD =	true
+		WRKSRC =	.
+
+AIXVER ?=	AIX5.2
+:variant AIXVER
+	none
+		LPPDIR = $LPPBASE/none
+	AIX4
+		LPPDIR = $LPPBASE/aix4
+	AIX5
+		LPPDIR = $LPPBASE/aix5
+	AIX5.64
+		LPPDIR = $LPPBASE/aix5-64
+	AIX5.2
+		LPPDIR = $LPPBASE/aix5.2
+ 	AIX5.3
+                LPPDIR = $LPPBASE/aix5.3
+	AIX6.1
+		LPPDIR = $LPPBASE/aix6.1
+        AIX7.1
+                LPPDIR = $LPPBASE/aix7.1
+ 	addons
+                LPPDIR = $LPPBASE/addons
+ 	test
+                LPPDIR = $LPPBASE/test
+
+LXVER ?=	noarch
+:variant LXVER
+	noarch
+		RPMDIR = $RPMBASE/bsus
+		ARCH = BuildArch:	noarch
+ 	arch
+		RPMDIR = $RPMBASE/bsus
+		ARCH = 
+ 	test
+		RPMDIR = $RPMBASE/test
+		ARCH = BuildArch:	noarch
+	3psw 
+		RPMDIR = $RPMBASE/3psw
+                ARCH = BuildArch:       noarch
+	3psw_x86
+		RPMDIR = $RPMBASE/3psw
+                ARCH = 
+
+
+# spezielle Einstellungen für Perl-Module
+:variant PERLMODUL
+	NO
+		:pass
+	YES
+                @p1=os.path.basename(os.path.abspath(os.path.curdir))
+                @p2=os.path.basename(os.path.dirname(p1))
+                :system {f}{q}{l} egrep $p2/$p1 ../../p5mod
+                @if sysresult:
+                        :print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                        :print "X Bitte das Modul vorher in p5mod eintragen X"
+                        :print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                        :exit 2
+		BUILDCMD =	$PREFIX/bin/perl Makefile.PL && make
+		TESTCMD =	make test
+		INSTALLCMD =	make DESTDIR=$PKGDIR install
+		@if "AIX" in _no.OSNAME:
+			DEPENDS +=	lang/perl
+		@else:
+			BR_REQUIRES +=	lang/perl
+		ARCHIV =	$ARCHIV/perlmod
+
+
+# spezielle Einstellungen für Python3 Module
+:variant PY3MOD
+  NO
+    :pass
+  YES
+    BUILDCMD = true
+    TESTCMD = true
+    WRKSRC = .
+    PATCHDIR = .
+    PATCHFILE =
+    INSTALLCMD = /usr/local/bin/python3 -m pip install --no-index -f distfiles --no-build-isolation --root=$PKGDIR $PORTNAME
+    do-extract:
+          :mkdir work
+    do-build:
+          :pass
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# build an RPM
+
+rpmcp_x86: fetch
+	:sys cp $DISTDIR/* $RPMDIR
+	:sys createrepo --pretty $RPMDIR 
+
+rpmcp:  fetch
+        :sys cp $DISTDIR/* $RPMDIR/noarch
+        :sys createrepo --pretty $RPMDIR
+
+MKRPM =		/usr/bin/rpmbuild
+
+rpm: test fake-install {virtual} prep-rpm {virtual} chkpost {virtual} local-rpm {virtual} build-rpm {virtual}
+	:pass
+
+rpm-install: rpm rpminst 
+	:pass
+
+rpminst: 
+	:sys $(CLEARCACHE) && $RPMINSTALL $(RPMNAME)
+
+prep-rpm:
+	# rpm spec File erzeugen
+        file = $WRKDIR/${PORTNAME}.spec
+	:print >! $file %define __find_requires %{nil} 
+	:print >> $file %define __find_provides %{nil} 
+	:print >> $file %define _use_internal_dependency_generator %{nil}
+        :print >> $file 
+        :print >> $file Name:		$RPMNAME
+        :print >> $file Summary:	$PORTCOMMENT
+	:print >> $file Version:	`re.sub('-','_', var2string(_no.PORTVERSION))`
+        :print >> $file Release:	$RPMVERSION
+        :print >> $file License:	$PORTLICENSE
+        :print >> $file Vendor:		R+V	
+        :print >> $file Group:		$CATEGORIES
+        :print >> $file Packager:	$MAINTAINER
+	@if (_no.OBSOLETES):
+        	:print >> $file Obsoletes:	$OBSOLETES
+        :print >> $file $ARCH 
+        :print >> $file 
+        :print >> $file BuildRoot:	%buildroot/%{name}
+        :print >> $file 
+	# Bauabhaengigkeiten eintragen
+	@buildlist = []
+	@buildlist.extend(var2list(_no.BUILDREQUIRES))
+	@buildlist.extend(var2list(_no.BR_REQUIRES))
+	@buildreq = ""
+	@for d in buildlist:
+		:cd ../../$d
+		:syseval $AAP print-rpmreq | :assign buildreqline
+		:cd -
+		buildreq = $buildreq $buildreqline
+	# Bauabhaengigkeiten extern 
+	@buildextlist = []
+	@buildextlist.extend(var2list(_no.BUILDREQUIRES_EXT))
+	@buildextlist.extend(var2list(_no.BR_REQUIRES_EXT))
+	@for b in buildextlist:
+		buildreq = $buildreq $b
+	@if buildreq != "":	
+		:print >> $file 
+	@buildextlist = []
+	@buildlist = []
+	@buildreq = ""
+	# Laufzeitabhaengigkeiten aus dem AAP 
+	@reqlist = []
+	@reqlist.extend(var2list(_no.REQUIRES))
+	@reqlist.extend(var2list(_no.BR_REQUIRES))
+	@rpmreq = ""
+	@for d in reqlist:
+		:cd ../../$d
+		:syseval $AAP print-rpmreq | :assign rpmreqline
+		:cd -
+		rpmreq = $rpmreq $rpmreqline
+	# Laufzeitabhaengigkeiten extern 
+	@reqextlist = []
+	@reqextlist.extend(var2list(_no.REQUIRES_EXT))
+	@reqextlist.extend(var2list(_no.BR_REQUIRES_EXT))
+	@for e in reqextlist:
+		# i686 RPMs fuer das spec File umwandeln
+		@erpl = e.replace(".i686", "(x86-32)")
+		rpmreq = $rpmreq $erpl
+	@if rpmreq != "":	
+		:print >> $file Requires: $rpmreq
+	@reqextlist = []
+	@reqlist = []
+	@rpmreq = ""
+        :print >> $file 
+        :print >> $file %description 
+        :print >> $file	$PORTDESCR
+        :print >> $file 
+        :print >> $file %clean
+        :print >> $file true 
+        :print >> $file %files
+	# Metapakete ohne pack Verzeichnis, packen nix ein
+	@if (os.path.exists(var2string(_no.PKGDIR))):
+		:print >> $file %defattr(-, -, -)
+       		:print >> $file /*
+        :print >> $file 
+	@pm = var2string(_no.PERLMODUL)
+	@if (pm == 'YES'):
+		:execute {pass} main.aap doperlmod
+
+build-rpm:
+	# Erzeugte Funktionen fuer post_i, pre_i und unpost_i aufrufen
+	script = $WRKDIR/pre_i
+	@if (os.path.exists(var2string(script)) and var2string(s_global.PreScript) != ""):
+		:sys $AAP script=$script functions="$s_global.PreScript" shellfooter
+	# Eintrag %pre plus Fuktionen ins Spec-File schreiben
+        	file = $WRKDIR/${PORTNAME}.spec
+        	:print >> $file %pre
+        	:sys cat $script >> $file 
+        	:print >> $file 
+	script = $WRKDIR/post_i
+	@if (os.path.exists(var2string(script)) and var2string(s_global.PostScript) != ""):
+		:sys $AAP script=$script functions="$s_global.PostScript" shellfooter
+		:sys mkdir -p $PKGDIR$IPATH/  
+		:sys cp $script $PKGDIR$IPATH/$(RPMNAME)_post_i
+		:sys chmod +x $PKGDIR$IPATH/$(RPMNAME)_post_i
+	# Eintrag im Spec-File erzeugen
+        	file = $WRKDIR/${PORTNAME}.spec
+        	:print >> $file %post
+        	:print >> $file $IPATH/$(RPMNAME)_post_i
+        	:print >> $file 
+	script = $WRKDIR/unpost_i
+	@if (os.path.exists(var2string(script)) and var2string(s_global.UnpostScript) != ""):
+		:sys $AAP script=$script functions="$s_global.UnpostScript" shellfooter
+	# Eintrag %postun plus Fuktionen ins Spec-File schreiben
+        	file = $WRKDIR/${PORTNAME}.spec
+        	:print >> $file %postun
+        	:sys cat $script >> $file 
+        	:print >> $file 
+	# rpm erzeugen
+        :sys find $PKGDIR -name ".#*" | xargs rm -f
+	:sys $MKRPM -bb --nodeps --buildroot "$PKGDIR" --define "_rpmdir $RPMDIR" $WRKDIR/${PORTNAME}.spec
+	:sys createrepo --workers=6 --pretty $RPMDIR
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# RPM Abhängigkeitenn (suse)
+
+# wird zum Holen benötigt 
+FETCHREQUIRES ?=
+# wird zum Holen benötigt, ext. Abhaengigkeit
+FETCHREQUIRES_EXT ?=
+# wird zum Extrahieren benötigt 
+EXTRACTREQUIRES ?=
+# wird zum Extrahieren benötigt, ext. Abhaengigkeit
+EXTRACTREQUIRES_EXT ?=
+# wird zum Bauen benötigt 
+BUILDREQUIRES ?=
+# wird zum Bauen benötigt, ext. Abhaengigkeit
+BUILDREQUIRES_EXT ?=
+# wird zur Laufzeit benötigt 
+REQUIRES ?=
+# wird zur Laufzeit benötigt, ext. Abhaengigkeit
+REQUIRES_EXT ?=
+# Build/Run Requires wird zum Bau und zur Laufzeit benötigt 
+BR_REQUIRES ?=
+# Build/Run Requires wird zum Bau und zur Laufzeit benötigt, ext. Abhaengigkeit
+BR_REQUIRES_EXT ?=
+# RPMs, die ersetzt werden
+OBSOLETES ?=
+
+# rpmreq-Zeile für RPM ausgeben
+print-rpmreq:
+        :print $(RPMNAME) $(gt)= `re.sub('-','_', var2string(_no.PORTVERSION))`-$(RPMVERSION)
+
+# RPMNAME ausgeben
+print-rpmname:
+        :print $?RPMNAME 
+
+# Pfad yum RPM ausgeben
+print-rpmfile:
+	ADIR=noarch
+	@if (_no.LXVER == "arch"):
+		ADIR=x86_64
+        :print $(RPMDIR)/$(ADIR)/$(RPMNAME)-`re.sub('-','_', var2string(_no.PORTVERSION))`-$(RPMVERSION).$(ADIR).rpm
+
+print-deps:
+	@deps = []
+	@deps.extend(var2list(_no.FETCHREQUIRES))
+	@deps.extend(var2list(_no.EXTRACTREQUIRES))
+	@deps.extend(var2list(_no.BUILDREQUIRES))
+	@deps.extend(var2list(_no.BR_REQUIRES))
+	@deps.extend(var2list(_no.REQUIRES))
+	@for d in deps:
+		:cd ../../$d
+		:sys {q} $AAP print-deps
+		:print $d
+		:cd -
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# build an LPP
+BUILDLPP =	
+MKLPP =		
+LPPSCR =	post_i unpost_i pre_i
+
+@if "AIX" in _no.OSNAME:
+	BUILDLPP =	/opt/local/bin/buildlpp.ksh
+	MKLPP =		/opt/local/bin/mklpp
+
+do-package: fake-install prep-lpp chkpost local-lpp build-lpp
+
+prep-lpp:
+	:sys $BUILDLPP -n $LPPNAME -v $LPPVERSION -b $WRKDIR
+	# nach info-Dateien suchen
+	:execute {pass} main.aap chkinfo
+	# in Dateinamen ":" durch "_" ersetzen
+	:sys $AAP chkcolon
+	@pm = var2string(_no.PERLMODUL)
+	@if (pm == 'YES'):
+		:execute {pass} main.aap doperlmod
+	# virtuelles Root-Verzeichnis kopieren
+	:cd $WRKDIR/$LPPNAME
+	:sys cp -rhp $PKGDIR/* .
+	:cd -
+	# lpp_name erzeugen 1. Teil
+	file = $WRKDIR/$LPPNAME/lpp_name
+	:print >! $file 4 R I $LPPNAME $({)
+	:print >> $file $LPPNAME $(LPPVERSION).0000.0000 01 N U en_US $PORTNAME $PORTVERSION
+	:print >> $file [
+	@deplist = []
+	@deplist.extend(var2list(_no.DEPENDS))
+	@deplist.extend(var2list(_no.DEPEND_RUN))
+	@for d in deplist:
+		:cd ../../$d
+		:syseval $AAP print-prereq | :assign prereqline
+		:cd -
+		:print >> $file $prereqline
+	@deplist = []
+	@for prereqline in var2list(_no.DEPEND_EXT):
+		:print >> $file $prereqline
+	# lpp_name erzeugen 2. Teil
+	:print >> $file %
+	:print >> $file %
+	:print >> $file %
+	:print >> $file %
+	:print >> $file %
+	:print >> $file ]
+	:print >> $file $(})
+	# zu ersetzende LPPs
+	file = $WRKDIR/$LPPNAME/.info/$(LPPNAME).namelist
+	@for l in var2list(_no.REPLACE_LPP):
+		:print >> $file $l
+
+build-lpp:
+	# erzeugte Funktionen in post_i und unpost_i aufrufen
+	script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).post_i
+	@if (os.path.exists(var2string(script)) and var2string(s_global.PostScript) != ""):
+		:sys $AAP script=$script functions="$s_global.PostScript" shellfooter
+	script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).unpost_i
+	@if (os.path.exists(var2string(script)) and var2string(s_global.UnpostScript) != ""):
+		:sys $AAP script=$script functions="$s_global.UnpostScript" shellfooter
+	script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).pre_i
+	@if (os.path.exists(var2string(script)) and var2string(s_global.PreScript) != ""):
+		:sys $AAP script=$script functions="$s_global.PreScript" shellfooter
+	# das LPP erzeugen
+	:cd $WRKDIR/$LPPNAME
+	:sys $MKLPP -d $LPPDIR
+	:cd -
+	:sys /usr/sbin/inutoc $LPPDIR
+
+do-install:
+	:sys installp -awgXd $LPPDIR $LPPNAME
+
+do-uninstall:
+	:sys installp -u $LPPNAME
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# Abhängigkeiten
+
+DEPEND_FETCH ?=
+DEPEND_EXTRACT ?=
+# wird zum Bauen benötigt (vor make package)
+DEPEND_BUILD ?=
+# wird zur Laufzeit benötigt (vor make install)
+DEPEND_RUN ?=
+# allgemeine (wie DEPEND_BUILD)
+DEPENDS ?=
+# für vorgerfertigte LPPs, die nicht im AAP sind
+DEPEND_LPP ?=
+# Zeilen mit Abhängigkeiten, die direkt ins .toc kommen
+DEPEND_EXT ?=
+# Meldung warum der Port kaputt ist (Sicherheit, Bau)
+_top.BROKEN ?=
+REPLACE_LPP ?=
+
+# prereq-Zeile für LPP ausgeben
+print-prereq:
+	:print *prereq $LPPNAME $(LPPVERSION).0.0
+
+# Ist das Paket schon installiert?
+check-installed:
+	:python
+		import os, re
+
+		needinstall = -1
+		# installierte Version des Pakets anzeigen
+		cmd = " ".join(['lslpp -Lqc', var2string(_no.LPPNAME), '2>/dev/null'])
+		p = os.popen(cmd, 'r')
+		data = p.read()
+		needinstall = p.close()
+		if (needinstall == None): needinstall = 0
+		needinstall = needinstall >> 8
+		# es ist ein LPP installiert
+		if (int(needinstall) == 0):
+			# LPP-Version des Ports ermitteln
+			v = re.split('\.', var2string(_no.LPPVERSION))
+			# installierte LPP-Version ermitteln
+			instv = re.split(':', data)
+			vi = re.split('\.', instv[2])
+			if (int(v[0]) != int(vi[0])) or (int(v[1]) != int(vi[1])):
+				needinstall = 1
+		print needinstall
+
+# Installation vom LPPs, die nicht im AAP sind
+do-dependcheck:
+	@broken = var2string(_no.BROKEN)
+	@if (broken):
+		:print $BROKEN
+		:exit
+	@for d in var2list(_no.DEPEND_LPP):
+		:sys installp -awgXd $LPPDIR $d
+
+# Zum Holen notwendige Produkte installieren
+do-fetchdepend:
+	@for d in var2list(_no.DEPEND_FETCH):
+		:cd ../../$d
+		:syseval $AAP check-installed | :assign needinstall
+		@if int(needinstall) == 1:
+			:sys $AAP install
+		:cd -
+	@deplist = []
+	@deplist.extend(var2list(_no.FETCHREQUIRES))
+	@for d in deplist:
+		:cd ../../$d
+		:syseval $AAP print-rpmname | :assign rpmname	
+		:sys rpm -q $rpmname || $AAP rpm-install
+		:cd -
+	@deplist = []
+	@deplist.extend(var2list(_no.FETCHREQUIRES_EXT))
+	@for d in deplist:
+		:sys rpm -q $d || ( $(CLEARCACHE) && $RPMINSTALL $d )
+	@deplist = []
+
+# Zum Auspacken notwendige Produkte installieren
+do-extractdepend:
+	@for d in var2list(_no.DEPEND_EXTRACT):
+		:cd ../../$d
+		:syseval $AAP check-installed | :assign needinstall
+		@if int(needinstall) == 1:
+			:sys $AAP install
+		:cd -
+	@deplist = []
+	@deplist.extend(var2list(_no.EXTRACTREQUIRES))
+	@for d in deplist:
+		:cd ../../$d
+		:syseval $AAP print-rpmname | :assign rpmname	
+		:sys rpm -q $rpmname || $AAP rpm-install
+		:cd -
+	@deplist = []
+	@deplist.extend(var2list(_no.EXTRACTREQUIRES_EXT))
+	@for d in deplist:
+		:sys rpm -q $d || ( $(CLEARCACHE) && $RPMINSTALL $d )
+	@deplist = []
+
+# Zum Bauen notwendige Produkte installieren
+do-builddepend:
+	@deplist = []
+	@deplist.extend(var2list(_no.DEPENDS))
+	@deplist.extend(var2list(_no.DEPEND_BUILD))
+	@for d in deplist:
+		:cd ../../$d
+		:syseval $AAP check-installed | :assign needinstall
+		@if int(needinstall) == 1:
+			:sys $AAP install
+		:cd -
+	@deplist = []
+	@deplist.extend(var2list(_no.BUILDREQUIRES))
+	@deplist.extend(var2list(_no.BR_REQUIRES))
+	@for d in deplist:
+		:cd ../../$d
+		:syseval $AAP print-rpmname | :assign rpmname	
+		:sys rpm -q $rpmname || $AAP rpm-install
+		:cd -
+	@deplist = []
+	@deplist.extend(var2list(_no.BUILDREQUIRES_EXT))
+	@deplist.extend(var2list(_no.BR_REQUIRES_EXT))
+	@for d in deplist:
+		:sys rpm -q $d || ( $(CLEARCACHE) && $RPMINSTALL $d )
+	@deplist = []
+
+# Zur Laufzeit notwendige Pakete erzeugen und installieren
+do-rundepend:
+	@for d in var2list(_no.DEPEND_RUN):
+		:cd ../../$d
+		:syseval $AAP check-installed | :assign needinstall
+		@if int(needinstall) == 1:
+			:sys $AAP install
+		:cd -
+
+# abhängige Pakete aufräumen
+depclean:
+	@deplist = []
+	@deplist.extend(var2list(_no.DEPEND_FETCH))
+	@deplist.extend(var2list(_no.DEPEND_EXTRACT))
+	@deplist.extend(var2list(_no.DEPEND_RUN))
+	@deplist.extend(var2list(_no.DEPEND_BUILD))
+	@deplist.extend(var2list(_no.DEPENDS))
+	@deplist.extend(var2list(_no.REQUIRES))
+	@deplist.extend(var2list(_no.BUILDREQUIRES))
+	@deplist.extend(var2list(_no.BR_REQUIRES))
+	@for d in deplist:
+		:cd ../../$d
+		:sys $AAP clean
+		:cd -
+	@deplist = []
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# Werkzeuge
+
+shellheader:
+	:python
+		script = var2string(_no.script)
+		fh = open(script, 'w')
+		fh.write('#!/usr/bin/ksh\n')
+		fh.write('# Do not edit, generated automatically by AAP\n')
+		fh.write('# $Id: globals.aap,v 1.172 2026/09/10 12:01:26 mheinen Exp $\n')
+		fh.write('\n[[ -n "$DEBUG" ]] && set -x\n')
+		fh.close()
+
+shellfooter:
+	:python
+		functions = var2list(_no.functions)
+		script = var2string(_no.script)
+		fh = open(script, 'a')
+		fh.write('\n# MAIN\n')
+		for f in functions:
+			fh.write(f)
+			fh.write('\n')
+		fh.close()
+
+# erzeugt eine Funktion für post_i oder unpost_i,
+# die das Inhaltsverzeichnis der .info-Dateien aktualisiert.
+geninfo:
+	:python
+		import os
+
+		packdir = var2string(_no.PKGDIR)
+		prefix =  var2string(_no.PREFIX)
+		infodir = "/".join([packdir, prefix, 'info'])
+		infocmd = '/opt/local/bin/install-info'
+		type = var2string(_no.type)
+		script = var2string(_no.script)
+
+		fh = open(script, 'a')
+		fh.write('\n# update table of contents for info files\n')
+		fh.write('info() {\n')
+		fh.write('  [[ -n "$DEBUG" ]] && set -x\n')
+		fh.write('  ')
+		fh.write("".join(['infodir=', prefix, '/info']))
+		fh.write('\n')
+		realdir = "/".join([prefix, 'info/dir'])
+		fh.write('  ')
+		fh.write("".join(['dirfile=', realdir]))
+		fh.write('\n\n')
+		fh.write('  ')
+		fh.write("FILES='")
+		for f in os.listdir(infodir):
+			full = os.path.join(infodir, f)
+			if (os.path.isdir(full) or os.path.islink(full)):
+				continue
+			# das Inhaltsverzeichnis selbst löschen
+			if (f == 'dir'):
+				os.unlink(full)
+			fh.write(f)
+			fh.write('\n')
+		fh.write("'")
+		fh.write('\n')
+		fh.write('  for f in $FILES ; do\n')
+		fh.write('    ')
+		fh.write(infocmd)
+		fh.write(' --delete $infodir/$f $dirfile 2>/dev/null\n')
+		if (type == 'install'):
+			fh.write('    ')
+			fh.write(infocmd)
+			fh.write('          $infodir/$f $dirfile 2>/dev/null\n')
+		fh.write('  done\n')
+		# wenn die Datei schon im Index aufgeführt ist,
+		# gibt es einen Fehler -> ignorieren
+		fh.write('  return 0\n')
+		fh.write('}\n#end of info()\n')
+		fh.close()
+
+chkinfo:
+	@packdir = var2string(_no.PKGDIR)
+	@prefix =  var2string(_no.PREFIX)
+	@infodir = "/".join([packdir, prefix, 'info'])
+	@if (os.path.isdir(infodir)):
+		@name = var2string(_no.PORTNAME)
+		@if (name != 'texinfo'):
+			_top.DEPEND_RUN   += textproc/texinfo
+		s_global.PostScript   += info
+		s_global.UnpostScript += info
+		# post_i erzeugen
+		script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).post_i
+		@if (not os.path.exists(var2string(script))):
+			:sys $AAP script=$script shellheader
+		:sys $AAP type=install script=$script geninfo
+		# unpost_i erzeugen
+		script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).unpost_i
+		@if (not os.path.exists(var2string(script))):
+			:sys $AAP script=$script shellheader
+		:sys $AAP type=uninstall script=$script geninfo
+
+chkcolon:
+	:tree $PKGDIR { dirname = .*:.* }
+		@new = name.replace(':', '_')
+		@if (not os.path.exists(new)):
+			@os.rename(name, new)
+		@else:
+			:print WOOA: Please rename $name manually!
+			:exit
+	:tree $PKGDIR { filename = .*:.* }
+		@new = name.replace(':', '_')
+		@if (not os.path.exists(new)):
+			@os.rename(name, new)
+		@else:
+			:print WOOA: Please rename $name manually!
+			:exit
+
+# Lokale Installationsskripten in das LPP aufnehmen.
+# Im Rezept müssen die Variabeln PostScript und UnpostScript
+# erweitert werden.
+# Variable LPPSCR fuer LPPs u. RPMs verwendet
+chkpost:
+	@for f in var2list(_no.LPPSCR):
+		@file = "/".join(['files', f])
+		@if (os.path.exists(file)):
+			@if "AIX" in _no.OSNAME:
+				script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).$f
+			@else:
+				script = $WRKDIR/$f
+			@if (not os.path.exists(var2string(script))):
+				:sys $AAP script=$script shellheader
+			:cat >>$script $file
+
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# Perl-Module
+
+doperlmod:
+	# virtuelles Root-Verzeichnis aus der Packliste entfernen
+	:tree $PKGDIR { filename = .packlist }
+		# XXX: Doppelpunkte in der Packliste ersetzen?
+		:sys sed -e 's!$PKGDIR!!' < $name > $(name).new
+		:move $(name).new $name
+	# Modul-Dokumentation in perllocal.pod erstellen oder entfernen.
+	# Es darf nur ein perllocal.pod geben!
+	:tree $PKGDIR { filename = perllocal.pod }
+		:syseval sed -ne 's!.*L<\([^>][^>]*\).*!\1!p' $name |\
+		:assign modulename
+		@podpath = name.replace(var2string(_no.PKGDIR), '')
+		s_global.PostScript   += perllocal
+		s_global.UnpostScript += perllocal
+		# post_i erzeugen
+		@if "AIX" in _no.OSNAME:
+			script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).post_i
+		@else:
+			script = $WRKDIR/post_i
+		@if (not os.path.exists(var2string(script))):
+			:sys $AAP script=$script shellheader
+		:print >> $script
+		:print >> $script $(#) add module documentation to perllocal.pod
+		:print >> $script perllocal() $({)
+		:print >> $script $( ) [[ -n "$($)DEBUG" ]] && set -x
+		:print >> $script
+		:print >> $script $( ) cat $gt$gt $podpath <<EOPOD
+		:cat   >> $script $name
+		:print >> $script EOPOD
+		:print >> $script $(})
+		# unpost_i erzeugen
+		@if "AIX" in _no.OSNAME:
+			script = $WRKDIR/$LPPNAME/.info/$(LPPNAME).unpost_i
+		@else:
+			script = $WRKDIR/unpost_i
+		@if (not os.path.exists(var2string(script))):
+			:sys $AAP script=$script shellheader
+		:print >> $script
+		:print >> $script $(#) remove module documentation from perllocal.pod
+		:print >> $script perllocal() $({)
+		:print >> $script $( ) [[ -n "$($)DEBUG" ]] && set -x
+		:print >> $script
+		:print >> $script $( ) sed -e '/^=head2.*L<$(modulename)>/,/^=back/ d' < $podpath $gt $(podpath).new
+		:print >> $script $( ) mv $(podpath).new $podpath
+		:print >> $script $(})
+		# perllocal.pod nicht mit einpacken
+		:sys rm $name
+
+IndexEntry:
+        @if "Linux" in _no.OSNAME:
+	        :print $PORTNAME|$PORTVERSION|$CATEGORIES|$PORTCOMMENT|$DEPEND_FETCH $DEPEND_EXTRACT $DEPEND_BUILD|$DEPEND_RUN $DEPENDS|$(RPMNAME)-$RPMVERSION
+	@else:
+	        :print $PORTNAME|$PORTVERSION|$CATEGORIES|$PORTCOMMENT|$DEPEND_FETCH $DEPEND_EXTRACT $DEPEND_BUILD|$DEPEND_RUN $DEPENDS|$(LPPNAME)-$LPPVERSION

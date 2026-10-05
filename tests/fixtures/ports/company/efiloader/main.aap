@@ -1,0 +1,50 @@
+
+AAPVERSION =	1.0
+
+:include ../../globals.aap
+
+PORTNAME =	efiloader
+PORTVERSION =	293
+PORTLICENSE =	company
+RPMVERSION =	$(PORTVERSION)
+RPMNAME =	company.$(PORTNAME)
+MAINTAINER = Flo
+
+CATEGORIES =	company
+PORTCOMMENT =	EFI-Images für den TFTP-Server
+PORTDESCR =     $(PORTCOMMENT)
+
+do-extract:
+        :mkdir work {mode = 755}
+do-build:
+        :pass
+do-test:
+        :pass
+
+@if "suse" in _no.DISTRO:
+	BR_REQUIRES_EXT += grub2
+	BR_REQUIRES_EXT += grub2-x86_64-efi
+@elif "centos" in _no.DISTRO:
+	BUILDREQUIRES =	sysutils/grub
+
+fake-install: build
+	:mkdir {r} $PKGDIR/tftpboot
+	:mkdir {r} $WRKDIR/$WRKSRC/boot/grub
+        :copy files/grub.cfg $WRKDIR/$WRKSRC/boot/grub
+	:cd $WRKDIR/$WRKSRC
+	@if "suse" in _no.DISTRO:
+		:sys grub2-mkstandalone -o bootx64.efi
+					-O x86_64-efi ./boot/grub/grub.cfg
+	@elif "centos" in _no.DISTRO:
+        	:sys /usr/local/bin/grub-mkstandalone
+                	-d /usr/local/lib/grub/x86_64-efi/
+                	-O x86_64-efi
+                	--fonts="unicode"
+                	-o bootx64.efi
+                	./boot/grub/grub.cfg
+	:cd -
+        :copy $WRKDIR/$WRKSRC/bootx64.efi $PKGDIR/tftpboot
+	:sys chown -Rh root:root $PKGDIR
+
+local-rpm:
+	:pass

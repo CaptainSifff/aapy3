@@ -1,0 +1,52 @@
+#---*----1----*----2----*----3----*----4----*----5----*----6----*----7
+# Version: $Id
+#---*----1----*----2----*----3----*----4----*----5----*--
+
+AAPVERSION =	1.0
+
+:include ../../globals.aap
+
+PORTNAME =      nano
+PORTVERSION =	7.1
+MAINTAINER =	flo
+RPMVERSION =    1
+RPMNAME =       company.$(PORTNAME)
+PORTLICENSE =   company
+
+CATEGORIES =    editors
+PORTCOMMENT =   Nano's ANOther editor, an enhanced free Pico clone
+PORTDESCR << EOF
+nano is a small, free and friendly editor which aims to replace
+Pico, the default editor included in the non-free Pine package.
+Rather than just copying Pico's look and feel, nano also implements
+some missing (or disabled by default) features in Pico, such as
+"search and replace" and "goto line number".
+WWW: https://www.nano-editor.org/download.php
+	EOF
+
+WRKSRC =        nano-$(PORTVERSION)
+
+BUILDCMD =	./configure --prefix=$PREFIX && make
+
+TESTCMD =	true
+INSTALLCMD =	make DESTDIR=$PKGDIR install
+MASTER_SITES ?=	file://$ARCHIV
+DISTFILES =	nano-$(PORTVERSION).tar.gz
+PATCHFILES =
+PATCHDIR =	.
+
+BUILDREQUIRES_EXT = ncurses-devel
+
+fake-install: build
+        :sys $MKDIR $PKGDIR$PREFIX/doc/$PORTNAME
+	:cd $WRKDIR/$WRKSRC
+	:sys $INSTALLCMD
+	:sys chown -Rh root:root $PKGDIR
+
+local-rpm:
+	:pass
+
+#>>> automatically inserted by "aap makesum" <<<
+do-checksum:
+	:checksum $DISTDIR/nano-7.1.tar.gz {md5 = cc9e42c4805193f9dc3ae22b9644bb1d}
+#>>> end <<<

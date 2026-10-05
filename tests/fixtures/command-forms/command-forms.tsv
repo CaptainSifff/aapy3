@@ -1,0 +1,900 @@
+command	form	count	percentage_of_command	attribute_keys_seen	variable_sets_seen	block_observed_count	examples
+action	extract targz	26	78.79			26	databases/mysql57/main.aap:10;editors/emacs/main.aap:12;editors/xemacs/main.aap:11;globals.aap:32;java/apache-log4j/main.aap:13
+action	extract zip	3	9.09			3	java/eclipse-rcp-delta/main.aap:13;java/eclipse-rcp-devel/main.aap:13;sysutils/BMTMAgent/main.aap:12
+action	extract tarbz2	2	6.06			2	globals.aap:35;lang/php5/main.aap:12
+action	extract tarZ	1	3.03			1	globals.aap:24
+action	extract xz	1	3.03			1	globals.aap:27
+checksum	<VAR>/patch.aa <TEXT> <TEXT> <TEXT>	9	1.09		PATCHDISTDIR	0	archivers/bzip2/main.aap:49;benchmarks/nttcp/main.aap:65;net/netcat/main.aap:56;net/rsync/main.aap:67;security/prngd/main.aap:81
+checksum	<VAR>/tcl8.5.9-src.tar.gz <TEXT> <TEXT> <TEXT>	5	0.60		DISTDIR	0	lang/expect/main.aap:76;lang/oratcl/main.aap:54;lang/tcl/main.aap:66;lang/tclX/main.aap:60;x11-toolkits/tk/main.aap:81
+checksum	<VAR>/eclipse-SDK-3.5-aix-motif.zip <TEXT> <TEXT> <TEXT>	3	0.36		DISTDIR	0	java/eclipse/main.aap:59;java/eclipse-rcp-delta/main.aap:71;java/eclipse-rcp-devel/main.aap:63
+checksum	<VAR>/etpki.tar.gz <TEXT> <TEXT> <TEXT>	3	0.36		DISTDIR	0	company/scmclient/main.aap:197;company/scmserver/main.aap:164;company/scmshared/main.aap:92
+checksum	<VAR>/ansible_core-2.18.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	sysutils/py3-ansible_core/main.aap:43;sysutils/py3-ansible_core216SAS/main.aap:47
+checksum	<VAR>/bea81_sp3.tar.gz <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	java/bea8/main.aap:115;www/portale.addons/main.aap:57
+checksum	<VAR>/eclipse-3.5-delta-pack.zip <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	java/eclipse-delta/main.aap:56;java/eclipse-rcp-delta/main.aap:73
+checksum	<VAR>/eclipse-RCP-SDK-3.5-aix-motif.zip <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	java/eclipse-rcp-delta/main.aap:72;java/eclipse-rcp-devel/main.aap:64
+checksum	<VAR>/lic98-13-03_x86_64.tar.gz <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	company/scmserver/main.aap:163;company/scmshared/main.aap:91
+checksum	<VAR>/odbc.tar.gz <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	company/scmserver/main.aap:165;company/scmshared/main.aap:93
+checksum	<VAR>/pec474_64.tar.gz <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	company/scmclient/main.aap:198;company/scmserver/main.aap:160
+checksum	<VAR>/sqlserver-40.tar.gz <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	java/jboss7/main.aap:101;java/wildfly/main.aap:72
+checksum	<VAR>/tk8.5.9-src.tar.gz <TEXT> <TEXT> <TEXT>	2	0.24		DISTDIR	0	lang/expect/main.aap:75;x11-toolkits/tk/main.aap:82
+checksum	<VAR>/8.4.0-TIV-TWS-FP0001.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/tws/main.aap:152
+checksum	<VAR>/8.4.0-TIV-TWS.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/tws/main.aap:151
+checksum	<VAR>/8.5.1-TIV-TWS-AIX-FP0002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/tws-zcentric/main.aap:226
+checksum	<VAR>/8.5.1-TIV-TWS.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/tws-zcentric/main.aap:225
+checksum	<VAR>/AGENT_DIST-LINUX-X86_V02.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/BMTMAgent/main.aap:64
+checksum	<VAR>/Algorithm-Diff-1.201.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Algorithm-Diff/main.aap:53
+checksum	<VAR>/Alien-Build-2.41.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Alien-Build/main.aap:50
+checksum	<VAR>/Alien-GMP-1.16.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Alien-GMP/main.aap:43
+checksum	<VAR>/Alien-Libxml2-0.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Alien-Libxml2/main.aap:46
+checksum	<VAR>/AnyEvent-7.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-AnyEvent/main.aap:45
+checksum	<VAR>/AnyEvent-AIO-1.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-AnyEvent-AIO/main.aap:47
+checksum	<VAR>/AppConfig-1.71.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-AppConfig/main.aap:54
+checksum	<VAR>/Archive-Zip-1.68.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/p5-Archive-Zip/main.aap:59
+checksum	<VAR>/Authen-SASL-2.16.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Authen-SASL/main.aap:47
+checksum	<VAR>/Authen-SASL-SASLprep-1.100.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Authen-SASL-SASLprep/main.aap:42
+checksum	<VAR>/Authlib-1.3.2-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/py3-authlib/main.aap:41
+checksum	<VAR>/B-COW-0.004.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-B-COW/main.aap:40
+checksum	<VAR>/B-Hooks-EndOfScope-0.24.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-B-Hooks-EndOfScope/main.aap:48
+checksum	<VAR>/B-Hooks-OP-Check-0.22.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-B-Hooks-OP-Check/main.aap:45
+checksum	<VAR>/Bit-Vector-7.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/p5-Bit-Vector/main.aap:57
+checksum	<VAR>/Bottleneck-1.3.78-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-Bottleneck/main.aap:41
+checksum	<VAR>/Business-ISBN-3.006.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/p5-Business-ISBN/main.aap:42
+checksum	<VAR>/Business-ISBN-Data-20210112.006.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/p5-Business-ISBN-Data/main.aap:41
+checksum	<VAR>/CAHarvestSCMV145_01Patch_Agent.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/scmclient/main.aap:202
+checksum	<VAR>/CAHarvestSCMV145_01Patch_Client.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/scmclient/main.aap:201
+checksum	<VAR>/CAHarvestSCMV145_01Patch_Server_b55.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/scmserver/main.aap:162
+checksum	<VAR>/CGI-4.53.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-CGI/main.aap:56
+checksum	<VAR>/CP013313.scexe <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/hpilo/main.aap:75
+checksum	<VAR>/CP014002.scexe <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/hpilo/main.aap:76
+checksum	<VAR>/CP014710.scexe <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/hpilo/main.aap:77
+checksum	<VAR>/CP016462.scexe <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/hpilo/main.aap:78
+checksum	<VAR>/CPAN-Meta-Check-0.014.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-CPAN-Meta-Check/main.aap:46
+checksum	<VAR>/CacheControl-0.12.14-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-cachecontrol/main.aap:40
+checksum	<VAR>/Canary-Stability-2013.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Canary-Stability/main.aap:43
+checksum	<VAR>/Capture-Tiny-0.48.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Capture-Tiny/main.aap:47
+checksum	<VAR>/Carp-Clan-6.08.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Carp-Clan/main.aap:45
+checksum	<VAR>/Check-ISA-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Check-ISA/main.aap:46
+checksum	<VAR>/Class-Accessor-0.51.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Accessor/main.aap:49
+checksum	<VAR>/Class-Accessor-Chained-0.01.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Accessor-Chained/main.aap:47
+checksum	<VAR>/Class-Accessor-Grouped-0.10014.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Accessor-Grouped/main.aap:50
+checksum	<VAR>/Class-C3-0.35.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-C3/main.aap:47
+checksum	<VAR>/Class-C3-Componentised-1.001002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-C3-Componentised/main.aap:53
+checksum	<VAR>/Class-Data-Inheritable-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Data-Inheritable/main.aap:52
+checksum	<VAR>/Class-ISA-0.36.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-ISA/main.aap:45
+checksum	<VAR>/Class-Inspector-1.36.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Inspector/main.aap:52
+checksum	<VAR>/Class-Method-Modifiers-2.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Method-Modifiers/main.aap:71
+checksum	<VAR>/Class-Refresh-0.07.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Refresh/main.aap:50
+checksum	<VAR>/Class-Singleton-1.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Singleton/main.aap:44
+checksum	<VAR>/Class-Tiny-1.008.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Tiny/main.aap:40
+checksum	<VAR>/Class-Unload-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-Unload/main.aap:50
+checksum	<VAR>/Class-XSAccessor-1.19.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Class-XSAccessor/main.aap:47
+checksum	<VAR>/Clone-0.45.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Clone/main.aap:47
+checksum	<VAR>/Clone-Choose-0.010.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Clone-Choose/main.aap:42
+checksum	<VAR>/Compiler-Lexer-0.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Compiler-Lexer/main.aap:49
+checksum	<VAR>/Compress-LZ4Frame-0.012002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/p5-Compress-LZ4Frame/main.aap:45
+checksum	<VAR>/Compress-Snappy-0.24.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/p5-Compress-Snappy/main.aap:46
+checksum	<VAR>/Config-Any-0.32.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Config-Any/main.aap:55
+checksum	<VAR>/Config-IniFiles-3.000003.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Config-IniFiles/main.aap:53
+checksum	<VAR>/Config-Tiny-2.28.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Config-Tiny/main.aap:42
+checksum	<VAR>/Const-Fast-0.014.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Const-Fast/main.aap:51
+checksum	<VAR>/Context-Preserve-0.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Context-Preserve/main.aap:47
+checksum	<VAR>/Convert-ASN1-0.31.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Convert-ASN1/main.aap:63
+checksum	<VAR>/Convert-BinHex-1.125.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Convert-BinHex/main.aap:53
+checksum	<VAR>/Convert-EBCDIC-0.06.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Convert-EBCDIC/main.aap:40
+checksum	<VAR>/Crypt-CBC-3.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-CBC/main.aap:54
+checksum	<VAR>/Crypt-Curve25519-0.06.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-Curve25519/main.aap:45
+checksum	<VAR>/Crypt-DES-2.07.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-DES/main.aap:53
+checksum	<VAR>/Crypt-IDEA-1.10.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-IDEA/main.aap:45
+checksum	<VAR>/Crypt-PBKDF2-0.161520.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-PBKDF2/main.aap:51
+checksum	<VAR>/Crypt-RC4-2.02.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-RC4/main.aap:62
+checksum	<VAR>/Crypt-URandom-0.36.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Crypt-URandom/main.aap:42
+checksum	<VAR>/CryptX-0.073.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-cryptx/main.aap:62
+checksum	<VAR>/Cython-0.29.36-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-Cython/main.aap:38
+checksum	<VAR>/DBD-CSV-0.58.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBD-CSV/main.aap:51
+checksum	<VAR>/DBD-ODBC-1.61.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBD-ODBC/main.aap:52
+checksum	<VAR>/DBD-Oracle-1.83.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBD-Oracle/main.aap:69
+checksum	<VAR>/DBD-SQLite-1.70.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBD-SQLite/main.aap:54
+checksum	<VAR>/DBD-Sybase-1.15.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBD-Sybase/main.aap:72
+checksum	<VAR>/DBI-1.643.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBI/main.aap:59
+checksum	<VAR>/DBIx-Class-0.082842.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-DBIx-Class/main.aap:90
+checksum	<VAR>/Data-Compare-1.27.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-Compare/main.aap:45
+checksum	<VAR>/Data-Dump-1.25.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-Dump/main.aap:43
+checksum	<VAR>/Data-Dumper-Concise-2.023.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-Dumper-Concise/main.aap:44
+checksum	<VAR>/Data-HexDump-Range-0.13.72.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-HexDump-Range/main.aap:63
+checksum	<VAR>/Data-OptList-0.112.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-OptList/main.aap:65
+checksum	<VAR>/Data-Page-2.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-Data-Page/main.aap:55
+checksum	<VAR>/Data-TreeDumper-0.40.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-TreeDumper/main.aap:57
+checksum	<VAR>/Data-Validate-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Data-Validate/main.aap:46
+checksum	<VAR>/Data-Validate-IP-0.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net-mgmt/p5-Data-Validate-IP/main.aap:53
+checksum	<VAR>/Date-Calc-6.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Date-Calc/main.aap:49
+checksum	<VAR>/DateTime-1.54.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-DateTime/main.aap:54
+checksum	<VAR>/DateTime-Locale-1.32.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-DateTime-Locale/main.aap:64
+checksum	<VAR>/DateTime-TimeZone-1.92.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-DateTime-TimeZone/main.aap:55
+checksum	<VAR>/Deep-Encode-0.19.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Deep-Encode/main.aap:39
+checksum	<VAR>/Devel-CheckLib-1.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Devel-CheckLib/main.aap:43
+checksum	<VAR>/Devel-GlobalDestruction-0.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Devel-GlobalDestruction/main.aap:53
+checksum	<VAR>/Devel-OverloadInfo-0.007.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Devel-OverloadInfo/main.aap:43
+checksum	<VAR>/Devel-Size-0.83.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Devel-Size/main.aap:46
+checksum	<VAR>/Devel-StackTrace-2.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Devel-StackTrace/main.aap:57
+checksum	<VAR>/Devel-Symdump-2.18.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Devel-Symdump/main.aap:55
+checksum	<VAR>/Digest-HMAC-1.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Digest-HMAC/main.aap:50
+checksum	<VAR>/Digest-Perl-MD5-1.9.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Digest-Perl-MD5/main.aap:54
+checksum	<VAR>/Digest-SHA1-2.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Digest-SHA1/main.aap:52
+checksum	<VAR>/Digest-SHA3-1.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Digest-SHA3/main.aap:40
+checksum	<VAR>/Dist-CheckConflicts-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-DistCheckConflicts/main.aap:45
+checksum	<VAR>/Django-4.2.4-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-Django/main.aap:43
+checksum	<VAR>/Email-Date-Format-1.005.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/p5-Email-Date-Format/main.aap:46
+checksum	<VAR>/Encode-Locale-1.05.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Encode-Locale/main.aap:41
+checksum	<VAR>/Eval-Closure-0.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Eval-Closure/main.aap:43
+checksum	<VAR>/Exception-Class-1.45.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Exception-Class/main.aap:57
+checksum	<VAR>/Exporter-Tiny-1.002002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Exporter-Tiny/main.aap:43
+checksum	<VAR>/ExtUtils-AutoInstall-0.64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/p5-ExtUtils-AutoInstall/main.aap:55
+checksum	<VAR>/ExtUtils-Config-0.008.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-ExtUtils-Config/main.aap:44
+checksum	<VAR>/ExtUtils-Depends-0.8001.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-ExtUtils-Depends/main.aap:45
+checksum	<VAR>/ExtUtils-Helpers-0.026.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-ExtUtils-Helpers/main.aap:44
+checksum	<VAR>/ExtUtils-InstallPaths-0.012.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-ExtUtils-InstallPaths/main.aap:46
+checksum	<VAR>/FFI-CheckLib-0.28.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-FFI-CheckLib/main.aap:45
+checksum	<VAR>/File-Copy-Recursive-0.45.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-Copy-Recursive/main.aap:52
+checksum	<VAR>/File-Find-Rule-0.34.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-Find-Rule/main.aap:47
+checksum	<VAR>/File-HomeDir-1.006.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-HomeDir/main.aap:42
+checksum	<VAR>/File-Listing-6.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/p5-File-Listing/main.aap:45
+checksum	<VAR>/File-Map-0.71.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	file/p5-File-Map/main.aap:51
+checksum	<VAR>/File-Pid-1.01.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	file/p5-File-Pid/main.aap:48
+checksum	<VAR>/File-Remove-1.58.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-Remove/main.aap:40
+checksum	<VAR>/File-ShareDir-1.118.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-ShareDir/main.aap:50
+checksum	<VAR>/File-ShareDir-Install-0.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-ShareDir-Install/main.aap:40
+checksum	<VAR>/File-Slurp-9999.32.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-Slurp/main.aap:51
+checksum	<VAR>/File-Touch-0.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	file/p5-File-Touch/main.aap:45
+checksum	<VAR>/File-Which-1.27.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/p5-File-Which/main.aap:42
+checksum	<VAR>/File-Xcopy-0.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-File-Xcopy/main.aap:49
+checksum	<VAR>/File-chdir-0.1010.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/p5-File-chdir/main.aap:42
+checksum	<VAR>/Flask-2.3.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-Flask/main.aap:44
+checksum	<VAR>/GSSAPI-0.28.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-GSSAPI/main.aap:49
+checksum	<VAR>/GitPython-2.1.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/GitPython/main.aap:51
+checksum	<VAR>/GitPython-3.1.32-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-GitPython/main.aap:41
+checksum	<VAR>/HTML-Parser-3.76.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTML-Parser/main.aap:56
+checksum	<VAR>/HTML-Tagset-3.20.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTML-Tagset/main.aap:52
+checksum	<VAR>/HTTP-Cookies-6.10.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTTP-Cookies/main.aap:49
+checksum	<VAR>/HTTP-Daemon-6.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTTP-Daemon/main.aap:50
+checksum	<VAR>/HTTP-Date-6.05.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTTP-Date/main.aap:44
+checksum	<VAR>/HTTP-Message-6.33.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTTP-Message/main.aap:51
+checksum	<VAR>/HTTP-Negotiate-6.01.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTTP-Negotiate/main.aap:49
+checksum	<VAR>/HTTP-Server-Simple-0.52.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-HTTPServer-Simple/main.aap:47
+checksum	<VAR>/Hash-Merge-0.302.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Hash-Merge/main.aap:42
+checksum	<VAR>/IO-HTML-1.004.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IO-HTML/main.aap:52
+checksum	<VAR>/IO-SessionData-1.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IO-SessionData/main.aap:39
+checksum	<VAR>/IO-Socket-INET6-2.72.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-IO-Socket-INET6/main.aap:50
+checksum	<VAR>/IO-Socket-SSL-2.071.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-IO-Socket-SSL/main.aap:54
+checksum	<VAR>/IO-Stringy-2.113.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IO-stringy/main.aap:59
+checksum	<VAR>/IO-Tty-1.16.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IO-Tty/main.aap:45
+checksum	<VAR>/IPC-Run-20200505.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IPC-Run/main.aap:53
+checksum	<VAR>/IPC-Run3-0.048.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IPC-Run3/main.aap:40
+checksum	<VAR>/IPC-System-Simple-1.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-IPC-System-Simple/main.aap:40
+checksum	<VAR>/IWOVOpenDeployRcvr-Linux-7.2.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/opendeploy/main.aap:101
+checksum	<VAR>/ImageHash-4.3.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-imagehash/main.aap:42
+checksum	<VAR>/Import-Into-1.002005.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Import-Into/main.aap:48
+checksum	<VAR>/Importer-0.026.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Importer/main.aap:42
+checksum	<VAR>/JSDK2.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/JSDK2.0/main.aap:51
+checksum	<VAR>/JSON-4.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-JSON/main.aap:41
+checksum	<VAR>/Java14.sdk <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/ibmjava/main.aap:60
+checksum	<VAR>/Java14.sdk.1.4.2.5.bff <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/ibmjava/main.aap:61
+checksum	<VAR>/Jinja2-3.1.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-Jinja2/main.aap:39
+checksum	<VAR>/LWP-MediaTypes-6.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-LWP-MediaTypes/main.aap:45
+checksum	<VAR>/LWP-Protocol-https-6.10.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-LWP-Protocol-https/main.aap:63
+checksum	<VAR>/LdapAuthentication-master-52cf585.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/mediawiki/main.aap:98
+checksum	<VAR>/Lexical-SealRequireHints-0.011.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Lexical-SealRequireHints/main.aap:49
+checksum	<VAR>/List-AllUtils-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-List-AllUtils/main.aap:49
+checksum	<VAR>/List-MoreUtils-0.430.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-List-MoreUtils/main.aap:52
+checksum	<VAR>/List-MoreUtils-XS-0.430.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-List-MoreUtils-XS/main.aap:40
+checksum	<VAR>/List-SomeUtils-0.58.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-List-SomeUtils/main.aap:42
+checksum	<VAR>/List-UtilsBy-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-List-UtilsBy/main.aap:40
+checksum	<VAR>/Log-Message-0.08.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Log-Message/main.aap:51
+checksum	<VAR>/Log-Message-Simple-0.10.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Log-Message-Simple/main.aap:46
+checksum	<VAR>/MIME-Lite-3.033.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/p5-MIME-Lite/main.aap:62
+checksum	<VAR>/MIME-Types-2.21.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/p5-MIME-Types/main.aap:45
+checksum	<VAR>/MIME-tools-5.509.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/p5-MIME-Tools/main.aap:63
+checksum	<VAR>/MQSeries-1.34.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/p5-MQSeries/main.aap:76
+checksum	<VAR>/MRO-Compat-0.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-MRO-Compat/main.aap:45
+checksum	<VAR>/Mail-POP3Client-2.19.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/p5-Mail-POP3Client/main.aap:45
+checksum	<VAR>/MailTools-2.21.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/p5-Mailtools/main.aap:46
+checksum	<VAR>/MarkupSafe-0.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py-MarkupSafe/main.aap:50
+checksum	<VAR>/MarkupSafe-2.1.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-MarkupSafe/main.aap:38
+checksum	<VAR>/Math-Base-Convert-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/p5-Math-Base-Convert/main.aap:40
+checksum	<VAR>/Math-GMP-2.25.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/p5-Math-GMP/main.aap:45
+checksum	<VAR>/MesonPy-0.0.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-MesonPy/main.aap:44
+checksum	<VAR>/Module-Build-0.4231.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Build/main.aap:57
+checksum	<VAR>/Module-Build-Tiny-0.039.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Build-Tiny/main.aap:52
+checksum	<VAR>/Module-Find-0.15.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Find/main.aap:47
+checksum	<VAR>/Module-Implementation-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Implementation/main.aap:60
+checksum	<VAR>/Module-Install-1.19.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Install/main.aap:48
+checksum	<VAR>/Module-Pluggable-5.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Pluggable/main.aap:42
+checksum	<VAR>/Module-Runtime-0.016.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-Runtime/main.aap:45
+checksum	<VAR>/Module-ScanDeps-1.31.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Module-ScanDeps/main.aap:42
+checksum	<VAR>/Mojar-2.201.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-Mojar/main.aap:42
+checksum	<VAR>/Mojolicious-9.19.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-Mojolicious/main.aap:48
+checksum	<VAR>/Moo-2.005004.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Moo/main.aap:60
+checksum	<VAR>/Moose-2.2201.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Moose/main.aap:52
+checksum	<VAR>/Mozilla-CA-20200520.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-Mozilla-CA/main.aap:45
+checksum	<VAR>/NNTPClient-0.37.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	news/p5-NNTPClient/main.aap:45
+checksum	<VAR>/NTLM-1.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Authen-NTLM/main.aap:64
+checksum	<VAR>/Net-Daemon-0.49.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-Net-Daemon/main.aap:55
+checksum	<VAR>/Net-HTTP-6.21.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-Net-HTTP/main.aap:47
+checksum	<VAR>/Net-MySQL-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-Net-MySQL/main.aap:56
+checksum	<VAR>/Net-Netmask-2.0001.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net-mgmt/p5-Net-Netmask/main.aap:48
+checksum	<VAR>/Net-SCP-0.08.reprise.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-Net-SCP/main.aap:46
+checksum	<VAR>/Net-SFTP-Foreign-1.93.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-SFTP-Foreign/main.aap:48
+checksum	<VAR>/Net-SNMP-v6.0.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net-mgmt/p5-Net-SNMP/main.aap:57
+checksum	<VAR>/Net-SSH-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-Net-SSH/main.aap:48
+checksum	<VAR>/Net-SSH-Perl-2.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-net-ssh-perl/main.aap:64
+checksum	<VAR>/Net-SSLeay-1.96.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-Net-SSLeay/main.aap:64
+checksum	<VAR>/NetAddr-IP-4.079.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net-mgmt/p5-NetAddr-IP/main.aap:49
+checksum	<VAR>/Number-Compare-0.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/p5-Number-Compare/main.aap:52
+checksum	<VAR>/OLE-Storage_Lite-0.20.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-OLE-Storage_Lite/main.aap:50
+checksum	<VAR>/PBKDF2-Tiny-0.005.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/p5-PBKDF2-Tiny/main.aap:42
+checksum	<VAR>/PDL-2.104.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/p5-PDL/main.aap:55
+checksum	<VAR>/Package-DeprecationManager-0.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Package-DeprecationManager/main.aap:46
+checksum	<VAR>/Package-Stash-0.39.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Package-Stash/main.aap:51
+checksum	<VAR>/Package-Stash-XS-0.29.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Package-Stash-XS/main.aap:42
+checksum	<VAR>/Package-Variant-1.003002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Package-Variant/main.aap:50
+checksum	<VAR>/PadWalker-2.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-PadWalker/main.aap:51
+checksum	<VAR>/Params-Util-1.102.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Params-Util/main.aap:44
+checksum	<VAR>/Params-Validate-1.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Params-Validate/main.aap:66
+checksum	<VAR>/Params-ValidationCompiler-0.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Params-ValidationCompiler/main.aap:47
+checksum	<VAR>/Parse-RecDescent-1.967015.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Parse-RecDescent/main.aap:48
+checksum	<VAR>/Path-Class-0.37.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Path-Class/main.aap:45
+checksum	<VAR>/Path-Tiny-0.118.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Path-Tiny/main.aap:41
+checksum	<VAR>/Pod-Coverage-0.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Pod-Coverage/main.aap:51
+checksum	<VAR>/Pod-Parser-1.63.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Pod-Parser/main.aap:40
+checksum	<VAR>/Proc-Daemon-0.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Proc-Daemon/main.aap:46
+checksum	<VAR>/Proc-ProcessTable-0.59.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Proc-ProcessTable/main.aap:50
+checksum	<VAR>/PyJWT-2.8.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-PyJWT/main.aap:38
+checksum	<VAR>/Pygments-2.15.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-Pygments/main.aap:39
+checksum	<VAR>/Python-3.12.14.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/python3/main.aap:104
+checksum	<VAR>/R-4.3.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/R/main.aap:107
+checksum	<VAR>/REST-Client-273.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-REST-Client/main.aap:48
+checksum	<VAR>/RSS-master-e4dc10f.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/mediawiki/main.aap:97
+checksum	<VAR>/Readonly-2.05.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Readonly/main.aap:52
+checksum	<VAR>/Role-Tiny-2.002004.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Role-Tiny/main.aap:52
+checksum	<VAR>/SOAP-Lite-1.27.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-SOAP-Lite/main.aap:60
+checksum	<VAR>/SQL-Abstract-2.000001.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-SQL-Abstract/main.aap:61
+checksum	<VAR>/SQL-Abstract-Classic-1.91.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-SQL-Abstract-Classic/main.aap:43
+checksum	<VAR>/SQL-Statement-1.414.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-SQL-Statement/main.aap:50
+checksum	<VAR>/SQL-Translator-1.62.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-SQL-Translator/main.aap:63
+checksum	<VAR>/Scalar-List-Utils-1.56.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/p5-Scalar-List-Utils/main.aap:47
+checksum	<VAR>/Scalar-Util-Numeric-0.40.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Scalar-Util-Numeric/main.aap:45
+checksum	<VAR>/Scope-Guard-0.21.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Scope-Guard/main.aap:49
+checksum	<VAR>/SecretStorage-3.3.3-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/py3-SecretStorage/main.aap:40
+checksum	<VAR>/Sort-Naturally-1.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Sort-Naturally/main.aap:66
+checksum	<VAR>/Specio-0.47.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Specio/main.aap:52
+checksum	<VAR>/Spiffy-0.46.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Spiffy/main.aap:46
+checksum	<VAR>/Spread-3.17.4.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-spread/main.aap:46
+checksum	<VAR>/Spreadsheet-ParseExcel-0.65.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Spreadsheet-ParseExcel/main.aap:54
+checksum	<VAR>/Spreadsheet-WriteExcel-2.40.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Spreadsheet-WriteExcel/main.aap:43
+checksum	<VAR>/Spreadsheet-XLSX-0.15.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Spreadsheet-XLSX/main.aap:55
+checksum	<VAR>/String-CRC32-2.100.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-String-CRC32/main.aap:49
+checksum	<VAR>/String-Ediff-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-String-Ediff/main.aap:43
+checksum	<VAR>/String-ShellQuote-1.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-String-ShellQuote/main.aap:47
+checksum	<VAR>/Sub-Exporter-0.988.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Exporter/main.aap:49
+checksum	<VAR>/Sub-Exporter-Progressive-0.001013.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Exporter-Progressive/main.aap:55
+checksum	<VAR>/Sub-Identify-0.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Identify/main.aap:40
+checksum	<VAR>/Sub-Info-0.002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Info/main.aap:40
+checksum	<VAR>/Sub-Install-0.928.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Install/main.aap:45
+checksum	<VAR>/Sub-Name-0.26.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Name/main.aap:44
+checksum	<VAR>/Sub-Quote-2.006006.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Quote/main.aap:42
+checksum	<VAR>/Sub-Uplevel-0.2800.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sub-Uplevel/main.aap:44
+checksum	<VAR>/SupportAssistEnterprise_2.0.10.13.bin <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/sae/main.aap:56
+checksum	<VAR>/Switch-2.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/p5-Switch/main.aap:52
+checksum	<VAR>/Sys-SigAction-0.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Sys-SigAction/main.aap:46
+checksum	<VAR>/Task-Weaken-1.06.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Task-Weaken/main.aap:69
+checksum	<VAR>/TclSOAP-1.6.7.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/tclsoap/main.aap:55
+checksum	<VAR>/Template-Toolkit-3.009.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-Template-Toolkit/main.aap:56
+checksum	<VAR>/Term-Bash-Completion-Generator-0.02.8.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	shells/p5-Term-Bash-Completion-Generator/main.aap:54
+checksum	<VAR>/Term-Size-0.211.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Term-Size/main.aap:46
+checksum	<VAR>/Term-Table-0.015.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Term-Table/main.aap:47
+checksum	<VAR>/Term-UI-0.50.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Term-UI/main.aap:52
+checksum	<VAR>/Test-Base-0.89.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Base/main.aap:46
+checksum	<VAR>/Test-Block-0.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Block/main.aap:42
+checksum	<VAR>/Test-CleanNamespaces-0.24.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-CleanNamespaces/main.aap:49
+checksum	<VAR>/Test-Deep-1.130.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Deep/main.aap:49
+checksum	<VAR>/Test-Differences-0.68.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Differences/main.aap:52
+checksum	<VAR>/Test-Exception-0.43.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Exception/main.aap:54
+checksum	<VAR>/Test-FailWarnings-0.008.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-FailWarnings/main.aap:44
+checksum	<VAR>/Test-Fatal-0.016.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Fatal/main.aap:45
+checksum	<VAR>/Test-File-1.448.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-File/main.aap:42
+checksum	<VAR>/Test-File-ShareDir-1.001002.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-File-ShareDir/main.aap:46
+checksum	<VAR>/Test-Manifest-2.022.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Manifest/main.aap:46
+checksum	<VAR>/Test-Most-0.37.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Most/main.aap:50
+checksum	<VAR>/Test-Needs-0.002009.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Needs/main.aap:44
+checksum	<VAR>/Test-NoWarnings-1.06.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-NoWarnings/main.aap:48
+checksum	<VAR>/Test-Pod-1.52.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Pod/main.aap:43
+checksum	<VAR>/Test-Pod-Coverage-1.10.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Pod-Coverage/main.aap:41
+checksum	<VAR>/Test-Requires-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Requires/main.aap:45
+checksum	<VAR>/Test-RequiresInternet-0.05.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-RequiresInternet/main.aap:40
+checksum	<VAR>/Test-SharedFork-0.35.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-SharedFork/main.aap:49
+checksum	<VAR>/Test-Simple-1.302186.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Simple/main.aap:54
+checksum	<VAR>/Test-TCP-2.22.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-TCP/main.aap:44
+checksum	<VAR>/Test-Taint-1.08.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Taint/main.aap:44
+checksum	<VAR>/Test-UseAllModules-0.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-UseAllModules/main.aap:40
+checksum	<VAR>/Test-Warn-0.36.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Warn/main.aap:45
+checksum	<VAR>/Test-Warnings-0.031.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Warnings/main.aap:46
+checksum	<VAR>/Test-Without-Module-0.20.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-Without-Module/main.aap:40
+checksum	<VAR>/Test-YAML-1.07.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-YAML/main.aap:41
+checksum	<VAR>/Test-utf8-1.02.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test-utf8/main.aap:40
+checksum	<VAR>/Test2-Plugin-NoWarnings-0.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test2-Plugin-NoWarnings/main.aap:44
+checksum	<VAR>/Test2-Suite-0.000141.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Test2-Suite/main.aap:46
+checksum	<VAR>/Text-CSV-2.01.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-CSV/main.aap:57
+checksum	<VAR>/Text-CSV_XS-1.46.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-CSV_XS/main.aap:46
+checksum	<VAR>/Text-Colorizer-0.03.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-Colorizer/main.aap:54
+checksum	<VAR>/Text-Diff-1.45.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-Diff/main.aap:54
+checksum	<VAR>/Text-Glob-0.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-Glob/main.aap:45
+checksum	<VAR>/Text-Pluralize-1.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-Pluralize/main.aap:39
+checksum	<VAR>/Text-Soundex-3.05.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-Text-Soundex/main.aap:56
+checksum	<VAR>/TimeDate-2.33.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-TimeDate/main.aap:60
+checksum	<VAR>/Tivoli_Endpunkt-AIX_41022.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/endpoint/main.aap:55
+checksum	<VAR>/Tivoli_GwProxy-Aix_131.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/GatewayProxy/main.aap:60
+checksum	<VAR>/Tree-Trie-1.9.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Tree-Trie/main.aap:61
+checksum	<VAR>/Try-Tiny-0.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/p5-Try-Tiny/main.aap:45
+checksum	<VAR>/Type-Tiny-1.012004.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Type-Tiny/main.aap:45
+checksum	<VAR>/URI-5.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-URI/main.aap:54
+checksum	<VAR>/Unicode-Stringprep-1.105.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Unicode-Stringprep/main.aap:44
+checksum	<VAR>/Unicode-UTF8-0.62.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/p5-Unicode-UTF8/main.aap:42
+checksum	<VAR>/UnlimitedJCEPolicyJDK7.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/oraclejava7/main.aap:74
+checksum	<VAR>/Variable-Magic-0.62.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-Variable-Magic/main.aap:47
+checksum	<VAR>/WWW-Curl-4.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-WWW-Curl/main.aap:59
+checksum	<VAR>/WWW-RobotRules-6.02.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-WWW-RobotRules/main.aap:48
+checksum	<VAR>/Werkzeug-2.3.6-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-Werkzeug/main.aap:40
+checksum	<VAR>/WikiArticleFeeds-master-3a830ee.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/mediawiki/main.aap:96
+checksum	<VAR>/XML-DOM-1.46.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-XML-DOM/main.aap:61
+checksum	<VAR>/XML-Filter-BufferText-1.01.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-XML-Filter-BufferText/main.aap:51
+checksum	<VAR>/XML-LibXML-2.0213.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-LibXML/main.aap:57
+checksum	<VAR>/XML-LibXSLT-1.99.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-LibXSLT/main.aap:49
+checksum	<VAR>/XML-NamespaceSupport-1.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-NamespaceSupport/main.aap:56
+checksum	<VAR>/XML-Parser-2.46.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-Parser/main.aap:53
+checksum	<VAR>/XML-Parser-Lite-0.722.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-XML-Parser-Lite/main.aap:52
+checksum	<VAR>/XML-RegExp-0.04.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-RegExp/main.aap:56
+checksum	<VAR>/XML-SAX-1.02.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-SAX/main.aap:47
+checksum	<VAR>/XML-SAX-Base-1.09.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-SAX-Base/main.aap:42
+checksum	<VAR>/XML-SAX-Writer-0.57.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-XML-SAX-Writer/main.aap:44
+checksum	<VAR>/XML-Simple-2.25.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-Simple/main.aap:48
+checksum	<VAR>/XML-Writer-0.900.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-XML-Writer/main.aap:63
+checksum	<VAR>/XString-0.005.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-XString/main.aap:40
+checksum	<VAR>/YAML-1.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-YAML/main.aap:47
+checksum	<VAR>/YAML-Tiny-1.73.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/p5-YAML-Tiny/main.aap:40
+checksum	<VAR>/YourKit-JavaProfiler-2022.9-b177.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/yjp/main.aap:47
+checksum	<VAR>/a2ps-4.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	print/a2ps/main.aap:57
+checksum	<VAR>/aap-1.091.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/aap/main.aap:67
+checksum	<VAR>/agentonly.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/scmclient/main.aap:200
+checksum	<VAR>/allow_root <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	devel/rcs/main.aap:56
+checksum	<VAR>/annotated_types-0.6.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-annotated-types/main.aap:38
+checksum	<VAR>/ansible-11.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/py3-ansible/main.aap:47
+checksum	<VAR>/ant-contrib-0.6-bin.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/ant-contrib/main.aap:45
+checksum	<VAR>/anyio-4.12.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-anyio/main.aap:42
+checksum	<VAR>/apache-ant-1.8.2-bin.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/apache-ant/main.aap:55
+checksum	<VAR>/apache-ant-1.8.3-bin.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/apache-ant/main.aap:54
+checksum	<VAR>/apache-log4j-1.2.15.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/apache-log4j/main.aap:69
+checksum	<VAR>/apache-maven-3.3.9-bin.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/apache-maven/main.aap:50
+checksum	<VAR>/apache-tomcat-6.0.29.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat6/main.aap:187
+checksum	<VAR>/apache-tomcat-7.0.47.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat7/main.aap:91
+checksum	<VAR>/apache-tomcat-8.0.28.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat8/main.aap:81
+checksum	<VAR>/apache-tomcat-8.5.29.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat85/main.aap:78
+checksum	<VAR>/apache-tomcat-9.0.83.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat9/main.aap:70
+checksum	<VAR>/apr-1.4.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/apr/main.aap:45
+checksum	<VAR>/aps098.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/aps/main.aap:59
+checksum	<VAR>/argparse-1.4.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-argparse/main.aap:39
+checksum	<VAR>/asgiref-3.7.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-asgiref/main.aap:39
+checksum	<VAR>/asn1crypto-1.5.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-asn1crypto/main.aap:38
+checksum	<VAR>/asttokens-2.2.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-asttokens/main.aap:39
+checksum	<VAR>/atlassian-jira-software-7.3.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/jira/main.aap:64
+checksum	<VAR>/attrs-23.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-attrs/main.aap:39
+checksum	<VAR>/authd-0.2.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/authd/main.aap:50
+checksum	<VAR>/autoconf-2.69.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/autoconf/main.aap:47
+checksum	<VAR>/automake-1.14.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/automake/main.aap:53
+checksum	<VAR>/backcall-0.2.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-backcall/main.aap:39
+checksum	<VAR>/bareword-filehandles-0.007.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-bareword-filehandles/main.aap:48
+checksum	<VAR>/bash-2.05b.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	shells/bash/main.aap:67
+checksum	<VAR>/bea.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/wilyagent/main.aap:67
+checksum	<VAR>/beniget-0.4.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-beniget/main.aap:39
+checksum	<VAR>/bison-1.75.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/bison/main.aap:72
+checksum	<VAR>/blinker-1.6.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-blinker/main.aap:38
+checksum	<VAR>/bokeh-3.3.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-bokeh/main.aap:55
+checksum	<VAR>/boolean-0.46.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-boolean/main.aap:39
+checksum	<VAR>/boost_1_74_0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/boost/main.aap:57
+checksum	<VAR>/build-0.10.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-build/main.aap:40
+checksum	<VAR>/bzip2-1.0.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/bzip2/main.aap:48
+checksum	<VAR>/cacrypto.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/cacrypto/main.aap:52
+checksum	<VAR>/cairo-1.8.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/cairo/main.aap:70
+checksum	<VAR>/catalina.sh.patch <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	www/jakarta-tomcat5/main.aap:243
+checksum	<VAR>/cfengine-2.1.21.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/cfengine/main.aap:54
+checksum	<VAR>/cffi-1.16.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-cffi/main.aap:39
+checksum	<VAR>/chardet-5.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-chardet/main.aap:41
+checksum	<VAR>/charset_normalizer-3.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-charset-normalizer/main.aap:38
+checksum	<VAR>/check-0.9.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/check/main.aap:44
+checksum	<VAR>/clamav-0.103.11.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/clamav/main.aap:114
+checksum	<VAR>/clamdb.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/clamdb/main.aap:66
+checksum	<VAR>/cleo-2.0.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-cleo/main.aap:40
+checksum	<VAR>/click-8.1.4-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-Click/main.aap:39
+checksum	<VAR>/client.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/scmclient/main.aap:199
+checksum	<VAR>/clientsdk.4.10.FC4DE.LINUX.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/informix-clientsdk/main.aap:62
+checksum	<VAR>/cloudpickle-3.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-cloudpickle/main.aap:38
+checksum	<VAR>/clusterit-2.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/clusterit/main.aap:67
+checksum	<VAR>/cmd2-2.4.3-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-cmd2/main.aap:46
+checksum	<VAR>/colorama-0.4.6-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-colorama/main.aap:39
+checksum	<VAR>/common-sense-3.75.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-common-sense/main.aap:43
+checksum	<VAR>/compass-1.0.3.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	ruby/ruby-compass/main.aap:68
+checksum	<VAR>/compass-core-1.0.3.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	ruby/ruby-compass-core/main.aap:64
+checksum	<VAR>/compass-import-once-1.0.5.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	ruby/ruby-compass-import-once/main.aap:63
+checksum	<VAR>/config.informix.clientsdk.4.10.FC4DE.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/informix-clientsdk/main.aap:63
+checksum	<VAR>/confuse-2.7.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/confuse/main.aap:78
+checksum	<VAR>/connect.c <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/connect/main.aap:52
+checksum	<VAR>/conserver-8.1.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	comms/conserver-com/main.aap:73
+checksum	<VAR>/contourpy-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-contourpy/main.aap:39
+checksum	<VAR>/cppy-1.2.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-cppy/main.aap:38
+checksum	<VAR>/crashtest-0.4.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-crashtest/main.aap:38
+checksum	<VAR>/cryptography-41.0.2-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/py3-cryptography/main.aap:43
+checksum	<VAR>/cvs-1.11.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/cvs/main.aap:65
+checksum	<VAR>/cvsweb-3.0.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/cvsweb/main.aap:78
+checksum	<VAR>/cycler-0.11.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-cycler/main.aap:38
+checksum	<VAR>/dacite-1.8.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-dacite/main.aap:38
+checksum	<VAR>/datadeploy56.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/datadeploy/main.aap:77
+checksum	<VAR>/decorator-5.1.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-decorator/main.aap:38
+checksum	<VAR>/defusedxml-0.7.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-defusedxml/main.aap:41
+checksum	<VAR>/diffutils-2.8.7.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/diffutils/main.aap:64
+checksum	<VAR>/distlib-0.3.7-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-distlib/main.aap:38
+checksum	<VAR>/dj-static-0.0.6-0.0.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-dj-static/main.aap:39
+checksum	<VAR>/docutils-0.20.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-docutils/main.aap:38
+checksum	<VAR>/dulwich-0.21.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-dulwich/main.aap:39
+checksum	<VAR>/dvd-sv51-mf003.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/mfcobol/main.aap:64
+checksum	<VAR>/elasticsearch-2.3.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/elasticsearch/main.aap:68
+checksum	<VAR>/emacs-24.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/emacs/main.aap:98
+checksum	<VAR>/emcgrab_Linux_v4.6.4.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/emcgrab/main.aap:52
+checksum	<VAR>/et_xmlfile-1.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-et_xmlfile/main.aap:38
+checksum	<VAR>/executing-1.2.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-executing/main.aap:38
+checksum	<VAR>/expat-1.95.7.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/expat/main.aap:59
+checksum	<VAR>/expect5.45.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/expect/main.aap:74
+checksum	<VAR>/fastapi-0.128.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-fastapi/main.aap:42
+checksum	<VAR>/ffmpeg-4.3.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	multimedia/ffmpeg/main.aap:47
+checksum	<VAR>/filelock-3.12.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/py3-filelock/main.aap:38
+checksum	<VAR>/fire-0.5.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-fire/main.aap:45
+checksum	<VAR>/fisheye-4.3.0.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/fisheye/main.aap:59
+checksum	<VAR>/flam421.linux_x86.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/flam/main.aap:110
+checksum	<VAR>/flask_oidc-2.0.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-flask-oidc/main.aap:41
+checksum	<VAR>/flex-2.5.33.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/flex/main.aap:56
+checksum	<VAR>/flit-3.9.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-flit/main.aap:42
+checksum	<VAR>/flit_core-3.9.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-flit-core/main.aap:38
+checksum	<VAR>/fontconfig-2.6.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11-fonts/fontconfig/main.aap:60
+checksum	<VAR>/fonttools-4.44.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	print/py3-fonttools/main.aap:38
+checksum	<VAR>/freetype-2.10.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/freetype/main.aap:49
+checksum	<VAR>/ganglia-3.1.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/ganglia/main.aap:176
+checksum	<VAR>/gast-0.5.4-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-gast/main.aap:38
+checksum	<VAR>/gc6.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/boehm-gc/main.aap:67
+checksum	<VAR>/gd-2.0.35.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/gd/main.aap:74
+checksum	<VAR>/geos-3.8.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/geos/main.aap:50
+checksum	<VAR>/get-2019.4.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-get/main.aap:38
+checksum	<VAR>/gettext-0.13.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/gettext-tools/main.aap:53
+checksum	<VAR>/gettext-0.17.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/gettext/main.aap:55
+checksum	<VAR>/git-2.8.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/git/main.aap:55
+checksum	<VAR>/git-2.8.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/git/main.aap:56
+checksum	<VAR>/gitdb-0.6.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/gitdb/main.aap:51
+checksum	<VAR>/gitdb-4.0.10-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-gitdb/main.aap:40
+checksum	<VAR>/gitlab-runner-linux-amd64 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/gitlab-runner/main.aap:44
+checksum	<VAR>/glances-4.4.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/py3-glances/main.aap:54
+checksum	<VAR>/glib-2.18.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/glib/main.aap:56
+checksum	<VAR>/gnuplot-4.2.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/gnuplot/main.aap:89
+checksum	<VAR>/gpss-gpdb7-1.11.3-rhel8-x86_64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/gpss/main.aap:47
+checksum	<VAR>/gpsscli-2.3.0-linux-x86_64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/gpss-cli/main.aap:47
+checksum	<VAR>/grace-5.1.16.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/grace/main.aap:63
+checksum	<VAR>/gradle-1.9-all.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/gradle/main.aap:46
+checksum	<VAR>/grails-2.3.3.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/grails/main.aap:48
+checksum	<VAR>/graphviz-2.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/graphviz/main.aap:68
+checksum	<VAR>/groovy-binary-2.2.0.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/groovy/main.aap:47
+checksum	<VAR>/groovyserv-0.13-platform-independent-bin.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/groovyserv/main.aap:49
+checksum	<VAR>/grub-2.02~beta3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/grub/main.aap:54
+checksum	<VAR>/gunicorn-21.2.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-gunicorn/main.aap:40
+checksum	<VAR>/gzip-1.3.5.tar.Z <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/gzip/main.aap:53
+checksum	<VAR>/h11-0.14.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-h11/main.aap:38
+checksum	<VAR>/harvest_7.1.fix1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/Harvest7.0/main.aap:90
+checksum	<VAR>/hatchling-1.18.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-hatchling/main.aap:43
+checksum	<VAR>/htdig-3.1.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/htdig/main.aap:56
+checksum	<VAR>/html5lib-1.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-html5lib/main.aap:39
+checksum	<VAR>/htmlmin-0.1.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-htmlmin/main.aap:38
+checksum	<VAR>/httplib2-0.22.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-httplib2/main.aap:39
+checksum	<VAR>/icu4c-64_1-src.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/icu/main.aap:51
+checksum	<VAR>/idna-3.11-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	dns/py3-idna/main.aap:40
+checksum	<VAR>/imageio-2.33.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/py3-imageio/main.aap:40
+checksum	<VAR>/imbalanced_learn-0.11.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	science/py3-imbalanced-learn/main.aap:47
+checksum	<VAR>/importlib_metadata-6.8.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-importlib_metadata/main.aap:39
+checksum	<VAR>/indirect-0.39.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-indirect/main.aap:43
+checksum	<VAR>/inn-2.6.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	news/inn/main.aap:59
+checksum	<VAR>/inq.LinuxAMD64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/inq/main.aap:47
+checksum	<VAR>/install_zv25_company.jar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/ari/main.aap:132
+checksum	<VAR>/install_zv25_patch2.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/ari/main.aap:133
+checksum	<VAR>/install_zv25_patch2sso.tar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/ari/main.aap:134
+checksum	<VAR>/installer-0.7.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-installer/main.aap:38
+checksum	<VAR>/iperf-3.1.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	benchmarks/iperf/main.aap:53
+checksum	<VAR>/iplike-2.0.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/iplike/main.aap:40
+checksum	<VAR>/ipsec-tools-0.8.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/ipsec-tools/main.aap:92
+checksum	<VAR>/ipython-8.14.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-ipython/main.aap:48
+checksum	<VAR>/ipython_genutils-0.2.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-ipython_genutils/main.aap:39
+checksum	<VAR>/itsdangerous-2.1.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/py3-itsdangerous/main.aap:38
+checksum	<VAR>/jakarta-tomcat-4.1.31.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat/main.aap:104
+checksum	<VAR>/jakarta-tomcat-5.0.30.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/jakarta-tomcat5/main.aap:241
+checksum	<VAR>/jaraco.classes-3.3.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-jaraco.classes/main.aap:39
+checksum	<VAR>/jboss-4.2.3.GA-src.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/jboss/main.aap:128
+checksum	<VAR>/jboss-as-7.1.1.Final.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/jboss7/main.aap:100
+checksum	<VAR>/jdcal-1.4.1-py2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-jdcal/main.aap:38
+checksum	<VAR>/jdk-1_5_0_21-linux-amd64.bin <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/sunjava/main.aap:59
+checksum	<VAR>/jdk-7u80-linux-x64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/oraclejava7/main.aap:73
+checksum	<VAR>/jdk-8u45-linux-x64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/oraclejava8/main.aap:75
+checksum	<VAR>/jeepney-0.8.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-jeepney/main.aap:38
+checksum	<VAR>/joblib-1.3.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-joblib/main.aap:42
+checksum	<VAR>/joe-4.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/joe/main.aap:56
+checksum	<VAR>/jpegsrc.v6b.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/libjpeg/main.aap:88
+checksum	<VAR>/jq-1.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/jq/main.aap:47
+checksum	<VAR>/jrrd-1.0.7.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/jrrd/main.aap:39
+checksum	<VAR>/jsonschema-4.18.4-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-jsonschema/main.aap:40
+checksum	<VAR>/jsonschema_specifications-2023.7.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-jsonschema_specifications/main.aap:39
+checksum	<VAR>/keepalived-2.3.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	cluster/keepalived/main.aap:51
+checksum	<VAR>/kibana-4.5.1-linux-x64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/kibana/main.aap:70
+checksum	<VAR>/kiwisolver-1.4.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-kiwisolver/main.aap:39
+checksum	<VAR>/lazy_loader-0.3-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-lazy_loader/main.aap:38
+checksum	<VAR>/less-382.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/less/main.aap:49
+checksum	<VAR>/libdnet-1.12.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/libdnet/main.aap:57
+checksum	<VAR>/libe-0.3.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/libe/main.aap:42
+checksum	<VAR>/libffi-3.0.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/libffi/main.aap:50
+checksum	<VAR>/libiconv-1.9.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/libiconv/main.aap:110
+checksum	<VAR>/libiodbc-3.52.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/libiodbc/main.aap:55
+checksum	<VAR>/libmspack-0.5alpha.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/libmspack/main.aap:46
+checksum	<VAR>/libpng-1.2.35.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/libpng/main.aap:54
+checksum	<VAR>/libsodium-1.0.18.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/libsodium/main.aap:52
+checksum	<VAR>/libssh2-1.2.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/libssh2/main.aap:51
+checksum	<VAR>/libtool-2.4.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/libtool/main.aap:49
+checksum	<VAR>/libwww-perl-6.55.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/p5-libwww/main.aap:79
+checksum	<VAR>/libxml-perl-0.08.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	xml/p5-XML-Parser-PerlSAX/main.aap:48
+checksum	<VAR>/libxml2-2.9.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/libxml2/main.aap:66
+checksum	<VAR>/libxslt-1.1.28.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/libxslt/main.aap:49
+checksum	<VAR>/linux.x64_11gR2_database_1of2.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/oracle/main.aap:85
+checksum	<VAR>/linux.x64_11gR2_database_2of2.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/oracle/main.aap:86
+checksum	<VAR>/llvmlite-0.42.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-llvmlite/main.aap:38
+checksum	<VAR>/lockfile-0.12.2-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-lockfile/main.aap:38
+checksum	<VAR>/logstash-all-plugins-2.3.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/logstash/main.aap:50
+checksum	<VAR>/logsurfer+-1.7.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/logsurfer+/main.aap:52
+checksum	<VAR>/logsurfer-1.5b.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/logsurfer/main.aap:54
+checksum	<VAR>/lsof_4.86.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/lsof/main.aap:69
+checksum	<VAR>/lxc-5.0.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/lxc/main.aap:68
+checksum	<VAR>/lxml-5.2.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-lxml/main.aap:39
+checksum	<VAR>/m4-1.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/m4/main.aap:58
+checksum	<VAR>/make-3.80.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/gmake/main.aap:52
+checksum	<VAR>/matplotlib-3.8.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-matplotlib/main.aap:54
+checksum	<VAR>/matplotlib_inline-0.1.6-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-matplotlib_inline/main.aap:38
+checksum	<VAR>/mattn-tinytinyhttpd-3a3a10b.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/tinytinyhttpd/main.aap:57
+checksum	<VAR>/mc-4.6.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	shells/mc/main.aap:57
+checksum	<VAR>/mediawiki-1.32.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/mediawiki/main.aap:95
+checksum	<VAR>/meson-1.3.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-meson/main.aap:38
+checksum	<VAR>/metricbeat-6.1.0-linux-x86_64.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/metricbeat/main.aap:52
+checksum	<VAR>/mongodb-linux-x86_64-2.4.8.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/mongodb/main.aap:47
+checksum	<VAR>/mono-6.12.0.122.tar.xz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/mono/main.aap:74
+checksum	<VAR>/more_itertools-10.0.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-more_itertools/main.aap:38
+checksum	<VAR>/msgpack-1.0.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-msgpack/main.aap:38
+checksum	<VAR>/multi_json-1.11.2.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	ruby/ruby-multi_json/main.aap:62
+checksum	<VAR>/multidimensional-0.014.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-multidimensional/main.aap:50
+checksum	<VAR>/multimethod-1.10-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-multimethod/main.aap:38
+checksum	<VAR>/mutt-1.4.2.1i.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	mail/mutt/main.aap:57
+checksum	<VAR>/mysql-5.0.33.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/mysql/main.aap:68
+checksum	<VAR>/mysql.cc.patch <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	databases/mysql/main.aap:69
+checksum	<VAR>/nachusrlocal <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	sysutils/syslinux/main.aap:57
+checksum	<VAR>/namespace-autoclean-0.29.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-namespace-autoclean/main.aap:44
+checksum	<VAR>/namespace-clean-0.27.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-namespace-clean/main.aap:55
+checksum	<VAR>/nano-7.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/nano/main.aap:51
+checksum	<VAR>/nc110.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/netcat/main.aap:55
+checksum	<VAR>/ncurses-5.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/ncurses/main.aap:47
+checksum	<VAR>/nedit-5.4-source.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/nedit/main.aap:66
+checksum	<VAR>/neon-0.29.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/neon/main.aap:68
+checksum	<VAR>/netcat-0.7.1.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/gnetcat/main.aap:57
+checksum	<VAR>/networkx-3.2.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-networkx/main.aap:38
+checksum	<VAR>/nexus-professional-2.11.4-01-bundle.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/nexus/main.aap:68
+checksum	<VAR>/ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-ninja/main.aap:38
+checksum	<VAR>/nmon16m_helpsystems.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/nmonx86/main.aap:57
+checksum	<VAR>/nmon4aix_11e.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/nmon/main.aap:47
+checksum	<VAR>/ntlm.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/ntlm/main.aap:60
+checksum	<VAR>/nttcp-1.47.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	benchmarks/nttcp/main.aap:64
+checksum	<VAR>/numba-0.59.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-numba/main.aap:40
+checksum	<VAR>/numexpr-2.8.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-numexpr/main.aap:39
+checksum	<VAR>/numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-numpy/main.aap:39
+checksum	<VAR>/nutch-0.9.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/nutch/main.aap:90
+checksum	<VAR>/oauth2client-4.1.3-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/py3-oauth2client/main.aap:43
+checksum	<VAR>/oidentd-2.0.8.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/oidentd/main.aap:60
+checksum	<VAR>/oniguruma-6.9.7.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/oniguruma/main.aap:62
+checksum	<VAR>/openais-1.1.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	cluster/openais/main.aap:62
+checksum	<VAR>/opennms-meridian_2017.1.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/onms-basis/main.aap:52
+checksum	<VAR>/openpyxl-3.1.2-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-openpyxl/main.aap:40
+checksum	<VAR>/openssh-5.2p1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/openssh/main.aap:86
+checksum	<VAR>/openssl-0.9.8za.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/openssl/main.aap:91
+checksum	<VAR>/openssl-1.1.1g.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/openssl1/main.aap:65
+checksum	<VAR>/openssl-3.0.8.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/openssl3/main.aap:61
+checksum	<VAR>/ora2pg-24.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/p5-ora2pg/main.aap:48
+checksum	<VAR>/ora_lib32.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/oralib32/main.aap:54
+checksum	<VAR>/oratcl45.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/oratcl/main.aap:55
+checksum	<VAR>/packaging-23.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-packaging/main.aap:43
+checksum	<VAR>/pandas-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pandas/main.aap:45
+checksum	<VAR>/pango-1.22.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11-toolkits/pango/main.aap:60
+checksum	<VAR>/pango.patch <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	x11-toolkits/pango/main.aap:61
+checksum	<VAR>/parso-0.8.3-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-parso/main.aap:39
+checksum	<VAR>/patch-2.5.9.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/patch/main.aap:48
+checksum	<VAR>/patch.ab <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	benchmarks/nttcp/main.aap:66
+checksum	<VAR>/patch.in <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	sysutils/ganglia/main.aap:177
+checksum	<VAR>/patch.mod_ntlm.c <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	www/ntlm/main.aap:61
+checksum	<VAR>/patch.ntlmssp.inc.c <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	www/ntlm/main.aap:62
+checksum	<VAR>/patch1 <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	lang/python3/main.aap:105
+checksum	<VAR>/pathspec-0.11.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pathspec/main.aap:39
+checksum	<VAR>/patrol_linux_472.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/Patrol/main.aap:95
+checksum	<VAR>/patsy-0.5.3-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-patsy/main.aap:40
+checksum	<VAR>/perl-5.32.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/perl/main.aap:71
+checksum	<VAR>/perl-5.8.8.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/perl58/main.aap:54
+checksum	<VAR>/perl-ldap-0.68.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/p5-perl-ldap/main.aap:61
+checksum	<VAR>/permutation-0.1.8.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/ruby-permutation/main.aap:55
+checksum	<VAR>/pexpect-4.8.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pexpect/main.aap:44
+checksum	<VAR>/phik-0.12.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-phik/main.aap:43
+checksum	<VAR>/php-5.2.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/php5/main.aap:69
+checksum	<VAR>/php-5.5.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/php55/main.aap:66
+checksum	<VAR>/php-7.3.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/php7/main.aap:79
+checksum	<VAR>/pickleshare-0.7.5-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/py3-pickleshare/main.aap:38
+checksum	<VAR>/pidentd-3.0.19.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/pidentd/main.aap:62
+checksum	<VAR>/pillow-10.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/py3-pillow/main.aap:44
+checksum	<VAR>/pipenv-2023.2.4-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pipenv/main.aap:41
+checksum	<VAR>/pixman-0.12.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11/pixman/main.aap:47
+checksum	<VAR>/pja_2.5.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/pja/main.aap:56
+checksum	<VAR>/pkg-config-0.23.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/pkgconfig/main.aap:63
+checksum	<VAR>/pkg-config-0.28.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/pkg-config/main.aap:42
+checksum	<VAR>/pkginfo-1.9.6-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/py3-pkginfo/main.aap:38
+checksum	<VAR>/platformdirs-3.10.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-platformdirs/main.aap:38
+checksum	<VAR>/plotly-5.18.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/py3-plotly/main.aap:40
+checksum	<VAR>/pluggy-1.2.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pluggy/main.aap:38
+checksum	<VAR>/ply-3.11-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-ply/main.aap:38
+checksum	<VAR>/poetry-1.5.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-poetry/main.aap:62
+checksum	<VAR>/poetry_core-1.6.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-poetry-core/main.aap:38
+checksum	<VAR>/poetry_plugin_export-1.4.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-poetry/main.aap:63
+checksum	<VAR>/post-2019.4.13.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-post/main.aap:39
+checksum	<VAR>/postfix-2.7.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/postfix-qshape/main.aap:66
+checksum	<VAR>/postgresql-9.1.9.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/postgresql-client/main.aap:62
+checksum	<VAR>/postgresql-9.4.5.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/postgresql/main.aap:72
+checksum	<VAR>/preinstall6970.jar <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/netphantom/main.aap:97
+checksum	<VAR>/prngd-0.9.27.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/prngd/main.aap:80
+checksum	<VAR>/prompt_toolkit-3.0.39-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-prompt_toolkit/main.aap:39
+checksum	<VAR>/psutil-7.2.1-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/py3-psutil/main.aap:41
+checksum	<VAR>/ptyprocess-0.7.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-ptyprocess/main.aap:42
+checksum	<VAR>/public-2020.12.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-public/main.aap:39
+checksum	<VAR>/pure_eval-0.2.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pure_eval/main.aap:38
+checksum	<VAR>/py4j-0.10.9.7-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-py4j/main.aap:38
+checksum	<VAR>/pyarrow-15.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/py3-pyarrow/main.aap:39
+checksum	<VAR>/pyasn1-0.5.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyasn1/main.aap:38
+checksum	<VAR>/pyasn1_modules-0.3.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyasn1-modules/main.aap:40
+checksum	<VAR>/pybind11-2.11.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pybind11/main.aap:38
+checksum	<VAR>/pycparser-2.21-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pycparser/main.aap:38
+checksum	<VAR>/pycxx-0.0.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pycxx/main.aap:42
+checksum	<VAR>/pycxx-6.2.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/pycxx/main.aap:56
+checksum	<VAR>/pydantic-2.5.3-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pydantic/main.aap:41
+checksum	<VAR>/pydantic_core-2.14.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pydantic-core/main.aap:39
+checksum	<VAR>/pyfiglet-1.0.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyfiglet/main.aap:43
+checksum	<VAR>/pyodbc-5.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/py3-pyodbc/main.aap:41
+checksum	<VAR>/pyperclip-1.8.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyperclip/main.aap:39
+checksum	<VAR>/pyproject_hooks-1.0.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyproject_hooks/main.aap:38
+checksum	<VAR>/pyspark-3.5.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyspark/main.aap:39
+checksum	<VAR>/python_dateutil-2.8.2-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-python-dateutil/main.aap:41
+checksum	<VAR>/python_owasp_zap_v2.4-0.0.22-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pyZAPv2/main.aap:43
+checksum	<VAR>/pythran-0.13.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pythran/main.aap:43
+checksum	<VAR>/pytoml-0.1.21-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pytoml/main.aap:38
+checksum	<VAR>/pytz-2023.3-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-pytz/main.aap:38
+checksum	<VAR>/pywavelets-1.5.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-PyWavelets/main.aap:39
+checksum	<VAR>/query-string-2020.12.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-query-string/main.aap:39
+checksum	<VAR>/rapidfuzz-2.15.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-rapidfuzz/main.aap:38
+checksum	<VAR>/rb-fsevent-0.9.5.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	ruby/ruby-rb-fsevent/main.aap:62
+checksum	<VAR>/rb-inotify-0.9.5.gem <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	ruby/ruby-rb-inotify/main.aap:63
+checksum	<VAR>/rcs-5.7.tar.Z <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/rcs/main.aap:55
+checksum	<VAR>/rdist-6.1.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/rdist/main.aap:63
+checksum	<VAR>/readline-5.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/readline/main.aap:48
+checksum	<VAR>/referencing-0.30.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-referencing/main.aap:40
+checksum	<VAR>/requests-2.31.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-requests3/main.aap:47
+checksum	<VAR>/requests-2.5.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/requests/main.aap:51
+checksum	<VAR>/requests_toolbelt-1.0.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-requests_toolbelt/main.aap:38
+checksum	<VAR>/resolvelib-1.0.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-resolvelib/main.aap:38
+checksum	<VAR>/rpds_py-0.9.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-rpds_py/main.aap:38
+checksum	<VAR>/rrdtool-1.3.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/rrdtool/main.aap:120
+checksum	<VAR>/rsa-4.9-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/py3-rsa/main.aap:41
+checksum	<VAR>/rsync-2.6.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/rsync/main.aap:66
+checksum	<VAR>/ruby-3.1.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/ruby/main.aap:63
+checksum	<VAR>/s3cmd-2.4.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/s3cmd/main.aap:45
+checksum	<VAR>/samba-2.2.8a.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/samba2/main.aap:66
+checksum	<VAR>/sapidoc-1.0.4.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/sapjco/main.aap:63
+checksum	<VAR>/sapidocjco-1.0.8.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/sapjco/main.aap:64
+checksum	<VAR>/sapjco-linuxx86_64-2.1.8.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/sapjco/main.aap:62
+checksum	<VAR>/sapjco3-linuxx86_64-3.0.16.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/sapjco/main.aap:65
+checksum	<VAR>/sapjidoc30P_12-10009485.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/sapjco/main.aap:66
+checksum	<VAR>/saprouter.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/saprouter/main.aap:50
+checksum	<VAR>/scikit_image-0.22.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/py3-scikit-image/main.aap:45
+checksum	<VAR>/scikit_learn-1.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	science/py3-scikit-learn/main.aap:42
+checksum	<VAR>/scikit_plot-0.3.7-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	science/py3-scikit-plot/main.aap:43
+checksum	<VAR>/scipy-1.11.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	science/py3-scipy/main.aap:45
+checksum	<VAR>/scm.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/scmserver/main.aap:161
+checksum	<VAR>/scons-2.3.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/scons/main.aap:51
+checksum	<VAR>/seaborn-0.12.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-seaborn/main.aap:42
+checksum	<VAR>/sec-2.9.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/sec/main.aap:58
+checksum	<VAR>/semantic_version-2.10.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-semantic_version/main.aap:38
+checksum	<VAR>/serf-1.3.10.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/serf/main.aap:73
+checksum	<VAR>/serf-1.3.9.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/serf/main.aap:72
+checksum	<VAR>/setup_cobol_server_2.3_update2_redhat_x86_64 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/mfcobserver/main.aap:64
+checksum	<VAR>/setuptools-72.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-setuptools/main.aap:38
+checksum	<VAR>/setuptools_rust-1.6.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-setuptools_rust/main.aap:41
+checksum	<VAR>/setuptools_scm-7.1.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-setuptools_scm/main.aap:42
+checksum	<VAR>/shap2-0.42.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	science/py3-shap2/main.aap:50
+checksum	<VAR>/shellingham-1.5.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-shellingham/main.aap:38
+checksum	<VAR>/shtab-1.8.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-shtab/main.aap:41
+checksum	<VAR>/six-1.16.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-six/main.aap:38
+checksum	<VAR>/slicer-0.0.7-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-slicer/main.aap:37
+checksum	<VAR>/smmap-5.0.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-smmap/main.aap:38
+checksum	<VAR>/spread-src-4.1.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/spread/main.aap:65
+checksum	<VAR>/sqlite-autoconf-3390200.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/sqlite/main.aap:49
+checksum	<VAR>/sqlparse-0.4.4-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/py3-sqlparse/main.aap:39
+checksum	<VAR>/stack_data-0.6.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-stack_data/main.aap:41
+checksum	<VAR>/starlette-0.52.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-starlette/main.aap:43
+checksum	<VAR>/static3-0.7.0.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-static3/main.aap:39
+checksum	<VAR>/statsmodels-0.14.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	math/py3-statsmodels/main.aap:42
+checksum	<VAR>/stress-1.0.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/stress/main.aap:59
+checksum	<VAR>/strictures-2.000006.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/p5-strictures/main.aap:45
+checksum	<VAR>/subversion-1.14.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/subversion/main.aap:70
+checksum	<VAR>/subversion-1.14.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/subversion/main.aap:71
+checksum	<VAR>/sudo-1.6.8p12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	security/sudo/main.aap:59
+checksum	<VAR>/swat-1.15.0-0-cp312-cp312-manylinux1_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sas/py3-python-swat/main.aap:42
+checksum	<VAR>/swish-e-2.4.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/swish-e/main.aap:48
+checksum	<VAR>/syslinux-6.04-pre1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	sysutils/syslinux/main.aap:56
+checksum	<VAR>/tabexjava-3.1.2.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/tabex/main.aap:68
+checksum	<VAR>/tangled_up_in_unicode-0.2.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-tangled-up-in-unicode/main.aap:38
+checksum	<VAR>/tar-1.14.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/gtar/main.aap:68
+checksum	<VAR>/tcl8.4.6-src.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11-toolkits/Tix/main.aap:71
+checksum	<VAR>/tcl8.4.9-src.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/tcl/main.aap:65
+checksum	<VAR>/tcllib-1.8.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/tcllib/main.aap:61
+checksum	<VAR>/tclx8.4.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	lang/tclX/main.aap:61
+checksum	<VAR>/tenacity-8.2.3-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-tenacity/main.aap:38
+checksum	<VAR>/termcolor-2.4.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-termcolor/main.aap:39
+checksum	<VAR>/texinfo-4.6.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/texinfo/main.aap:55
+checksum	<VAR>/threadpoolctl-3.2.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-threadpoolctl/main.aap:38
+checksum	<VAR>/thttpd-2.29.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/tinyhttpd/main.aap:57
+checksum	<VAR>/tifffile-2023.12.9-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/py3-tifffile/main.aap:39
+checksum	<VAR>/tin-2.2.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	news/tin/main.aap:49
+checksum	<VAR>/tix-8.1.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11-toolkits/Tix/main.aap:70
+checksum	<VAR>/tk8.4.6-src.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11-toolkits/Tix/main.aap:72
+checksum	<VAR>/tomli_w-1.0.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-tomli_w/main.aap:38
+checksum	<VAR>/tornado-6.4-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-tornado/main.aap:44
+checksum	<VAR>/tqdm-4.66.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/py3-tqdm/main.aap:38
+checksum	<VAR>/trace.c.patch <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	databases/libiodbc/main.aap:56
+checksum	<VAR>/traitlets-5.9.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-traitlets/main.aap:42
+checksum	<VAR>/trove_classifiers-2023.7.6-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-trove_classifiers/main.aap:38
+checksum	<VAR>/ttfonts.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/ttfonts/main.aap:45
+checksum	<VAR>/typeguard-4.1.5-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-typeguard/main.aap:39
+checksum	<VAR>/typing_extensions-4.7.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-typing-extensions/main.aap:39
+checksum	<VAR>/tzdata-2023.3-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-tzdata/main.aap:38
+checksum	<VAR>/udunits-2.2.26.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	science/udunits/main.aap:50
+checksum	<VAR>/unixODBC-2.2.12.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	databases/unixODBC/main.aap:46
+checksum	<VAR>/unzip60.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/unzip/main.aap:73
+checksum	<VAR>/urllib3-1.26.9-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/py3-urllib3/main.aap:39
+checksum	<VAR>/usemod-1.2.1.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/usemod/main.aap:63
+checksum	<VAR>/v11.1.4fp6_linuxx64_dsdriver.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/db2-11.1-client/main.aap:45
+checksum	<VAR>/v11.5.9_linuxx64_dsdriver.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/db2-client/main.aap:45
+checksum	<VAR>/versioneer-0.29-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-versioneer/main.aap:39
+checksum	<VAR>/view.result.patch <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	databases/mysql/main.aap:70
+checksum	<VAR>/vim-6.2.tar.bz2 <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/vim6/main.aap:69
+checksum	<VAR>/virtualenv-20.24.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-virtualenv/main.aap:44
+checksum	<VAR>/virtualenv_clone-0.5.7-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-virtualenv_clone/main.aap:39
+checksum	<VAR>/visions-0.7.5-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-visions/main.aap:48
+checksum	<VAR>/w3m-0.5.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/w3m/main.aap:73
+checksum	<VAR>/wackamole-2.1.4.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	net/wackamole/main.aap:80
+checksum	<VAR>/wallet-rais.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/RAIS_wallet/main.aap:55
+checksum	<VAR>/wcwidth-0.2.6.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-wcwidth/main.aap:38
+checksum	<VAR>/web.xml.patch <TEXT> <TEXT> <TEXT>	1	0.12		PATCHDISTDIR	0	www/jakarta-tomcat5/main.aap:242
+checksum	<VAR>/webencodings-0.5.1-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	converters/py3-webencodings/main.aap:38
+checksum	<VAR>/wheel-0.40.0-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-wheel/main.aap:40
+checksum	<VAR>/wildfly-8.0.0.Final.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	java/wildfly/main.aap:71
+checksum	<VAR>/wilyagent-5.3.1.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/wilyagent/main.aap:66
+checksum	<VAR>/wordcloud-1.9.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	textproc/py3-wordcloud/main.aap:49
+checksum	<VAR>/x3270-332p1.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	x11/x3270/main.aap:54
+checksum	<VAR>/xemacs-21.4.22.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/xemacs/main.aap:106
+checksum	<VAR>/xemacs-sumo.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	editors/xemacs/main.aap:107
+checksum	<VAR>/xgboost-1.7.6-py3-none-manylinux2014_x86_64.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	misc/py3-xgboost/main.aap:42
+checksum	<VAR>/xpdf-3.02.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/xpdf/main.aap:56
+checksum	<VAR>/xpm-3.4k.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	graphics/xpm/main.aap:56
+checksum	<VAR>/xyzservices-2023.10.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	www/py3-xyzservices/main.aap:38
+checksum	<VAR>/ydata_profiling-4.9.0-py2.py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-ydata-profiling/main.aap:57
+checksum	<VAR>/zcrypt29-exportable.zip <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/zip/main.aap:52
+checksum	<VAR>/zip232.tgz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/zip/main.aap:51
+checksum	<VAR>/zipp-3.16.2-py3-none-any.whl <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	devel/py3-zipp/main.aap:38
+checksum	<VAR>/zlib-1.2.3.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	archivers/zlib/main.aap:61
+checksum	<VAR>/zookeeper-3.4.8.tar.gz <TEXT> <TEXT> <TEXT>	1	0.12		DISTDIR	0	company/zookeeper/main.aap:54
+filetype	<EMPTY>	1	100.00			1	globals.aap:20
+include	<PATH>	1479	100.00			0	archivers/bzip2/main.aap:9;archivers/flam/main.aap:11;archivers/gtar/main.aap:9;archivers/gzip/main.aap:9;archivers/libmspack/main.aap:8
+print	>! README <VAR>: <VAR>	51	22.37		LPPNAME;PORTCOMMENT | PORTCOMMENT;PORTNAME | PORTCOMMENT;RPMNAME	0	company/Sysmgt-Basis/main.aap:42;company/addcpm/main.aap:30;company/addetl/main.aap:37;company/authadk/main.aap:52;company/authadk61/main.aap:49
+print	>> README	46	20.18			0	company/Sysmgt-Basis/main.aap:43;company/authadk/main.aap:53;company/authadk61/main.aap:50;company/authuser/main.aap:35;company/basis/main.aap:47
+print	>> README <TEXT> <TEXT> <VAR>	45	19.74		p	0	company/Sysmgt-Basis/main.aap:45;company/authadk/main.aap:55;company/authadk61/main.aap:52;company/authuser/main.aap:37;company/basis/main.aap:49
+print	>> <VAR>	16	7.02		README | file | script	0	globals.aap:231;globals.aap:243;globals.aap:245;globals.aap:263;globals.aap:290
+print	>> <VAR> <TEXT>	14	6.14		file	0	globals.aap:291;globals.aap:294;globals.aap:296;globals.aap:313;globals.aap:324
+print	>> <VAR> <TEXT> <VAR>	8	3.51		CATEGORIES;file | MAINTAINER;file | OBSOLETES;file | PORTCOMMENT;file | PORTLICENSE;file | RPMNAME;file | RPMVERSION;file | file;rpmreq	0	globals.aap:232;globals.aap:233;globals.aap:235;globals.aap:236;globals.aap:238
+print	>> <VAR> <VAR>	5	2.19		ARCH;file | PORTDESCR;file | file;l | file;prereqline	0	globals.aap:242;globals.aap:292;globals.aap:431;globals.aap:434;globals.aap:446
+print	<TEXT>	4	1.75			0	globals.aap:174;globals.aap:372;lang/python3/main.aap:95;lang/python3/main.aap:97
+print	>! <VAR> <VAR>: <VAR>	4	1.75		LPPNAME;PORTCOMMENT;README	0	company/csmmaster/main.aap:41;company/dss/main.aap:98;company/lpar/main.aap:36;company/nimmstr/main.aap:42
+print	>> <VAR> <TEXT> <TEXT> <VAR>	4	1.75		README;p	0	company/csmmaster/main.aap:44;company/dss/main.aap:101;company/lpar/main.aap:39;company/nimmstr/main.aap:45
+print	<TEXT> Please rename <VAR> <TEXT>	2	0.88		name	0	globals.aap:724;globals.aap:731
+print	<VAR>	2	0.88		BROKEN | d	0	globals.aap:391;globals.aap:522
+print	XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	2	0.88			0	globals.aap:173;globals.aap:175
+print	<PATH> > <VAR>/etc/ld.so.conf.d/lxclib64.conf	1	0.44		PKGDIR	0	sysutils/lxc/main.aap:60
+print	<PATH> > <VAR>/etc/ld.so.conf.d/netcobol.conf	1	0.44		PKGDIR	0	lang/netcobol-rte/main.aap:45
+print	<PATH> > <VAR>/etc/ld.so.conf.d/usr_local_apr_lib.conf	1	0.44		PKGDIR	0	sysutils/ganglia/main.aap:123
+print	<TEXT> <VAR> <VAR>.0.0	1	0.44		LPPNAME;LPPVERSION	0	globals.aap:492
+print	<TEXT> PIP fehlt <TEXT>	1	0.44			0	lang/python3/main.aap:96
+print	<VAR> <VAR>= <TEXT> var2string(_no.PORTVERSION))`-<VAR>	1	0.44		RPMNAME;RPMVERSION;gt	0	globals.aap:368
+print	<VAR>/<VAR>/<VAR>-`re.sub(-,_, var2string(_no.PORTVERSION))`-<VAR>.<VAR>.rpm	1	0.44		ADIR;RPMDIR;RPMNAME;RPMVERSION	0	globals.aap:379
+print	>! <VAR> <NUMBER> R I <VAR> <TEXT>	1	0.44		LPPNAME;file	0	globals.aap:421
+print	>! <VAR> <TEXT> __find_requires <TEXT>	1	0.44		file	0	globals.aap:228
+print	>! <VAR><VAR>/doc/<VAR>/README <VAR>: <VAR>	1	0.44		PKGDIR;PORTCOMMENT;PORTNAME;PREFIX	0	company/sas/main.aap:48
+print	>> <VAR> <PATH>	1	0.44		file	0	globals.aap:300
+print	>> <VAR> <TEXT> -, -)	1	0.44		file	1	globals.aap:299
+print	>> <VAR> <TEXT> <PATH>	1	0.44		file	0	globals.aap:244
+print	>> <VAR> <TEXT> <TEXT>	1	0.44		script	0	globals.aap:776
+print	>> <VAR> <TEXT> <TEXT> <TEXT>	1	0.44		file	1	globals.aap:234
+print	>> <VAR> <TEXT> <TEXT> <TEXT> -n <TEXT> <TEXT> && set -x	1	0.44		script	0	globals.aap:777
+print	>> <VAR> <TEXT> R+V	1	0.44		file	0	globals.aap:237
+print	>> <VAR> <TEXT> __find_provides <TEXT>	1	0.44		file	0	globals.aap:229
+print	>> <VAR> <TEXT> _use_internal_dependency_generator <TEXT>	1	0.44		file	1	globals.aap:230
+print	>> <VAR> <TEXT> add module documentation to perllocal.pod	1	0.44		script	0	globals.aap:775
+print	>> <VAR> <VAR> <VAR>.0000.0000 <NUMBER> N U en_US <VAR> <VAR>	1	0.44		LPPNAME;LPPVERSION;PORTNAME;PORTVERSION;file	0	globals.aap:422
+print	>> <VAR> <VAR>/<VAR>_post_i	1	0.44		IPATH;RPMNAME;file	0	globals.aap:325
+print	>> <VAR> true	1	0.44		file	0	globals.aap:295
+print	>> <VAR><VAR>/etc/x3270/ibm_hosts MVS primary tn3270p01	1	0.44		PKGDIR;PREFIX	0	x11/x3270/main.aap:45
+print	>> <VAR><VAR>/etc/x3270/ibm_hosts MVS_alt primary <TEXT>	1	0.44		PKGDIR;PREFIX	0	x11/x3270/main.aap:46
+tree	<PATH> <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	16	20.51			16	company/elastic/main.aap:39;company/elastic5_datastore/main.aap:37;company/elastic_datastore/main.aap:38;company/eskibana/main.aap:38;company/eskibana5/main.aap:40
+tree	bin <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	10	12.82			10	company/bau/main.aap:65;company/eventproxy/main.aap:34;company/instserver/main.aap:102;company/linux-basis/main.aap:49;company/linux-standard/main.aap:55
+tree	etc <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	7	8.97			7	company/bau/main.aap:68;company/instserver/main.aap:108;company/oasis/main.aap:59;company/oasis-aibtools/main.aap:63;company/oasis-tools/main.aap:52
+tree	<PATH> <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries|Tag <TEXT>	4	5.13			4	company/lxc/main.aap:46;company/lxc/main.aap:48;company/lxc/main.aap:50;company/sap-hana/main.aap:45
+tree	<TEXT> <TEXT> filename <TEXT> main.aap <TEXT>	4	5.13			4	main.aap:16;main.aap:26;main.aap:35;main.aap:44
+tree	rc.d <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	4	5.13			4	company/RVMON/main.aap:49;company/alm/main.aap:53;company/alm2/main.aap:41;company/sonarqube/main.aap:35
+tree	<VAR> <TEXT> filename <TEXT> <TEXT> <TEXT>	2	2.56		PKGDIR	2	globals.aap:726;globals.aap:755
+tree	<VAR> <TEXT> filename <TEXT> perllocal.pod <TEXT>	2	2.56		PKGDIR	1	databases/rrdtool/main.aap:109;globals.aap:761
+tree	company <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	2	2.56			2	company/oasis-tools/main.aap:54;company/oasis-was/main.aap:62
+tree	<VAR> <TEXT> dirname <TEXT> <TEXT> <TEXT>	1	1.28		PKGDIR	1	globals.aap:719
+tree	<VAR>-<VAR>/x86_64/sles-15-sp3 <TEXT> filename <TEXT> <TEXT> <TEXT>	1	1.28		ELX;VER	1	company/ma-emulex/main.aap:39
+tree	OAsIs_CECFG_TEMPLATE <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-was/main.aap:60
+tree	abb <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:106
+tree	autoyast <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:129
+tree	bin <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries|Template <TEXT>	1	1.28			1	company/hanfs/main.aap:56
+tree	ca_etc <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/calzen/main.aap:63
+tree	cfg <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis/main.aap:61
+tree	configuration <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-aibtools/main.aap:61
+tree	files <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries|Tag <TEXT>	1	1.28			1	company/ma-emulex/main.aap:43
+tree	lib <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-aibtools/main.aap:65
+tree	local <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/rpd/main.aap:62
+tree	na_bin <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/nacharbeiten/main.aap:41
+tree	na_etc <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/nacharbeiten/main.aap:43
+tree	nac <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:104
+tree	p8 <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-was/main.aap:56
+tree	pwstock-root <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:112
+tree	pxe <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/dhcppxe/main.aap:53
+tree	scripts <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-aibtools/main.aap:67
+tree	sdconf <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:114
+tree	sdflex <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:116
+tree	smbconf <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:118
+tree	tools.rc <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-tools/main.aap:56
+tree	uletc <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:110
+tree	var <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/instserver/main.aap:127
+tree	was <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-was/main.aap:54
+tree	wpxt <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>	1	1.28			1	company/oasis-was/main.aap:58
+variant	ANW	8	30.77			8	java/bea8/main.aap:42;company/ari/main.aap:46;company/datadeploy/main.aap:49;www/apache/main.aap:65;www/jakarta-tomcat/main.aap:58
+variant	TYP	4	15.38			4	lang/oraclejava7/main.aap:30;lang/oraclejava8/main.aap:30;lang/sunjava6/main.aap:10;lang/sunjava6/main.aap:42
+variant	FTACLIENT	2	7.69			2	company/tws/main.aap:38;company/tws-zcentric/main.aap:61
+variant	Version	2	7.69			2	company/beta92ejm/main.aap:40;company/gpdbclient/main.aap:58
+variant	AIXVER	1	3.85			1	globals.aap:123
+variant	BOXED	1	3.85			1	globals.aap:110
+variant	COMP	1	3.85			1	company/otwsa/main.aap:25
+variant	DSS	1	3.85			1	company/dss/main.aap:31
+variant	FTA	1	3.85			1	company/fta/main.aap:35
+variant	JAVAVERSION	1	3.85			1	java/jboss/main.aap:22
+variant	LXVER	1	3.85			1	globals.aap:146
+variant	ONMSVER	1	3.85			1	company/opennms/main.aap:16
+variant	PERLMODUL	1	3.85			1	globals.aap:165
+variant	PY3MOD	1	3.85			1	globals.aap:188

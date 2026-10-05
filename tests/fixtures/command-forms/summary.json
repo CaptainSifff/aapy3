@@ -1,0 +1,299 @@
+{
+  "commands_requested": [
+    "action",
+    "checksum",
+    "filetype",
+    "include",
+    "print",
+    "tree",
+    "variant"
+  ],
+  "files_scanned": 1481,
+  "notes": [
+    "Lexical census only; recipes were not executed.",
+    "Forms abstract many literals while preserving options and identifier-like words.",
+    "has_block is only an indentation observation.",
+    "Literal/heredoc bodies are excluded."
+  ],
+  "occurrences_total": 2674,
+  "per_command": {
+    "action": {
+      "distinct_forms": 5,
+      "occurrences": 33,
+      "top_forms": [
+        {
+          "count": 26,
+          "form": "extract targz",
+          "percentage": "78.79"
+        },
+        {
+          "count": 3,
+          "form": "extract zip",
+          "percentage": "9.09"
+        },
+        {
+          "count": 2,
+          "form": "extract tarbz2",
+          "percentage": "6.06"
+        },
+        {
+          "count": 1,
+          "form": "extract tarZ",
+          "percentage": "3.03"
+        },
+        {
+          "count": 1,
+          "form": "extract xz",
+          "percentage": "3.03"
+        }
+      ]
+    },
+    "checksum": {
+      "distinct_forms": 804,
+      "occurrences": 829,
+      "top_forms": [
+        {
+          "count": 9,
+          "form": "<VAR>/patch.aa <TEXT> <TEXT> <TEXT>",
+          "percentage": "1.09"
+        },
+        {
+          "count": 5,
+          "form": "<VAR>/tcl8.5.9-src.tar.gz <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.60"
+        },
+        {
+          "count": 3,
+          "form": "<VAR>/eclipse-SDK-3.5-aix-motif.zip <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.36"
+        },
+        {
+          "count": 3,
+          "form": "<VAR>/etpki.tar.gz <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.36"
+        },
+        {
+          "count": 2,
+          "form": "<VAR>/ansible_core-2.18.1-py3-none-any.whl <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.24"
+        },
+        {
+          "count": 2,
+          "form": "<VAR>/bea81_sp3.tar.gz <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.24"
+        },
+        {
+          "count": 2,
+          "form": "<VAR>/eclipse-3.5-delta-pack.zip <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.24"
+        },
+        {
+          "count": 2,
+          "form": "<VAR>/eclipse-RCP-SDK-3.5-aix-motif.zip <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.24"
+        },
+        {
+          "count": 2,
+          "form": "<VAR>/lic98-13-03_x86_64.tar.gz <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.24"
+        },
+        {
+          "count": 2,
+          "form": "<VAR>/odbc.tar.gz <TEXT> <TEXT> <TEXT>",
+          "percentage": "0.24"
+        }
+      ]
+    },
+    "filetype": {
+      "distinct_forms": 1,
+      "occurrences": 1,
+      "top_forms": [
+        {
+          "count": 1,
+          "form": "<EMPTY>",
+          "percentage": "100.00"
+        }
+      ]
+    },
+    "include": {
+      "distinct_forms": 1,
+      "occurrences": 1479,
+      "top_forms": [
+        {
+          "count": 1479,
+          "form": "<PATH>",
+          "percentage": "100.00"
+        }
+      ]
+    },
+    "print": {
+      "distinct_forms": 38,
+      "occurrences": 228,
+      "top_forms": [
+        {
+          "count": 51,
+          "form": ">! README <VAR>: <VAR>",
+          "percentage": "22.37"
+        },
+        {
+          "count": 46,
+          "form": ">> README",
+          "percentage": "20.18"
+        },
+        {
+          "count": 45,
+          "form": ">> README <TEXT> <TEXT> <VAR>",
+          "percentage": "19.74"
+        },
+        {
+          "count": 16,
+          "form": ">> <VAR>",
+          "percentage": "7.02"
+        },
+        {
+          "count": 14,
+          "form": ">> <VAR> <TEXT>",
+          "percentage": "6.14"
+        },
+        {
+          "count": 8,
+          "form": ">> <VAR> <TEXT> <VAR>",
+          "percentage": "3.51"
+        },
+        {
+          "count": 5,
+          "form": ">> <VAR> <VAR>",
+          "percentage": "2.19"
+        },
+        {
+          "count": 4,
+          "form": "<TEXT>",
+          "percentage": "1.75"
+        },
+        {
+          "count": 4,
+          "form": ">! <VAR> <VAR>: <VAR>",
+          "percentage": "1.75"
+        },
+        {
+          "count": 4,
+          "form": ">> <VAR> <TEXT> <TEXT> <VAR>",
+          "percentage": "1.75"
+        }
+      ]
+    },
+    "tree": {
+      "distinct_forms": 36,
+      "occurrences": 78,
+      "top_forms": [
+        {
+          "count": 16,
+          "form": "<PATH> <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>",
+          "percentage": "20.51"
+        },
+        {
+          "count": 10,
+          "form": "bin <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>",
+          "percentage": "12.82"
+        },
+        {
+          "count": 7,
+          "form": "etc <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>",
+          "percentage": "8.97"
+        },
+        {
+          "count": 4,
+          "form": "<PATH> <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries|Tag <TEXT>",
+          "percentage": "5.13"
+        },
+        {
+          "count": 4,
+          "form": "<TEXT> <TEXT> filename <TEXT> main.aap <TEXT>",
+          "percentage": "5.13"
+        },
+        {
+          "count": 4,
+          "form": "rc.d <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>",
+          "percentage": "5.13"
+        },
+        {
+          "count": 2,
+          "form": "<VAR> <TEXT> filename <TEXT> <TEXT> <TEXT>",
+          "percentage": "2.56"
+        },
+        {
+          "count": 2,
+          "form": "<VAR> <TEXT> filename <TEXT> perllocal.pod <TEXT>",
+          "percentage": "2.56"
+        },
+        {
+          "count": 2,
+          "form": "ruv <TEXT> filename <TEXT> <TEXT> <TEXT> <TEXT> reject <TEXT> Root|Repository|Entries <TEXT>",
+          "percentage": "2.56"
+        },
+        {
+          "count": 1,
+          "form": "<VAR> <TEXT> dirname <TEXT> <TEXT> <TEXT>",
+          "percentage": "1.28"
+        }
+      ]
+    },
+    "variant": {
+      "distinct_forms": 14,
+      "occurrences": 26,
+      "top_forms": [
+        {
+          "count": 8,
+          "form": "ANW",
+          "percentage": "30.77"
+        },
+        {
+          "count": 4,
+          "form": "TYP",
+          "percentage": "15.38"
+        },
+        {
+          "count": 2,
+          "form": "FTACLIENT",
+          "percentage": "7.69"
+        },
+        {
+          "count": 2,
+          "form": "Version",
+          "percentage": "7.69"
+        },
+        {
+          "count": 1,
+          "form": "AIXVER",
+          "percentage": "3.85"
+        },
+        {
+          "count": 1,
+          "form": "BOXED",
+          "percentage": "3.85"
+        },
+        {
+          "count": 1,
+          "form": "COMP",
+          "percentage": "3.85"
+        },
+        {
+          "count": 1,
+          "form": "DSS",
+          "percentage": "3.85"
+        },
+        {
+          "count": 1,
+          "form": "FTA",
+          "percentage": "3.85"
+        },
+        {
+          "count": 1,
+          "form": "JAVAVERSION",
+          "percentage": "3.85"
+        }
+      ]
+    }
+  },
+  "root": "/home/xv42456/scripts/ports"
+}
