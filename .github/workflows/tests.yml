@@ -48,7 +48,7 @@ jobs:
         run: |
           mkdir -p "${{ runner.temp }}/suse-package-input"
           curl --fail --location --retry 3 \
-            https://ftp.gnu.org/gnu/nano/nano-7.1.tar.gz \
+            https://ftpmirror.gnu.org/nano/nano-7.1.tar.gz \
             -o "${{ runner.temp }}/suse-package-input/nano-7.1.tar.gz"
           echo 'cc9e42c4805193f9dc3ae22b9644bb1d  ${{ runner.temp }}/suse-package-input/nano-7.1.tar.gz' | md5sum --check
       - name: Build SUSE test image
