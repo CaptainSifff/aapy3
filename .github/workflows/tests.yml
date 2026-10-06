@@ -25,3 +25,48 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Run recursive CLI tests
         run: python tests/adapters/test_cli_stdout.py
+
+  suse-package-build:
+    name: RPM build (${{ matrix.target }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: sles15sp6
+            base: registry.suse.com/suse/sle15:15.6
+          - target: sles15sp7
+            base: registry.suse.com/suse/sle15:15.7
+          - target: leap16
+            base: opensuse/leap:16.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify Nano source
+        run: |
+          mkdir -p "${{ runner.temp }}/suse-package-input"
+          curl --fail --location --retry 3 \
+            https://ftp.gnu.org/gnu/nano/nano-7.1.tar.gz \
+            -o "${{ runner.temp }}/suse-package-input/nano-7.1.tar.gz"
+          echo 'cc9e42c4805193f9dc3ae22b9644bb1d  ${{ runner.temp }}/suse-package-input/nano-7.1.tar.gz' | md5sum --check
+      - name: Build SUSE test image
+        run: >-
+          docker build
+          --build-arg BASE=${{ matrix.base }}
+          --tag py3aap-suse-package:${{ matrix.target }}
+          --file tests/integration/suse/Dockerfile .
+      - name: Build and verify Nano RPM through A-A-P
+        run: |
+          mkdir -p "${{ runner.temp }}/suse-package-results"
+          docker run --rm \
+            -e MATRIX_OS=${{ matrix.target }} \
+            -v "$GITHUB_WORKSPACE:/source:ro" \
+            -v "${{ runner.temp }}/suse-package-input/nano-7.1.tar.gz:/input/nano-7.1.tar.gz:ro" \
+            -v "${{ runner.temp }}/suse-package-results:/results" \
+            py3aap-suse-package:${{ matrix.target }}
+      - name: Upload package build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: suse-package-${{ matrix.target }}
+          path: ${{ runner.temp }}/suse-package-results/
+          if-no-files-found: ignore
