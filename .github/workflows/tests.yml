@@ -35,10 +35,13 @@ jobs:
         include:
           - target: sles15sp6
             base: registry.suse.com/suse/sle15:15.6
+            rpm_path: /export/company/SLES15SP6/bsus/noarch/company.nano-7.1-1.noarch.rpm
           - target: sles15sp7
             base: registry.suse.com/suse/sle15:15.7
+            rpm_path: /export/company/SLES15SP7/bsus/noarch/company.nano-7.1-1.noarch.rpm
           - target: leap16
             base: opensuse/leap:16.0
+            rpm_path: /export/company/bsus/noarch/company.nano-7.1-1.noarch.rpm
     steps:
       - uses: actions/checkout@v4
       - name: Download and verify Nano source
@@ -54,15 +57,70 @@ jobs:
           --build-arg BASE=${{ matrix.base }}
           --tag py3aap-suse-package:${{ matrix.target }}
           --file tests/integration/suse/Dockerfile .
-      - name: Build and verify Nano RPM through A-A-P
+      - name: Start SUSE test container
         run: |
           mkdir -p "${{ runner.temp }}/suse-package-results"
-          docker run --rm \
+          docker run --detach --name py3aap-suse-${{ matrix.target }} \
+            --entrypoint /bin/sh \
             -e MATRIX_OS=${{ matrix.target }} \
+            -e AAP_REPOSITORY=/work/repo \
+            -e AAP=/usr/local/bin/aap \
+            -e AAP_RECURSIVE_INVOCATION=primary \
+            -e AAP_RECURSIVE_TRACE=/results/${{ matrix.target }}-events.jsonl \
             -v "$GITHUB_WORKSPACE:/source:ro" \
             -v "${{ runner.temp }}/suse-package-input/nano-7.1.tar.gz:/input/nano-7.1.tar.gz:ro" \
             -v "${{ runner.temp }}/suse-package-results:/results" \
-            py3aap-suse-package:${{ matrix.target }}
+            py3aap-suse-package:${{ matrix.target }} \
+            -c 'sleep infinity'
+      - name: Prepare recipe workspace
+        run: |
+          container=py3aap-suse-${{ matrix.target }}
+          docker exec "$container" sh -ec '
+            mkdir -p /work/repo/ports
+            cp -a /source/. /work/repo/
+            cp -a /work/repo/tests/fixtures/ports/. /work/repo/ports/
+            mkdir -p /work/repo/ports/editors/nano/distfiles
+            cp /input/nano-7.1.tar.gz /work/repo/ports/editors/nano/distfiles/
+            printf "cc9e42c4805193f9dc3ae22b9644bb1d  %s\\n" \
+              /work/repo/ports/editors/nano/distfiles/nano-7.1.tar.gz | md5sum --check
+          '
+          docker exec "$container" mkdir -p /usr/local/nacharbeiten/na_bin /usr/local/bin
+          docker exec "$container" install -m 0755 \
+            /work/repo/tests/integration/suse/getdistro \
+            /usr/local/nacharbeiten/na_bin/getdistro
+          docker exec "$container" install -m 0755 \
+            /work/repo/tests/integration/suse/aap /usr/local/bin/aap
+      - name: Run A-A-P RPM target and show rpmbuild output
+        run: |
+          container=py3aap-suse-${{ matrix.target }}
+          set +e
+          docker exec --workdir /work/repo/ports/editors/nano \
+            "$container" /usr/local/bin/aap rpm
+          build_status=$?
+          set -e
+          docker exec "$container" python3 \
+            /work/repo/tests/integration/suse/show-rpmbuild.py \
+            "/results/${{ matrix.target }}-events.jsonl"
+          exit "$build_status"
+      - name: Inspect built RPM
+        run: |
+          docker exec py3aap-suse-${{ matrix.target }} rpm -qp \
+            --queryformat '%{NAME} %{VERSION} %{RELEASE} %{ARCH}\n' \
+            '${{ matrix.rpm_path }}'
+          docker exec py3aap-suse-${{ matrix.target }} rpm -qpl \
+            '${{ matrix.rpm_path }}'
+      - name: Install RPM and verify Nano
+        run: |
+          docker exec py3aap-suse-${{ matrix.target }} rpm -i '${{ matrix.rpm_path }}'
+          docker exec py3aap-suse-${{ matrix.target }} rpm -q company.nano
+          docker exec py3aap-suse-${{ matrix.target }} /usr/local/bin/nano --version
+          docker exec py3aap-suse-${{ matrix.target }} /usr/local/bin/nano --help
+          docker exec py3aap-suse-${{ matrix.target }} rpm -V company.nano
+      - name: Save RPM artifact
+        if: success()
+        run: |
+          docker cp 'py3aap-suse-${{ matrix.target }}:${{ matrix.rpm_path }}' \
+            '${{ runner.temp }}/suse-package-results/${{ matrix.target }}-nano.rpm'
       - name: Upload package build evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -70,3 +128,6 @@ jobs:
           name: suse-package-${{ matrix.target }}
           path: ${{ runner.temp }}/suse-package-results/
           if-no-files-found: ignore
+      - name: Stop SUSE test container
+        if: always()
+        run: docker rm --force py3aap-suse-${{ matrix.target }}

@@ -17,8 +17,10 @@ python3 tests/tools/build_standalone.py
 GitHub Actions also builds and installs the fixture Nano 7.1 RPM in disposable
 SLES 15 SP6, SLES 15 SP7, and openSUSE Leap 16.0 containers. These jobs run the
 real configure, compile, staged install, and `rpmbuild` steps through the A-A-P
-CLI, then inspect and smoke-test the produced RPM. Logs, traces, and packages
-are uploaded as workflow artifacts.
+CLI, then inspect and smoke-test the produced RPM. The Actions log prints the
+actual `rpmbuild` request with its captured output, followed by separate RPM
+inspection and installation steps. Traces and packages are uploaded as
+workflow artifacts.
 
 Run the suites from the repository root with:
 
